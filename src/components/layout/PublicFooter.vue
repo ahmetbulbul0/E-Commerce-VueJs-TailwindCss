@@ -63,7 +63,7 @@
                         </li>
                         <li>
                             <router-link
-                                to="/return"
+                                to="/return-policy"
                                 class="text-sm text-muted-foreground hover:text-foreground"
                             >
                                 İade ve Değişim

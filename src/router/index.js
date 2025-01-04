@@ -85,6 +85,11 @@ const router = createRouter({
                     component: () => import('@/views/public/ShippingView.vue'),
                 },
                 {
+                    path: 'return-policy',
+                    name: 'return-policy',
+                    component: () => import('@/views/public/ReturnPolicyView.vue'),
+                },
+                {
                     path: 'cart',
                     name: 'cart',
                     component: () => import('@/views/public/CartView.vue'),
