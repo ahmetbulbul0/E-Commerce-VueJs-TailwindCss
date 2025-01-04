@@ -90,6 +90,11 @@ const router = createRouter({
                     component: () => import('@/views/public/ReturnPolicyView.vue'),
                 },
                 {
+                    path: 'privacy-policy',
+                    name: 'privacy-policy',
+                    component: () => import('@/views/public/PrivacyPolicyView.vue'),
+                },
+                {
                     path: 'cart',
                     name: 'cart',
                     component: () => import('@/views/public/CartView.vue'),

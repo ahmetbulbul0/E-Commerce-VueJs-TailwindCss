@@ -71,7 +71,7 @@
                         </li>
                         <li>
                             <router-link
-                                to="/privacy"
+                                to="/privacy-policy"
                                 class="text-sm text-muted-foreground hover:text-foreground"
                             >
                                 Gizlilik Politikası
