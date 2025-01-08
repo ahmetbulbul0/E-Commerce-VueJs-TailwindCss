@@ -4,20 +4,20 @@
             <div class="absolute inset-0 bg-gradient-to-r from-background to-background/50 bg-muted/100"></div>
 
             <div class="container relative">
-                <div class="flex flex-col items-center space-y-4 py-24 text-center md:py-32">
-                    <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+                <div class="flex flex-col items-center space-y-4 py-12 text-center sm:py-16 md:py-24 lg:py-32">
+                    <h1 class="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl px-4">
                         Modern Alışverişin Adresi
                     </h1>
 
-                    <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl">En yeni ürünleri keşfedin, güvenle alışveriş yapın ve özel fırsatlardan yararlanın.</p>
+                    <p class="mx-auto max-w-[700px] text-muted-foreground text-sm md:text-xl px-4">En yeni ürünleri keşfedin, güvenle alışveriş yapın ve özel fırsatlardan yararlanın.</p>
 
-                    <div class="flex space-x-4">
-                        <router-link to="/products">
-                            <Button size="lg" class="h-11 px-8">Alışverişe Başla</Button>
+                    <div class="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4 px-4">
+                        <router-link to="/products" class="w-full sm:w-auto">
+                            <Button size="lg" class="w-full sm:w-auto h-11 px-8">Alışverişe Başla</Button>
                         </router-link>
 
-                        <router-link to="/register">
-                            <Button size="lg" variant="outline" class="h-11 px-8">Üye Ol</Button>
+                        <router-link to="/register" class="w-full sm:w-auto">
+                            <Button size="lg" variant="outline" class="w-full sm:w-auto h-11 px-8">Üye Ol</Button>
                         </router-link>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                     <p class="text-muted-foreground">Kaçırılmayacak fırsatları yakalayın</p>
                 </div>
 
-                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 sm:px-0">
                     <div class="group relative overflow-hidden rounded-lg border bg-background">
                         <div class="aspect-[16/9] overflow-hidden">
                             <img
@@ -101,7 +101,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 px-4 sm:px-0">
                     <router-link
                         v-for="category in categories"
                         :key="category.name"
@@ -134,7 +134,7 @@
                     <p class="text-muted-foreground">En çok tercih edilen ürünleri keşfedin</p>
                 </div>
 
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 px-4 sm:px-0">
                     <div
                         v-for="product in popularProducts"
                         :key="product.id"
@@ -181,8 +181,8 @@
         <!-- Özellikler -->
         <section class="border-t bg-muted/40 py-12 md:py-16">
             <div class="container">
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-                    <div class="flex flex-col items-center space-y-2 text-center">
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-3 px-4 sm:px-0">
+                    <div class="flex flex-col items-center space-y-2 text-center p-4 bg-background rounded-lg">
                         <div
                             class="flex h-12 w-12 items-center justify-center rounded-full border-2"
                         >
@@ -211,7 +211,7 @@
                         </p>
                     </div>
 
-                    <div class="flex flex-col items-center space-y-2 text-center">
+                    <div class="flex flex-col items-center space-y-2 text-center p-4 bg-background rounded-lg">
                         <div
                             class="flex h-12 w-12 items-center justify-center rounded-full border-2"
                         >
@@ -237,7 +237,7 @@
                         </p>
                     </div>
 
-                    <div class="flex flex-col items-center space-y-2 text-center">
+                    <div class="flex flex-col items-center space-y-2 text-center p-4 bg-background rounded-lg">
                         <div
                             class="flex h-12 w-12 items-center justify-center rounded-full border-2"
                         >
