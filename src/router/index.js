@@ -3,6 +3,7 @@ import publicRoutes from './publicRoutes';
 import customerRoutes from './customerRoutes';
 import sellerRoutes from './sellerRoutes';
 import authRoutes from './authRoutes';
+import superAdminRoutes from './superAdminRoutes';
 
 
 const router = createRouter({
@@ -11,7 +12,8 @@ const router = createRouter({
         ...publicRoutes,
         ...customerRoutes,
         ...sellerRoutes,
-        ...authRoutes
+        ...authRoutes,
+        ...superAdminRoutes
     ],
 })
 

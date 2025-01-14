@@ -45,7 +45,7 @@
                             <circle cx="12" cy="7" r="4" />
                         </svg>
                     </button>
-                    <div v-show="isUserMenuOpen" class="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-card shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div v-show="isUserMenuOpen" class="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-card shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none border">
                         <div class="py-1">
                             <router-link v-for="item in userMenuItems" :key="item.name" :to="item.to" class="block px-4 py-2 text-sm hover:bg-accent" @click="isUserMenuOpen = false">
                                 {{ item.name }}
@@ -165,7 +165,7 @@ export default defineComponent({
         ];
 
         const userMenuItems = [
-            { name: "Müşteri Paneli", to: { name: "customer-orders" } },
+            { name: "Müşteri Paneli", to: { name: "customer-dashboard" } },
             { name: "Satıcı Paneli", to: { name: "seller-dashboard" } },
             { name: "Giriş Yap", to: { name: "login" } },
             { name: "Kayıt Ol", to: { name: "register" } },

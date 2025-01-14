@@ -18,6 +18,7 @@ An innovative e-commerce platform built with Vue.js and TailwindCSS, designed fo
 - Pinia
 - Cypress
 - ESLint
+- Vue-Toastification
 
 ## Setup
 

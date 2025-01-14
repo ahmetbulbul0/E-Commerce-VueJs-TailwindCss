@@ -26,6 +26,31 @@ export default [
                 component: () => import("@/views/public/ProductDetailView.vue"),
             },
             {
+                path: "discounted-products",
+                name: "discounted-products",
+                component: () => import("@/views/public/DiscountedProductsView.vue"),
+            },
+            {
+                path: "compare-products",
+                name: "compare-products",
+                component: () => import("@/views/public/CompareProductsView.vue"),
+            },
+            {
+                path: "brands",
+                name: "brands",
+                component: () => import("@/views/public/BrandsView.vue"),
+            },
+            {
+                path: "brand-detail/1",
+                name: "brand-detail",
+                component: () => import("@/views/public/BrandDetailView.vue"),
+            },
+            {
+                path: "all-pages",
+                name: "all-pages",
+                component: () => import("@/views/public/AllPagesView.vue"),
+            },
+            {
                 path: "categories",
                 name: "categories",
                 component: () => import("@/views/public/CategoriesView.vue"),
