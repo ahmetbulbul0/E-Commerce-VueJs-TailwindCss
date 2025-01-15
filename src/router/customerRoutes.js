@@ -66,6 +66,11 @@ export default [
                 name: "customer-order-return",
                 component: () => import("@/views/customer/orders/OrderReturnView.vue"),
             },
+            {
+                path: "notifications",
+                name: "customer-notifications",
+                component: () => import("@/views/customer/CustomerNotificationsView.vue"),
+            },
         ],
     },
 ];

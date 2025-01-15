@@ -51,6 +51,11 @@ export default [
                 name: "seller-order-detail",
                 component: () => import("@/views/seller/OrderDetailView.vue"),
             },
+            {
+                path: "notifications",
+                name: "seller-notifications",
+                component: () => import("@/views/seller/SellerNotificationsView.vue"),
+            },
         ],
     },
 ];
