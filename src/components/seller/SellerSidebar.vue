@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
 import { useRoute } from "vue-router";
-import { LayoutDashboard, Users, Store, Package, Tag, ShoppingCart, Percent, BarChart, Settings } from "lucide-vue-next";
+import { LayoutDashboard, Package, ShoppingCart, Users, LineChart, MessageSquare, Percent, Wallet, Settings } from "lucide-vue-next";
 
 const route = useRoute();
 
@@ -45,42 +45,42 @@ const menuItems = [
     {
         title: "Analitik",
         path: "seller-analytics",
-        icon: LayoutDashboard,
+        icon: Package,
     },
     {
         title: "Profil",
         path: "seller-settings",
-        icon: LayoutDashboard,
+        icon: ShoppingCart,
     },
     {
         title: "Ürünler",
         path: "seller-products",
-        icon: LayoutDashboard,
+        icon: Users,
     },
     {
         title: "Yeni Ürün Ekle",
         path: "seller-product-create",
-        icon: LayoutDashboard,
+        icon: LineChart,
     },
     {
         title: "Ürün Detay",
         path: "seller-product-detail",
-        icon: LayoutDashboard,
+        icon: MessageSquare,
     },
     {
         title: "Ürün Düzenle",
         path: "seller-product-edit",
-        icon: LayoutDashboard,
+        icon: Percent,
     },
     {
         title: "Siparişler",
         path: "seller-orders",
-        icon: LayoutDashboard,
+        icon: Wallet,
     },
     {
         title: "Sipariş Detay",
         path: "seller-order-detail",
-        icon: LayoutDashboard,
+        icon: Settings,
     },
 ];
 </script>

@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
 import { useRoute } from "vue-router";
-import { LayoutDashboard } from "lucide-vue-next";
+import { LayoutDashboard, MapPin, Heart, User, KeyRound, Bell, Share2, ShoppingBag, FileText, Truck, PackageX } from "lucide-vue-next";
 
 const route = useRoute();
 
@@ -45,52 +45,52 @@ const menuItems = [
     {
         title: "Adreslerim",
         path: "customer-addresses",
-        icon: LayoutDashboard,
+        icon: MapPin,
     },
     {
         title: "Favorilerim",
         path: "customer-favorites",
-        icon: LayoutDashboard,
+        icon: Heart,
     },
     {
         title: "Profilim",
         path: "customer-profile",
-        icon: LayoutDashboard,
+        icon: User,
     },
     {
         title: "Şifre Değiştir",
         path: "customer-profile-password",
-        icon: LayoutDashboard,
+        icon: KeyRound,
     },
     {
         title: "Bildirim Ayarlarım",
         path: "customer-profile-notifications",
-        icon: LayoutDashboard,
+        icon: Bell,
     },
     {
         title: "Sosyal Bağlantılarım",
         path: "customer-profile-social",
-        icon: LayoutDashboard,
+        icon: Share2,
     },
     {
         title: "Siparişlerim",
         path: "customer-orders",
-        icon: LayoutDashboard,
+        icon: ShoppingBag,
     },
     {
         title: "Sipariş Detay",
         path: "customer-order-detail",
-        icon: LayoutDashboard,
+        icon: FileText,
     },
     {
         title: "Sipariş Kargo Takip",
         path: "customer-order-track",
-        icon: LayoutDashboard,
+        icon: Truck,
     },
     {
         title: "Sipariş İade",
         path: "customer-order-return",
-        icon: LayoutDashboard,
+        icon: PackageX,
     },
 ];
 </script>
