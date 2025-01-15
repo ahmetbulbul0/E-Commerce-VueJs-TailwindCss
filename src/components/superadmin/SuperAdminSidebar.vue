@@ -65,40 +65,40 @@ const menuItems = [
         path: 'superadmin-users',
         icon: 'UsersIcon'
     },
-    // {
-    //     title: 'Satıcı Yönetimi',
-    //     path: 'superadmin-sellers',
-    //     icon: 'StoreIcon'
-    // },
-    // {
-    //     title: 'Ürün Yönetimi',
-    //     path: 'superadmin-products',
-    //     icon: 'PackageIcon'
-    // },
-    // {
-    //     title: 'Kategori Yönetimi',
-    //     path: 'superadmin-categories',
-    //     icon: 'TagIcon'
-    // },
-    // {
-    //     title: 'Sipariş Yönetimi',
-    //     path: 'superadmin-orders',
-    //     icon: 'ShoppingCartIcon'
-    // },
-    // {
-    //     title: 'İndirim Yönetimi',
-    //     path: 'superadmin-discounts',
-    //     icon: 'PercentIcon'
-    // },
-    // {
-    //     title: 'Raporlar & Analitik',
-    //     path: 'superadmin-analytics',
-    //     icon: 'ChartIcon'
-    // },
-    // {
-    //     title: 'Ayarlar',
-    //     path: 'superadmin-settings',
-    //     icon: 'SettingsIcon'
-    // }
+    {
+        title: 'Satıcı Yönetimi',
+        path: 'superadmin-sellers',
+        icon: 'StoreIcon'
+    },
+    {
+        title: 'Ürün Yönetimi',
+        path: 'superadmin-products',
+        icon: 'PackageIcon'
+    },
+    {
+        title: 'Kategori Yönetimi',
+        path: 'superadmin-categories',
+        icon: 'TagIcon'
+    },
+    {
+        title: 'Sipariş Yönetimi',
+        path: 'superadmin-orders',
+        icon: 'ShoppingCartIcon'
+    },
+    {
+        title: 'İndirim Yönetimi',
+        path: 'superadmin-discounts',
+        icon: 'PercentIcon'
+    },
+    {
+        title: 'Raporlar & Analitik',
+        path: 'superadmin-analytics',
+        icon: 'ChartIcon'
+    },
+    {
+        title: 'Ayarlar',
+        path: 'superadmin-settings',
+        icon: 'SettingsIcon'
+    }
 ]
 </script> 
