@@ -31,6 +31,11 @@ export default [
                 component: () => import("@/views/public/DiscountedProductsView.vue"),
             },
             {
+                path: "discounts",
+                name: "discounts",
+                component: () => import("@/views/public/DiscountsView.vue"),
+            },
+            {
                 path: "compare-products",
                 name: "compare-products",
                 component: () => import("@/views/public/CompareProductsView.vue"),

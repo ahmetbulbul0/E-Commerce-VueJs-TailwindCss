@@ -55,6 +55,11 @@ export default [
                 name: "admin-profile",
                 component: () => import("@/views/admin/ProfileView.vue"),
             },
+            {
+                path: "notifications",
+                name: "admin-notifications",
+                component: () => import("@/views/admin/AdminNotificationsView.vue"),
+            },
         ],
     },
 ]; 

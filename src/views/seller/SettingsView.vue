@@ -1,7 +1,7 @@
 <template>
-    <div class="container py-8">
+    <div class="space-y-6">
         <!-- Başlık -->
-        <div class="mb-8">
+        <div>
             <h1 class="text-3xl font-bold tracking-tight">Ayarlar</h1>
             <p class="text-muted-foreground">Mağaza ve hesap ayarlarınızı yönetin</p>
         </div>

@@ -1,11 +1,11 @@
 <template>
     <div class="min-h-screen bg-background">
-        <SellerSidebar :is-open="isSidebarOpen" />
+        <SellerSidebar :is-open="isSidebarOpen" @toggle-sidebar="isSidebarOpen = !isSidebarOpen" />
 
-        <div :class="['transition-all duration-300', isSidebarOpen ? 'lg:ml-64' : 'lg:ml-20']">
+        <div :class="['transition-all duration-300', isSidebarOpen ? 'lg:ml-64' : 'lg:ml-[69px]']">
             <SellerHeader @toggle-sidebar="isSidebarOpen = !isSidebarOpen" />
             
-            <main class="container py-6">
+            <main class="w-full py-6 px-12">
                 <router-view />
             </main>
         </div>

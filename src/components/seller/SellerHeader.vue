@@ -1,18 +1,15 @@
 <template>
     <header class="sticky top-0 z-30 border-b border-border bg-card">
         <div class="flex h-16 items-center justify-between px-4">
-            <!-- Sol Taraf -->
-            <div class="flex items-center space-x-4">
-                <!-- Sidebar Toggle -->
-                <button @click="$emit('toggle-sidebar')" class="rounded-lg p-2 text-muted-foreground hover:bg-accent hover:text-foreground">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" x2="21" y1="6" y2="6" />
-                        <line x1="3" x2="21" y1="12" y2="12" />
-                        <line x1="3" x2="21" y1="18" y2="18" />
-                    </svg>
-                </button>
+            <button @click="$emit('toggle-sidebar')" class="lg:hidden rounded-lg p-2 text-muted-foreground hover:bg-accent hover:text-foreground">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" x2="21" y1="6" y2="6" />
+                    <line x1="3" x2="21" y1="12" y2="12" />
+                    <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+            </button>
 
-                <!-- Arama -->
+            <div class="flex items-center space-x-4">
                 <div class="relative hidden md:block">
                     <input type="text" placeholder="Ara..." class="h-9 w-[300px] rounded-lg border bg-background px-3 pl-9 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">

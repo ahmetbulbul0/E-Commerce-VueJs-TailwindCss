@@ -1,9 +1,17 @@
 <template>
-    <aside :class="['fixed left-0 top-0 z-40 h-screen border-r bg-card transition-all duration-300', isOpen ? 'w-64' : 'w-20']">
-        <div class="flex mt-[1px] h-16 items-center border-b border-border px-6">
-            <router-link :to="{ name: 'customer-dashboard' }" class="flex items-center space-x-2 w-full">
+    <aside :class="['fixed left-0 top-0 z-40 h-screen border-r bg-card transition-all duration-300', isOpen ? 'w-full lg:w-64' : 'max-lg:hidden lg:w-[69px]']">
+        <div class="flex mt-[1px] h-16 items-center border-b border-border" :class="{ 'px-6 justify-between': isOpen, 'justify-center': !isOpen }">
+            <router-link v-if="isOpen" :to="{ name: 'customer-dashboard' }" class="flex items-center space-x-2 w-full">
                 <span class="text-xl font-bold">Müşteri Paneli</span>
             </router-link>
+
+            <button @click="$emit('toggle-sidebar')" class="rounded-lg p-2 text-muted-foreground hover:bg-accent hover:text-foreground">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" x2="21" y1="6" y2="6" />
+                    <line x1="3" x2="21" y1="12" y2="12" />
+                    <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+            </button>
         </div>
 
         <nav class="space-y-1 p-2">
