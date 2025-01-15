@@ -1,70 +1,86 @@
 <template>
-    <aside class="fixed inset-y-0 left-0 z-50 w-64 bg- rd border-r border-border">
-        <!-- Logo -->
-        <div class="h-16 flex items-center px-6 border-b border-border">
-            <router-link :to="{ name: 'seller-dashboard' }" class="text-xl font-bold">Satıcı Paneli</router-link>
+    <aside :class="['fixed left-0 top-0 z-40 h-screen border-r bg-card transition-all duration-300', isOpen ? 'w-64' : 'w-20']">
+        <div class="flex mt-[1px] h-16 items-center border-b border-border px-6">
+            <router-link :to="{ name: 'admin-dashboard' }" class="flex items-center space-x-2 w-full">
+                <span class="text-xl font-bold">Satıcı Paneli</span>
+            </router-link>
         </div>
 
-        <!-- Navigation -->
-        <nav class="p-4 space-y-2">
-            <router-link :to="{ name: 'seller-dashboard' }" class="flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors hover:bg-accent hover:text-accent-foreground" :class="{ 'bg-accent text-accent-foreground': $route.name === 'seller-dashboard' }">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                    <rect width="7" height="9" x="3" y="3" rx="1" />
-                    <rect width="7" height="5" x="14" y="3" rx="1" />
-                    <rect width="7" height="9" x="14" y="12" rx="1" />
-                    <rect width="7" height="5" x="3" y="16" rx="1" />
-                </svg>
-                <span>Panel</span>
-            </router-link>
-
-            <router-link :to="{ name: 'seller-analytics' }" class="flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors hover:bg-accent hover:text-accent-foreground" :class="{ 'bg-accent text-accent-foreground': $route.name === 'seller-analytics' }">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                    <path d="M3 3v18h18" />
-                    <path d="m19 9-5 5-4-4-3 3" />
-                </svg>
-                <span>Analitik</span>
-            </router-link>
-
-            <router-link :to="{ name: 'seller-products' }" class="flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors hover:bg-accent hover:text-accent-foreground" :class="{ 'bg-accent text-accent-foreground': $route.name?.startsWith('seller-product') }">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                    <path d="m7.5 4.27 9 5.15" />
-                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-                    <path d="m3.3 7 8.7 5 8.7-5" />
-                    <path d="M12 22V12" />
-                </svg>
-                <span>Ürünler</span>
-            </router-link>
-
-            <router-link
-                :to="{ name: 'seller-orders' }"
-                class="flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors hover:bg-accent hover:text-accent-foreground"
-                :class="{
-                    'bg-accent text-accent-foreground': $route.name?.startsWith('seller-order'),
-                }"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-                    <path d="M3 6h18" />
-                    <path d="M16 10a4 4 0 0 1-8 0" />
-                </svg>
-                <span>Siparişler</span>
-            </router-link>
-
-            <router-link :to="{ name: 'seller-settings' }" class="flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors hover:bg-accent hover:text-accent-foreground" :class="{ 'bg-accent text-accent-foreground': $route.name === 'seller-settings' }">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
-                    <circle cx="12" cy="12" r="3" />
-                </svg>
-                <span>Ayarlar</span>
+        <nav class="space-y-1 p-2">
+            <router-link v-for="item in menuItems" :key="item.path" :to="{ name: item.path }" class="flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-colors hover:bg-accent" :class="[$route.name === item.path ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:text-foreground']">
+                <component :is="item.icon" class="h-5 w-5" />
+                <span v-if="isOpen" class="ml-3">{{ item.title }}</span>
             </router-link>
         </nav>
+
+        <div class="absolute bottom-0 w-full border-t p-4">
+            <div class="flex items-center" :class="{ 'justify-center': !isOpen }">
+                <img src="https://github.com/shadcn.png" alt="Admin" class="h-8 w-8 rounded-full" />
+                <div v-if="isOpen" class="ml-3">
+                    <p class="text-sm font-medium">Süper Admin</p>
+                    <p class="text-xs text-muted-foreground">admin@example.com</p>
+                </div>
+            </div>
+        </div>
     </aside>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { defineProps } from "vue";
+import { useRoute } from "vue-router";
+import { LayoutDashboard, Users, Store, Package, Tag, ShoppingCart, Percent, BarChart, Settings } from "lucide-vue-next";
 
-export default defineComponent({
-    name: 'SellerSidebar'
-})
-</script> 
+const route = useRoute();
+
+const props = defineProps<{
+    isOpen: boolean;
+}>();
+
+const menuItems = [
+    {
+        title: "Dashboard",
+        path: "seller-dashboard",
+        icon: LayoutDashboard,
+    },
+    {
+        title: "Analitik",
+        path: "seller-analytics",
+        icon: LayoutDashboard,
+    },
+    {
+        title: "Profil",
+        path: "seller-settings",
+        icon: LayoutDashboard,
+    },
+    {
+        title: "Ürünler",
+        path: "seller-products",
+        icon: LayoutDashboard,
+    },
+    {
+        title: "Yeni Ürün Ekle",
+        path: "seller-product-create",
+        icon: LayoutDashboard,
+    },
+    {
+        title: "Ürün Detay",
+        path: "seller-product-detail",
+        icon: LayoutDashboard,
+    },
+    {
+        title: "Ürün Düzenle",
+        path: "seller-product-edit",
+        icon: LayoutDashboard,
+    },
+    {
+        title: "Siparişler",
+        path: "seller-orders",
+        icon: LayoutDashboard,
+    },
+    {
+        title: "Sipariş Detay",
+        path: "seller-order-detail",
+        icon: LayoutDashboard,
+    },
+];
+</script>

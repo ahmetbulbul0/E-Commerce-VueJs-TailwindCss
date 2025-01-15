@@ -52,17 +52,17 @@ export default [
                 component: () => import("@/views/customer/orders/OrdersView.vue"),
             },
             {
-                path: "orders/:id",
+                path: "orders/1",
                 name: "customer-order-detail",
                 component: () => import("@/views/customer/orders/OrderDetailView.vue"),
             },
             {
-                path: "orders/:id/track",
+                path: "orders/1/track",
                 name: "customer-order-track",
                 component: () => import("@/views/customer/orders/OrderTrackView.vue"),
             },
             {
-                path: "orders/:id/return",
+                path: "orders/1/return",
                 name: "customer-order-return",
                 component: () => import("@/views/customer/orders/OrderReturnView.vue"),
             },

@@ -32,12 +32,12 @@ export default [
                 component: () => import("@/views/seller/products/ProductCreateView.vue"),
             },
             {
-                path: "products/:id",
+                path: "products/1",
                 name: "seller-product-detail",
                 component: () => import("@/views/seller/products/ProductDetailView.vue"),
             },
             {
-                path: "products/:id/edit",
+                path: "products/1/edit",
                 name: "seller-product-edit",
                 component: () => import("@/views/seller/products/ProductEditView.vue"),
             },
@@ -47,7 +47,7 @@ export default [
                 component: () => import("@/views/seller/OrdersView.vue"),
             },
             {
-                path: "orders/:id",
+                path: "orders/1",
                 name: "seller-order-detail",
                 component: () => import("@/views/seller/OrderDetailView.vue"),
             },
