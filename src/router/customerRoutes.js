@@ -3,7 +3,6 @@ import CustomerLayout from "@/layouts/CustomerLayout.vue";
 export default [
     {
         path: "/customer",
-        name: "customer",
         component: () => CustomerLayout,
         children: [
             {

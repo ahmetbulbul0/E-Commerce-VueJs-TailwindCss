@@ -3,7 +3,6 @@ import SellerLayout from "@/layouts/SellerLayout.vue";
 export default [
     {
         path: "/seller",
-        name: "seller",
         component: SellerLayout,
         children: [
             {

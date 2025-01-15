@@ -26,14 +26,14 @@ export default [
                 component: () => import("@/views/public/ProductDetailView.vue"),
             },
             {
-                path: "discounted-products",
-                name: "discounted-products",
-                component: () => import("@/views/public/DiscountedProductsView.vue"),
-            },
-            {
                 path: "discounts",
                 name: "discounts",
                 component: () => import("@/views/public/DiscountsView.vue"),
+            },
+            {
+                path: "discounted-products",
+                name: "discounted-products",
+                component: () => import("@/views/public/DiscountedProductsView.vue"),
             },
             {
                 path: "compare-products",
@@ -61,7 +61,7 @@ export default [
                 component: () => import("@/views/public/CategoriesView.vue"),
             },
             {
-                path: "categories/:slug",
+                path: "categories/1",
                 name: "category-products",
                 component: () => import("@/views/public/CategoryProductsView.vue"),
             },
@@ -76,7 +76,7 @@ export default [
                 component: () => import("@/views/public/CareersView.vue"),
             },
             {
-                path: "careers/:id",
+                path: "careers/1",
                 name: "career-detail",
                 component: () => import("@/views/public/CareerDetailView.vue"),
             },
@@ -86,7 +86,7 @@ export default [
                 component: () => import("@/views/public/BlogView.vue"),
             },
             {
-                path: "blog/:slug",
+                path: "blog/1",
                 name: "blog-detail",
                 component: () => import("@/views/public/BlogDetailView.vue"),
             },

@@ -164,6 +164,293 @@
             </div>
         </section>
 
+        <!-- Avantajlar -->
+        <section class="py-12 md:py-16">
+            <div class="container">
+                <div class="flex flex-col items-center space-y-2 mb-12">
+                    <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Alışveriş Avantajları</h2>
+                    <p class="text-muted-foreground">Size özel ayrıcalıklarla alışverişin keyfini çıkarın</p>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                    <!-- Kolay İade -->
+                    <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
+                        <div class="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
+                        
+                        <div class="relative space-y-4">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 7h18"/>
+                                    <path d="M6 7V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/>
+                                    <path d="M6 7v13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7"/>
+                                    <path d="M12 10v7"/>
+                                    <path d="m9 13 3-3 3 3"/>
+                                </svg>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h3 class="font-semibold">Kolay İade</h3>
+                                <p class="text-sm text-muted-foreground">30 gün içinde ücretsiz iade hakkı</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hızlı Teslimat -->
+                    <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
+                        <div class="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
+                        
+                        <div class="relative space-y-4">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19"/>
+                                    <path d="M23 13h-4a2 2 0 0 0-2 2v4"/>
+                                    <path d="M1 13h4a2 2 0 0 1 2 2v4"/>
+                                    <path d="M8 6h8"/>
+                                    <path d="M12 6v12"/>
+                                </svg>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h3 class="font-semibold">Hızlı Teslimat</h3>
+                                <p class="text-sm text-muted-foreground">Aynı gün kargo ve teslimat imkanı</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Taksit Seçenekleri -->
+                    <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
+                        <div class="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
+                        
+                        <div class="relative space-y-4">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="20" height="14" x="2" y="5" rx="2"/>
+                                    <line x1="2" x2="22" y1="10" y2="10"/>
+                                </svg>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h3 class="font-semibold">Taksit Seçenekleri</h3>
+                                <p class="text-sm text-muted-foreground">12 aya varan taksit imkanları</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobil Uygulama -->
+                    <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
+                        <div class="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
+                        
+                        <div class="relative space-y-4">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+                                    <path d="M12 18h.01"/>
+                                </svg>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h3 class="font-semibold">Mobil Uygulama</h3>
+                                <p class="text-sm text-muted-foreground">Özel indirimlerle mobil alışveriş</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Müşteri Yorumları -->
+        <section class="border-t bg-muted/40 py-12 md:py-16">
+            <div class="container">
+                <div class="flex flex-col items-center space-y-2 mb-12">
+                    <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Müşteri Yorumları</h2>
+                    <p class="text-muted-foreground">Müşterilerimizin deneyimleri ve değerlendirmeleri</p>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Yorum Kartı 1 -->
+                    <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
+                        <div class="absolute right-0 top-0 h-32 w-32 -translate-y-12 translate-x-12 transform rounded-full bg-primary/5"></div>
+                        
+                        <div class="relative space-y-4">
+                            <!-- Yıldızlar -->
+                            <div class="flex text-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                            </div>
+
+                            <!-- Yorum Metni -->
+                            <p class="text-muted-foreground italic">"Ürünler çok kaliteli ve hızlı teslimat yapılıyor. Müşteri hizmetleri de oldukça ilgili. Kesinlikle tavsiye ederim!"</p>
+
+                            <!-- Müşteri Bilgisi -->
+                            <div class="flex items-center space-x-4 pt-4 border-t">
+                                <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Ahmet Yılmaz</h4>
+                                    <p class="text-sm text-muted-foreground">İstanbul</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yorum Kartı 2 -->
+                    <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
+                        <div class="absolute right-0 top-0 h-32 w-32 -translate-y-12 translate-x-12 transform rounded-full bg-primary/5"></div>
+                        
+                        <div class="relative space-y-4">
+                            <!-- Yıldızlar -->
+                            <div class="flex text-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                            </div>
+
+                            <!-- Yorum Metni -->
+                            <p class="text-muted-foreground italic">"Ürün çeşitliliği çok fazla ve fiyatlar da gayet uygun. Taksit seçenekleri de oldukça avantajlı. Teşekkürler!"</p>
+
+                            <!-- Müşteri Bilgisi -->
+                            <div class="flex items-center space-x-4 pt-4 border-t">
+                                <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Ayşe Demir</h4>
+                                    <p class="text-sm text-muted-foreground">Ankara</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yorum Kartı 3 -->
+                    <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
+                        <div class="absolute right-0 top-0 h-32 w-32 -translate-y-12 translate-x-12 transform rounded-full bg-primary/5"></div>
+                        
+                        <div class="relative space-y-4">
+                            <!-- Yıldızlar -->
+                            <div class="flex text-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                </svg>
+                            </div>
+
+                            <!-- Yorum Metni -->
+                            <p class="text-muted-foreground italic">"İade sürecinde hiç sorun yaşamadım. Müşteri hizmetleri çok yardımcı oldu. Bundan sonra alışverişlerimi buradan yapacağım."</p>
+
+                            <!-- Müşteri Bilgisi -->
+                            <div class="flex items-center space-x-4 pt-4 border-t">
+                                <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Mehmet Kaya</h4>
+                                    <p class="text-sm text-muted-foreground">İzmir</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tüm Yorumlar Butonu -->
+                <div class="flex justify-center mt-8">
+                    <Button variant="outline" size="lg" class="group">
+                        Tüm Yorumları Gör
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform">
+                            <path d="M5 12h14"/>
+                            <path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </Button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="border-t py-12 md:py-16">
+            <div class="container">
+                <div class="relative overflow-hidden rounded-2xl bg-card px-6 py-16 border shadow-lg">
+                    <!-- Gradient Arka Plan -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10"></div>
+                    
+                    <!-- Dekoratif Daireler -->
+                    <div class="absolute -left-6 -top-6 h-24 w-24 rounded-full bg-primary/5"></div>
+                    <div class="absolute -bottom-6 -right-6 h-24 w-24 rounded-full bg-primary/5"></div>
+                    <div class="absolute left-1/2 top-0 h-16 w-16 -translate-x-1/2 rounded-full bg-primary/5"></div>
+
+                    <!-- İçerik -->
+                    <div class="relative">
+                        <div class="flex flex-col items-center space-y-4 text-center">
+                            <h2 class="text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl">
+                                Fırsatları Kaçırmayın!
+                            </h2>
+                            <p class="max-w-2xl text-muted-foreground md:text-lg">
+                                En yeni ürünler, özel kampanyalar ve indirimlerden ilk siz haberdar olun.
+                            </p>
+                            <div class="flex w-full max-w-md flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                                <input
+                                    type="email"
+                                    placeholder="E-posta adresiniz"
+                                    class="h-11 w-full rounded-lg border bg-background px-4 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                                />
+                                <Button size="lg" class="h-11 whitespace-nowrap">
+                                    Abone Ol
+                                </Button>
+                            </div>
+                            <p class="text-sm text-muted-foreground">
+                                Dilediğiniz zaman abonelikten çıkabilirsiniz. 
+                                <a href="#" class="text-primary hover:text-primary/80 underline">Gizlilik Politikası</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Markalar -->
         <section class="py-12 md:py-16">
             <div class="container space-y-8">
