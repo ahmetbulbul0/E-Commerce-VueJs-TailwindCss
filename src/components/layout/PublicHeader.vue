@@ -162,6 +162,11 @@ export default defineComponent({
                 to: { name: "categories" },
                 routeName: "categories",
             },
+            // {
+            //     name: "Kampanyalar",
+            //     to: { name: "campaigns" },
+            //     routeName: "campaigns",
+            // },
         ];
 
         const userMenuItems = [

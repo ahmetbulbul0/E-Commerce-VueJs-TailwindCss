@@ -21,7 +21,7 @@ export default [
                 component: () => import("@/views/public/ProductsView.vue"),
             },
             {
-                path: "products/:id",
+                path: "products/1",
                 name: "product-detail",
                 component: () => import("@/views/public/ProductDetailView.vue"),
             },
