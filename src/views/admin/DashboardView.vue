@@ -178,12 +178,7 @@
                                 <td class="px-6 py-4">{{ transaction.type }}</td>
                                 <td class="px-6 py-4">₺{{ transaction.amount }}</td>
                                 <td class="px-6 py-4">
-                                    <span :class="[
-                                        'rounded-full px-2 py-1 text-xs font-medium',
-                                        transaction.status === 'Başarılı' ? 'bg-green-100 text-green-700' :
-                                        transaction.status === 'Beklemede' ? 'bg-yellow-100 text-yellow-700' :
-                                        'bg-red-100 text-red-700'
-                                    ]">
+                                    <span :class="['rounded-full px-2 py-1 text-xs font-medium', transaction.status === 'Başarılı' ? 'bg-green-100 text-green-700' : transaction.status === 'Beklemede' ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-700']">
                                         {{ transaction.status }}
                                     </span>
                                 </td>
@@ -206,7 +201,7 @@ const topProducts = [
         category: "Elektronik",
         image: "https://example.com/iphone.jpg",
         sales: 245,
-        revenue: "367.5K"
+        revenue: "367.5K",
     },
     {
         id: 2,
@@ -214,7 +209,7 @@ const topProducts = [
         category: "Elektronik",
         image: "https://example.com/macbook.jpg",
         sales: 189,
-        revenue: "472.5K"
+        revenue: "472.5K",
     },
     {
         id: 3,
@@ -222,7 +217,7 @@ const topProducts = [
         category: "Elektronik",
         image: "https://example.com/airpods.jpg",
         sales: 312,
-        revenue: "156K"
+        revenue: "156K",
     },
     {
         id: 4,
@@ -230,9 +225,9 @@ const topProducts = [
         category: "Elektronik",
         image: "https://example.com/ipad.jpg",
         sales: 156,
-        revenue: "234K"
-    }
-]
+        revenue: "234K",
+    },
+];
 
 const recentTransactions = [
     {
@@ -241,7 +236,7 @@ const recentTransactions = [
         type: "Satış",
         amount: "1,250.00",
         status: "Başarılı",
-        date: "2024-02-15 14:30"
+        date: "2024-02-15 14:30",
     },
     {
         id: "TR123457",
@@ -249,7 +244,7 @@ const recentTransactions = [
         type: "İade",
         amount: "450.00",
         status: "Beklemede",
-        date: "2024-02-15 13:45"
+        date: "2024-02-15 13:45",
     },
     {
         id: "TR123458",
@@ -257,7 +252,7 @@ const recentTransactions = [
         type: "Satış",
         amount: "2,750.00",
         status: "Başarılı",
-        date: "2024-02-15 12:15"
+        date: "2024-02-15 12:15",
     },
     {
         id: "TR123459",
@@ -265,7 +260,7 @@ const recentTransactions = [
         type: "Satış",
         amount: "890.00",
         status: "İptal",
-        date: "2024-02-15 11:30"
+        date: "2024-02-15 11:30",
     },
     {
         id: "TR123460",
@@ -273,7 +268,7 @@ const recentTransactions = [
         type: "Satış",
         amount: "1,890.00",
         status: "Başarılı",
-        date: "2024-02-15 10:45"
-    }
-]
-</script> 
+        date: "2024-02-15 10:45",
+    },
+];
+</script>

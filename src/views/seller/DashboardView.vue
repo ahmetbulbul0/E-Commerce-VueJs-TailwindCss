@@ -1,5 +1,10 @@
 <template>
-    <div class="dashboard">
+    <div class="space-y-6">
+        <div>
+            <h1 class="text-3xl font-bold tracking-tight">Dashboard</h1>
+            <p class="text-muted-foreground">Mağazanızın genel durumunu buradan takip edebilirsiniz.</p>
+        </div>
+
         <!-- İstatistikler -->
         <div class="grid gap-4 md:grid-cols-4">
             <!-- Toplam Satış -->

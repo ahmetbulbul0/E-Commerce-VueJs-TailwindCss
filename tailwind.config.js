@@ -12,7 +12,7 @@ export default {
         },
         extend: {
             fontFamily: {
-                sans: ['Poppins'],
+                sans: ["Poppins"],
             },
             colors: {
                 border: "hsl(var(--border))",

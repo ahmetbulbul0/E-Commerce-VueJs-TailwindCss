@@ -17,8 +17,8 @@
             <div class="flex items-center" :class="{ 'justify-center': !isOpen }">
                 <img src="https://github.com/shadcn.png" alt="Admin" class="h-8 w-8 rounded-full" />
                 <div v-if="isOpen" class="ml-3">
-                    <p class="text-sm font-medium">Süper Admin</p>
-                    <p class="text-xs text-muted-foreground">admin@example.com</p>
+                    <p class="text-sm font-medium">Seller</p>
+                    <p class="text-xs text-muted-foreground">seller@example.com</p>
                 </div>
             </div>
         </div>
