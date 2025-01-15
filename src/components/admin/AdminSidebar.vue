@@ -57,47 +57,47 @@ const props = defineProps<{
 const menuItems = [
     {
         title: 'Dashboard',
-        path: 'superadmin-dashboard',
+        path: 'admin-dashboard',
         icon: 'DashboardIcon'
     },
     {
         title: 'Kullanıcı Yönetimi',
-        path: 'superadmin-users',
+        path: 'admin-users',
         icon: 'UsersIcon'
     },
     {
         title: 'Satıcı Yönetimi',
-        path: 'superadmin-sellers',
+        path: 'admin-sellers',
         icon: 'StoreIcon'
     },
     {
         title: 'Ürün Yönetimi',
-        path: 'superadmin-products',
+        path: 'admin-products',
         icon: 'PackageIcon'
     },
     {
         title: 'Kategori Yönetimi',
-        path: 'superadmin-categories',
+        path: 'admin-categories',
         icon: 'TagIcon'
     },
     {
         title: 'Sipariş Yönetimi',
-        path: 'superadmin-orders',
+        path: 'admin-orders',
         icon: 'ShoppingCartIcon'
     },
     {
         title: 'İndirim Yönetimi',
-        path: 'superadmin-discounts',
+        path: 'admin-discounts',
         icon: 'PercentIcon'
     },
     {
         title: 'Raporlar & Analitik',
-        path: 'superadmin-analytics',
+        path: 'admin-analytics',
         icon: 'ChartIcon'
     },
     {
         title: 'Ayarlar',
-        path: 'superadmin-settings',
+        path: 'admin-settings',
         icon: 'SettingsIcon'
     }
 ]
