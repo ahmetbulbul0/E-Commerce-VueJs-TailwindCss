@@ -10,12 +10,12 @@
                     <p class="mx-auto max-w-[700px] text-muted-foreground text-sm md:text-xl px-4">En yeni ürünleri keşfedin, güvenle alışveriş yapın ve özel fırsatlardan yararlanın.</p>
 
                     <div class="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4 px-4">
-                        <router-link to="/products" class="w-full sm:w-auto">
-                            <button class="w-full sm:w-auto h-11 px-8">Alışverişe Başla</button>
+                        <router-link :to="{ name: 'products' }" class="w-full sm:w-auto">
+                            <Button variant="primary">Alışverişe Başla</Button>
                         </router-link>
 
-                        <router-link to="/register" class="w-full sm:w-auto">
-                            <button class="w-full sm:w-auto h-11 px-8">Üye Ol</button>
+                        <router-link :to="{ name: 'register' }" class="w-full sm:w-auto">
+                            <Button variant="outline">Üye Ol</Button>
                         </router-link>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <div class="p-4">
                             <h3 class="text-lg font-semibold">Yaz Sezonu İndirimleri</h3>
                             <p class="mt-1 text-sm text-muted-foreground">Seçili yaz ürünlerinde %50'ye varan indirimler</p>
-                            <Button class="mt-4" variant="secondary">İncele</Button>
+                            <Button class="mt-4" variant="secondary" size="sm">İncele</Button>
                         </div>
                     </div>
 
@@ -49,7 +49,7 @@
                         <div class="p-4">
                             <h3 class="text-lg font-semibold">Teknoloji Festivali</h3>
                             <p class="mt-1 text-sm text-muted-foreground">Elektronik ürünlerde süper fırsatlar</p>
-                            <Button class="mt-4" variant="secondary">İncele</Button>
+                            <Button class="mt-4" variant="secondary" size="sm">İncele</Button>
                         </div>
                     </div>
 
@@ -60,7 +60,7 @@
                         <div class="p-4">
                             <h3 class="text-lg font-semibold">Süper Fırsat Günleri</h3>
                             <p class="mt-1 text-sm text-muted-foreground">Her gün yeni süper fırsatlar</p>
-                            <Button class="mt-4" variant="secondary">İncele</Button>
+                            <Button class="mt-4" variant="secondary" size="sm">İncele</Button>
                         </div>
                     </div>
                 </div>
@@ -176,15 +176,15 @@
                     <!-- Kolay İade -->
                     <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
                         <div class="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
-                        
+
                         <div class="relative space-y-4">
                             <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 7h18"/>
-                                    <path d="M6 7V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/>
-                                    <path d="M6 7v13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7"/>
-                                    <path d="M12 10v7"/>
-                                    <path d="m9 13 3-3 3 3"/>
+                                    <path d="M3 7h18" />
+                                    <path d="M6 7V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3" />
+                                    <path d="M6 7v13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7" />
+                                    <path d="M12 10v7" />
+                                    <path d="m9 13 3-3 3 3" />
                                 </svg>
                             </div>
 
@@ -198,15 +198,15 @@
                     <!-- Hızlı Teslimat -->
                     <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
                         <div class="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
-                        
+
                         <div class="relative space-y-4">
                             <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19"/>
-                                    <path d="M23 13h-4a2 2 0 0 0-2 2v4"/>
-                                    <path d="M1 13h4a2 2 0 0 1 2 2v4"/>
-                                    <path d="M8 6h8"/>
-                                    <path d="M12 6v12"/>
+                                    <path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19" />
+                                    <path d="M23 13h-4a2 2 0 0 0-2 2v4" />
+                                    <path d="M1 13h4a2 2 0 0 1 2 2v4" />
+                                    <path d="M8 6h8" />
+                                    <path d="M12 6v12" />
                                 </svg>
                             </div>
 
@@ -220,12 +220,12 @@
                     <!-- Taksit Seçenekleri -->
                     <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
                         <div class="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
-                        
+
                         <div class="relative space-y-4">
                             <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect width="20" height="14" x="2" y="5" rx="2"/>
-                                    <line x1="2" x2="22" y1="10" y2="10"/>
+                                    <rect width="20" height="14" x="2" y="5" rx="2" />
+                                    <line x1="2" x2="22" y1="10" y2="10" />
                                 </svg>
                             </div>
 
@@ -239,12 +239,12 @@
                     <!-- Mobil Uygulama -->
                     <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
                         <div class="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
-                        
+
                         <div class="relative space-y-4">
                             <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
-                                    <path d="M12 18h.01"/>
+                                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                                    <path d="M12 18h.01" />
                                 </svg>
                             </div>
 
@@ -270,24 +270,24 @@
                     <!-- Yorum Kartı 1 -->
                     <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
                         <div class="absolute right-0 top-0 h-32 w-32 -translate-y-12 translate-x-12 transform rounded-full bg-primary/5"></div>
-                        
+
                         <div class="relative space-y-4">
                             <!-- Yıldızlar -->
                             <div class="flex text-yellow-400">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                             </div>
 
@@ -298,8 +298,8 @@
                             <div class="flex items-center space-x-4 pt-4 border-t">
                                 <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="12" cy="7" r="4"/>
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
                                     </svg>
                                 </div>
                                 <div>
@@ -313,24 +313,24 @@
                     <!-- Yorum Kartı 2 -->
                     <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
                         <div class="absolute right-0 top-0 h-32 w-32 -translate-y-12 translate-x-12 transform rounded-full bg-primary/5"></div>
-                        
+
                         <div class="relative space-y-4">
                             <!-- Yıldızlar -->
                             <div class="flex text-yellow-400">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                             </div>
 
@@ -341,8 +341,8 @@
                             <div class="flex items-center space-x-4 pt-4 border-t">
                                 <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="12" cy="7" r="4"/>
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
                                     </svg>
                                 </div>
                                 <div>
@@ -356,24 +356,24 @@
                     <!-- Yorum Kartı 3 -->
                     <div class="group relative overflow-hidden rounded-xl border bg-card p-6 hover:shadow-lg transition-all">
                         <div class="absolute right-0 top-0 h-32 w-32 -translate-y-12 translate-x-12 transform rounded-full bg-primary/5"></div>
-                        
+
                         <div class="relative space-y-4">
                             <!-- Yıldızlar -->
                             <div class="flex text-yellow-400">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                                 </svg>
                             </div>
 
@@ -384,8 +384,8 @@
                             <div class="flex items-center space-x-4 pt-4 border-t">
                                 <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="12" cy="7" r="4"/>
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
                                     </svg>
                                 </div>
                                 <div>
@@ -402,8 +402,8 @@
                     <Button variant="outline" size="lg" class="group">
                         Tüm Yorumları Gör
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform">
-                            <path d="M5 12h14"/>
-                            <path d="m12 5 7 7-7 7"/>
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
                         </svg>
                     </Button>
                 </div>
@@ -416,7 +416,7 @@
                 <div class="relative overflow-hidden rounded-2xl bg-card px-6 py-16 border shadow-lg">
                     <!-- Gradient Arka Plan -->
                     <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10"></div>
-                    
+
                     <!-- Dekoratif Daireler -->
                     <div class="absolute -left-6 -top-6 h-24 w-24 rounded-full bg-primary/5"></div>
                     <div class="absolute -bottom-6 -right-6 h-24 w-24 rounded-full bg-primary/5"></div>
@@ -425,24 +425,14 @@
                     <!-- İçerik -->
                     <div class="relative">
                         <div class="flex flex-col items-center space-y-4 text-center">
-                            <h2 class="text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl">
-                                Fırsatları Kaçırmayın!
-                            </h2>
-                            <p class="max-w-2xl text-muted-foreground md:text-lg">
-                                En yeni ürünler, özel kampanyalar ve indirimlerden ilk siz haberdar olun.
-                            </p>
+                            <h2 class="text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl">Fırsatları Kaçırmayın!</h2>
+                            <p class="max-w-2xl text-muted-foreground md:text-lg">En yeni ürünler, özel kampanyalar ve indirimlerden ilk siz haberdar olun.</p>
                             <div class="flex w-full max-w-md flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                                <input
-                                    type="email"
-                                    placeholder="E-posta adresiniz"
-                                    class="h-11 w-full rounded-lg border bg-background px-4 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                                />
-                                <Button size="lg" class="h-11 whitespace-nowrap">
-                                    Abone Ol
-                                </Button>
+                                <Input type="email" placeholder="E-posta adresiniz" />
+                                <Button size="sm" >Abone Ol</Button>
                             </div>
                             <p class="text-sm text-muted-foreground">
-                                Dilediğiniz zaman abonelikten çıkabilirsiniz. 
+                                Dilediğiniz zaman abonelikten çıkabilirsiniz.
                                 <a href="#" class="text-primary hover:text-primary/80 underline">Gizlilik Politikası</a>
                             </p>
                         </div>
@@ -471,6 +461,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import Button from "@/components/ui/Button.vue";
+import Input from "@/components/ui/Input.vue";
 
 const categories = ref([
     {

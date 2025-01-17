@@ -120,6 +120,14 @@ export default [
                 name: "checkout",
                 component: () => import("@/views/public/CheckoutView.vue"),
             },
+            {
+                path: '/ui-kit',
+                name: 'ui-kit',
+                component: () => import('@/views/public/UiKitView.vue'),
+                meta: {
+                    title: 'UI Kit',
+                }
+            },
         ],
     },
 ];
