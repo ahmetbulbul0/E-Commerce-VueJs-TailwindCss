@@ -4,18 +4,18 @@
             <div class="absolute inset-0 bg-gradient-to-r from-background to-background/50 bg-muted/100"></div>
 
             <div class="container relative">
-                <div class="flex flex-col items-center space-y-4 py-12 text-center sm:py-16 md:py-24 lg:py-32">
+                <div class="flex flex-col items-center space-y-4 py-12 text-center sm:py-16 md:py-24 lg:py-32 xl:py-64">
                     <h1 class="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl px-4">Modern Alışverişin Adresi</h1>
 
                     <p class="mx-auto max-w-[700px] text-muted-foreground text-sm md:text-xl px-4">En yeni ürünleri keşfedin, güvenle alışveriş yapın ve özel fırsatlardan yararlanın.</p>
 
                     <div class="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4 px-4">
                         <router-link to="/products" class="w-full sm:w-auto">
-                            <Button size="lg" class="w-full sm:w-auto h-11 px-8">Alışverişe Başla</Button>
+                            <button class="w-full sm:w-auto h-11 px-8">Alışverişe Başla</button>
                         </router-link>
 
                         <router-link to="/register" class="w-full sm:w-auto">
-                            <Button size="lg" variant="outline" class="w-full sm:w-auto h-11 px-8">Üye Ol</Button>
+                            <button class="w-full sm:w-auto h-11 px-8">Üye Ol</button>
                         </router-link>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
         </section>
 
         <!-- Kampanyalar -->
-        <section class="py-12 md:py-16 border-t">
+        <section class="sm:py-16 md:py-24 lg:py-32 border-t">
             <div class="container space-y-8">
                 <div class="flex flex-col items-center space-y-2">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Özel Kampanyalar</h2>
@@ -68,7 +68,7 @@
         </section>
 
         <!-- Öne Çıkan Kategoriler -->
-        <section class="border-t bg-muted/40 py-12 md:py-16">
+        <section class="border-t bg-muted/40 sm:py-16 md:py-24 lg:py-32">
             <div class="container space-y-8">
                 <div class="flex flex-col items-center space-y-2">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Öne Çıkan Kategoriler</h2>
@@ -90,7 +90,7 @@
         </section>
 
         <!-- Popüler Ürünler -->
-        <section class="py-12 md:py-16">
+        <section class="sm:py-16 md:py-24 lg:py-32">
             <div class="container space-y-8">
                 <div class="flex flex-col items-center space-y-2">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Popüler Ürünler</h2>
@@ -122,7 +122,7 @@
         </section>
 
         <!-- Özellikler -->
-        <section class="border-t bg-muted/40 py-12 md:py-16">
+        <section class="border-t bg-muted/40 sm:py-16 md:py-24 lg:py-32">
             <div class="container">
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-3 px-4 sm:px-0">
                     <div class="flex flex-col items-center space-y-2 text-center p-4 bg-background rounded-lg">
@@ -165,7 +165,7 @@
         </section>
 
         <!-- Avantajlar -->
-        <section class="py-12 md:py-16">
+        <section class="sm:py-16 md:py-24 lg:py-32">
             <div class="container">
                 <div class="flex flex-col items-center space-y-2 mb-12">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Alışveriş Avantajları</h2>
@@ -259,7 +259,7 @@
         </section>
 
         <!-- Müşteri Yorumları -->
-        <section class="border-t bg-muted/40 py-12 md:py-16">
+        <section class="border-t bg-muted/40 sm:py-16 md:py-24 lg:py-32">
             <div class="container">
                 <div class="flex flex-col items-center space-y-2 mb-12">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Müşteri Yorumları</h2>
@@ -411,7 +411,7 @@
         </section>
 
         <!-- Newsletter -->
-        <section class="border-t py-12 md:py-16">
+        <section class="border-t sm:py-16 md:py-24 lg:py-32">
             <div class="container">
                 <div class="relative overflow-hidden rounded-2xl bg-card px-6 py-16 border shadow-lg">
                     <!-- Gradient Arka Plan -->
@@ -452,7 +452,7 @@
         </section>
 
         <!-- Markalar -->
-        <section class="py-12 md:py-16">
+        <section class="sm:py-16 md:py-24 lg:py-32">
             <div class="container space-y-8">
                 <div class="flex flex-col items-center space-y-2">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">İş Ortaklarımız</h2>
@@ -471,7 +471,6 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import Button from "@/components/ui/button/Button.vue";
 
 const categories = ref([
     {
