@@ -1,6 +1,5 @@
-import { clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+// Utility fonksiyonları
 
-export function cn(...inputs) {
-  return twMerge(clsx(inputs))
+export function cn(...classes) {
+  return classes.filter(Boolean).join(' ')
 }
