@@ -84,11 +84,16 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Button variant="primary"&gt;Primary&lt;/Button&gt;<br>
-                            &lt;Button variant="secondary"&gt;Secondary&lt;/Button&gt;<br>
-                            &lt;Button variant="outline"&gt;Outline&lt;/Button&gt;<br>
-                            &lt;Button variant="ghost"&gt;Ghost&lt;/Button&gt;<br>
-                            &lt;Button variant="danger"&gt;Danger&lt;/Button&gt;<br>
+                            &lt;Button variant="primary"&gt;Primary&lt;/Button&gt;
+                            <br />
+                            &lt;Button variant="secondary"&gt;Secondary&lt;/Button&gt;
+                            <br />
+                            &lt;Button variant="outline"&gt;Outline&lt;/Button&gt;
+                            <br />
+                            &lt;Button variant="ghost"&gt;Ghost&lt;/Button&gt;
+                            <br />
+                            &lt;Button variant="danger"&gt;Danger&lt;/Button&gt;
+                            <br />
                             &lt;Button variant="success"&gt;Success&lt;/Button&gt;
                         </code>
                     </div>
@@ -106,8 +111,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Button size="sm"&gt;Small&lt;/Button&gt;<br>
-                            &lt;Button size="md"&gt;Medium&lt;/Button&gt;<br>
+                            &lt;Button size="sm"&gt;Small&lt;/Button&gt;
+                            <br />
+                            &lt;Button size="md"&gt;Medium&lt;/Button&gt;
+                            <br />
                             &lt;Button size="lg"&gt;Large&lt;/Button&gt;
                         </code>
                     </div>
@@ -124,7 +131,8 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Button loading&gt;Yükleniyor&lt;/Button&gt;<br>
+                            &lt;Button loading&gt;Yükleniyor&lt;/Button&gt;
+                            <br />
                             &lt;Button disabled&gt;Devre Dışı&lt;/Button&gt;
                         </code>
                     </div>
@@ -208,9 +216,12 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Input variant="default" placeholder="Default variant" /&gt;<br>
-                            &lt;Input variant="filled" placeholder="Filled variant" /&gt;<br>
-                            &lt;Input variant="outline" placeholder="Outline variant" /&gt;<br>
+                            &lt;Input variant="default" placeholder="Default variant" /&gt;
+                            <br />
+                            &lt;Input variant="filled" placeholder="Filled variant" /&gt;
+                            <br />
+                            &lt;Input variant="outline" placeholder="Outline variant" /&gt;
+                            <br />
                             &lt;Input variant="ghost" placeholder="Ghost variant" /&gt;
                         </code>
                     </div>
@@ -229,9 +240,12 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Input type="text" placeholder="Text input" /&gt;<br>
-                            &lt;Input type="email" placeholder="Email input" /&gt;<br>
-                            &lt;Input type="password" placeholder="Password input" /&gt;<br>
+                            &lt;Input type="text" placeholder="Text input" /&gt;
+                            <br />
+                            &lt;Input type="email" placeholder="Email input" /&gt;
+                            <br />
+                            &lt;Input type="password" placeholder="Password input" /&gt;
+                            <br />
                             &lt;Input type="number" placeholder="Number input" /&gt;
                         </code>
                     </div>
@@ -249,8 +263,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Input size="sm" placeholder="Small input" /&gt;<br>
-                            &lt;Input size="md" placeholder="Medium input" /&gt;<br>
+                            &lt;Input size="sm" placeholder="Small input" /&gt;
+                            <br />
+                            &lt;Input size="md" placeholder="Medium input" /&gt;
+                            <br />
                             &lt;Input size="lg" placeholder="Large input" /&gt;
                         </code>
                     </div>
@@ -269,9 +285,12 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Input label="Normal" placeholder="Normal input" /&gt;<br>
-                            &lt;Input label="Disabled" placeholder="Disabled input" disabled /&gt;<br>
-                            &lt;Input label="With Error" placeholder="Error input" error="Bu alan zorunludur" /&gt;<br>
+                            &lt;Input label="Normal" placeholder="Normal input" /&gt;
+                            <br />
+                            &lt;Input label="Disabled" placeholder="Disabled input" disabled /&gt;
+                            <br />
+                            &lt;Input label="With Error" placeholder="Error input" error="Bu alan zorunludur" /&gt;
+                            <br />
                             &lt;Input label="With Helper" placeholder="Helper text" helperText="Bu alana kullanıcı adınızı girin" /&gt;
                         </code>
                     </div>
@@ -383,10 +402,14 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Select variant="default" placeholder="Default variant"&gt;<br>
-                            &nbsp;&nbsp;&lt;option value="1"&gt;Seçenek 1&lt;/option&gt;<br>
-                            &nbsp;&nbsp;&lt;option value="2"&gt;Seçenek 2&lt;/option&gt;<br>
-                            &nbsp;&nbsp;&lt;option value="3"&gt;Seçenek 3&lt;/option&gt;<br>
+                            &lt;Select variant="default" placeholder="Default variant"&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;option value="1"&gt;Seçenek 1&lt;/option&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;option value="2"&gt;Seçenek 2&lt;/option&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;option value="3"&gt;Seçenek 3&lt;/option&gt;
+                            <br />
                             &lt;/Select&gt;
                         </code>
                     </div>
@@ -416,8 +439,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Select size="sm" placeholder="Small select"&gt;...&lt;/Select&gt;<br>
-                            &lt;Select size="md" placeholder="Medium select"&gt;...&lt;/Select&gt;<br>
+                            &lt;Select size="sm" placeholder="Small select"&gt;...&lt;/Select&gt;
+                            <br />
+                            &lt;Select size="md" placeholder="Medium select"&gt;...&lt;/Select&gt;
+                            <br />
                             &lt;Select size="lg" placeholder="Large select"&gt;...&lt;/Select&gt;
                         </code>
                     </div>
@@ -452,9 +477,12 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Select label="Normal" placeholder="Normal select"&gt;...&lt;/Select&gt;<br>
-                            &lt;Select label="Disabled" placeholder="Disabled select" disabled&gt;...&lt;/Select&gt;<br>
-                            &lt;Select label="With Error" placeholder="Error select" error="Bu alan zorunludur"&gt;...&lt;/Select&gt;<br>
+                            &lt;Select label="Normal" placeholder="Normal select"&gt;...&lt;/Select&gt;
+                            <br />
+                            &lt;Select label="Disabled" placeholder="Disabled select" disabled&gt;...&lt;/Select&gt;
+                            <br />
+                            &lt;Select label="With Error" placeholder="Error select" error="Bu alan zorunludur"&gt;...&lt;/Select&gt;
+                            <br />
                             &lt;Select label="With Helper" placeholder="Helper select" helperText="Lütfen bir seçenek seçin"&gt;...&lt;/Select&gt;
                         </code>
                     </div>
@@ -473,7 +501,7 @@
                             :options="[
                                 { label: 'Seçenek 1', value: '1' },
                                 { label: 'Seçenek 2', value: '2' },
-                                { label: 'Seçenek 3', value: '3' }
+                                { label: 'Seçenek 3', value: '3' },
                             ]"
                         />
 
@@ -486,7 +514,7 @@
                                 { label: 'Armut', value: '2' },
                                 { label: 'Muz', value: '3' },
                                 { label: 'Portakal', value: '4' },
-                                { label: 'Mandalina', value: '5' }
+                                { label: 'Mandalina', value: '5' },
                             ]"
                             searchable
                         />
@@ -500,7 +528,7 @@
                                 { label: 'TypeScript', value: '2' },
                                 { label: 'Vue.js', value: '3' },
                                 { label: 'React', value: '4' },
-                                { label: 'Angular', value: '5' }
+                                { label: 'Angular', value: '5' },
                             ]"
                             multiple
                         />
@@ -514,7 +542,7 @@
                                 { label: 'Ankara', value: '2' },
                                 { label: 'İzmir', value: '3' },
                                 { label: 'Bursa', value: '4' },
-                                { label: 'Antalya', value: '5' }
+                                { label: 'Antalya', value: '5' },
                             ]"
                             multiple
                             searchable
@@ -522,33 +550,63 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;!-- Temel Select --&gt;<br>
-                            &lt;Select<br>
-                            &nbsp;&nbsp;placeholder="Bir seçenek seçin"<br>
-                            &nbsp;&nbsp;:options="[<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;{ label: 'Seçenek 1', value: '1' },<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;{ label: 'Seçenek 2', value: '2' },<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;{ label: 'Seçenek 3', value: '3' }<br>
-                            &nbsp;&nbsp;]"<br>
-                            /&gt;<br><br>
-                            &lt;!-- Arama Özellikli Select --&gt;<br>
-                            &lt;Select<br>
-                            &nbsp;&nbsp;searchable<br>
-                            &nbsp;&nbsp;placeholder="Seçeneklerde arama yapın"<br>
-                            &nbsp;&nbsp;:options="options"<br>
-                            /&gt;<br><br>
-                            &lt;!-- Çoklu Seçim --&gt;<br>
-                            &lt;Select<br>
-                            &nbsp;&nbsp;multiple<br>
-                            &nbsp;&nbsp;placeholder="Birden fazla seçim yapın"<br>
-                            &nbsp;&nbsp;:options="options"<br>
-                            /&gt;<br><br>
-                            &lt;!-- Çoklu Seçim ve Arama --&gt;<br>
-                            &lt;Select<br>
-                            &nbsp;&nbsp;multiple<br>
-                            &nbsp;&nbsp;searchable<br>
-                            &nbsp;&nbsp;placeholder="Arama yapın ve birden fazla seçin"<br>
-                            &nbsp;&nbsp;:options="options"<br>
+                            &lt;!-- Temel Select --&gt;
+                            <br />
+                            &lt;Select
+                            <br />
+                            &nbsp;&nbsp;placeholder="Bir seçenek seçin"
+                            <br />
+                            &nbsp;&nbsp;:options="[
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;{ label: 'Seçenek 1', value: '1' },
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;{ label: 'Seçenek 2', value: '2' },
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;{ label: 'Seçenek 3', value: '3' }
+                            <br />
+                            &nbsp;&nbsp;]"
+                            <br />
+                            /&gt;
+                            <br />
+                            <br />
+                            &lt;!-- Arama Özellikli Select --&gt;
+                            <br />
+                            &lt;Select
+                            <br />
+                            &nbsp;&nbsp;searchable
+                            <br />
+                            &nbsp;&nbsp;placeholder="Seçeneklerde arama yapın"
+                            <br />
+                            &nbsp;&nbsp;:options="options"
+                            <br />
+                            /&gt;
+                            <br />
+                            <br />
+                            &lt;!-- Çoklu Seçim --&gt;
+                            <br />
+                            &lt;Select
+                            <br />
+                            &nbsp;&nbsp;multiple
+                            <br />
+                            &nbsp;&nbsp;placeholder="Birden fazla seçim yapın"
+                            <br />
+                            &nbsp;&nbsp;:options="options"
+                            <br />
+                            /&gt;
+                            <br />
+                            <br />
+                            &lt;!-- Çoklu Seçim ve Arama --&gt;
+                            <br />
+                            &lt;Select
+                            <br />
+                            &nbsp;&nbsp;multiple
+                            <br />
+                            &nbsp;&nbsp;searchable
+                            <br />
+                            &nbsp;&nbsp;placeholder="Arama yapın ve birden fazla seçin"
+                            <br />
+                            &nbsp;&nbsp;:options="options"
+                            <br />
                             /&gt;
                         </code>
                     </div>
@@ -585,11 +643,16 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Loading variant="primary" text="Yükleniyor..." /&gt;<br>
-                            &lt;Loading variant="secondary" text="Yükleniyor..." /&gt;<br>
-                            &lt;Loading variant="success" text="Yükleniyor..." /&gt;<br>
-                            &lt;Loading variant="warning" text="Yükleniyor..." /&gt;<br>
-                            &lt;Loading variant="danger" text="Yükleniyor..." /&gt;<br>
+                            &lt;Loading variant="primary" text="Yükleniyor..." /&gt;
+                            <br />
+                            &lt;Loading variant="secondary" text="Yükleniyor..." /&gt;
+                            <br />
+                            &lt;Loading variant="success" text="Yükleniyor..." /&gt;
+                            <br />
+                            &lt;Loading variant="warning" text="Yükleniyor..." /&gt;
+                            <br />
+                            &lt;Loading variant="danger" text="Yükleniyor..." /&gt;
+                            <br />
                             &lt;Loading variant="info" text="Yükleniyor..." /&gt;
                         </code>
                     </div>
@@ -607,8 +670,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Loading size="sm" text="Küçük" /&gt;<br>
-                            &lt;Loading size="md" text="Orta" /&gt;<br>
+                            &lt;Loading size="sm" text="Küçük" /&gt;
+                            <br />
+                            &lt;Loading size="md" text="Orta" /&gt;
+                            <br />
                             &lt;Loading size="lg" text="Büyük" /&gt;
                         </code>
                     </div>
@@ -636,33 +701,21 @@
                 <h3 class="text-lg font-semibold text-white">Varyantlar</h3>
                 <div class="p-6 border border-border rounded-lg space-y-6">
                     <div class="space-y-4">
-                        <Alert
-                            variant="info"
-                            title="Bilgi"
-                            message="Bu bir bilgi mesajıdır."
-                        />
-                        <Alert
-                            variant="success"
-                            title="Başarılı"
-                            message="İşlem başarıyla tamamlandı."
-                        />
-                        <Alert
-                            variant="warning"
-                            title="Uyarı"
-                            message="Bu bir uyarı mesajıdır."
-                        />
-                        <Alert
-                            variant="danger"
-                            title="Hata"
-                            message="Bir hata oluştu."
-                        />
+                        <Alert variant="info" title="Bilgi" message="Bu bir bilgi mesajıdır." />
+                        <Alert variant="success" title="Başarılı" message="İşlem başarıyla tamamlandı." />
+                        <Alert variant="warning" title="Uyarı" message="Bu bir uyarı mesajıdır." />
+                        <Alert variant="danger" title="Hata" message="Bir hata oluştu." />
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Alert<br>
-                            &nbsp;&nbsp;variant="info"<br>
-                            &nbsp;&nbsp;title="Bilgi"<br>
-                            &nbsp;&nbsp;message="Bu bir bilgi mesajıdır."<br>
+                            &lt;Alert
+                            <br />
+                            &nbsp;&nbsp;variant="info"
+                            <br />
+                            &nbsp;&nbsp;title="Bilgi"
+                            <br />
+                            &nbsp;&nbsp;message="Bu bir bilgi mesajıdır."
+                            <br />
                             /&gt;
                         </code>
                     </div>
@@ -674,18 +727,8 @@
                 <h3 class="text-lg font-semibold text-white">Özellikler</h3>
                 <div class="p-6 border border-border rounded-lg space-y-6">
                     <div class="max-w-sm space-y-4">
-                        <Alert
-                            variant="info"
-                            title="İkon ile"
-                            message="İkonlu alert mesajı"
-                            icon
-                        />
-                        <Alert
-                            variant="success"
-                            title="Kapatılabilir"
-                            message="Bu alert kapatılabilir."
-                            dismissible
-                        />
+                        <Alert variant="info" title="İkon ile" message="İkonlu alert mesajı" icon />
+                        <Alert variant="success" title="Kapatılabilir" message="Bu alert kapatılabilir." dismissible />
                         <Alert variant="warning">
                             <template #default>
                                 <div class="flex items-center">
@@ -697,17 +740,29 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Alert<br>
-                            &nbsp;&nbsp;variant="info"<br>
-                            &nbsp;&nbsp;title="İkon ile"<br>
-                            &nbsp;&nbsp;message="İkonlu alert mesajı"<br>
-                            &nbsp;&nbsp;icon<br>
-                            /&gt;<br><br>
-                            &lt;Alert<br>
-                            &nbsp;&nbsp;variant="success"<br>
-                            &nbsp;&nbsp;title="Kapatılabilir"<br>
-                            &nbsp;&nbsp;message="Bu alert kapatılabilir."<br>
-                            &nbsp;&nbsp;dismissible<br>
+                            &lt;Alert
+                            <br />
+                            &nbsp;&nbsp;variant="info"
+                            <br />
+                            &nbsp;&nbsp;title="İkon ile"
+                            <br />
+                            &nbsp;&nbsp;message="İkonlu alert mesajı"
+                            <br />
+                            &nbsp;&nbsp;icon
+                            <br />
+                            /&gt;
+                            <br />
+                            <br />
+                            &lt;Alert
+                            <br />
+                            &nbsp;&nbsp;variant="success"
+                            <br />
+                            &nbsp;&nbsp;title="Kapatılabilir"
+                            <br />
+                            &nbsp;&nbsp;message="Bu alert kapatılabilir."
+                            <br />
+                            &nbsp;&nbsp;dismissible
+                            <br />
                             /&gt;
                         </code>
                     </div>
@@ -744,11 +799,16 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Badge variant="primary" text="Primary" /&gt;<br>
-                            &lt;Badge variant="secondary" text="Secondary" /&gt;<br>
-                            &lt;Badge variant="success" text="Success" /&gt;<br>
-                            &lt;Badge variant="warning" text="Warning" /&gt;<br>
-                            &lt;Badge variant="danger" text="Danger" /&gt;<br>
+                            &lt;Badge variant="primary" text="Primary" /&gt;
+                            <br />
+                            &lt;Badge variant="secondary" text="Secondary" /&gt;
+                            <br />
+                            &lt;Badge variant="success" text="Success" /&gt;
+                            <br />
+                            &lt;Badge variant="warning" text="Warning" /&gt;
+                            <br />
+                            &lt;Badge variant="danger" text="Danger" /&gt;
+                            <br />
                             &lt;Badge variant="info" text="Info" /&gt;
                         </code>
                     </div>
@@ -766,8 +826,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Badge size="sm" text="Small" /&gt;<br>
-                            &lt;Badge size="md" text="Medium" /&gt;<br>
+                            &lt;Badge size="sm" text="Small" /&gt;
+                            <br />
+                            &lt;Badge size="md" text="Medium" /&gt;
+                            <br />
                             &lt;Badge size="lg" text="Large" /&gt;
                         </code>
                     </div>
@@ -793,11 +855,16 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Badge variant="primary" text="Kapatılabilir" dismissible /&gt;<br>
-                            &lt;Badge variant="success"&gt;<br>
-                            &nbsp;&nbsp;&lt;template #default&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;Özel İçerik<br>
-                            &nbsp;&nbsp;&lt;/template&gt;<br>
+                            &lt;Badge variant="primary" text="Kapatılabilir" dismissible /&gt;
+                            <br />
+                            &lt;Badge variant="success"&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;template #default&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;Özel İçerik
+                            <br />
+                            &nbsp;&nbsp;&lt;/template&gt;
+                            <br />
                             &lt;/Badge&gt;
                         </code>
                     </div>
@@ -817,11 +884,16 @@
                 <h3 class="text-lg font-semibold text-white">Import</h3>
                 <div class="border border-border p-4 rounded-md">
                     <code class="text-sm text-gray-300">
-                        import Table from '@/components/ui/Table.vue'<br>
-                        import TableHeader from '@/components/ui/TableHeader.vue'<br>
-                        import TableHeaderCell from '@/components/ui/TableHeaderCell.vue'<br>
-                        import TableBody from '@/components/ui/TableBody.vue'<br>
-                        import TableRow from '@/components/ui/TableRow.vue'<br>
+                        import Table from '@/components/ui/Table.vue'
+                        <br />
+                        import TableHeader from '@/components/ui/TableHeader.vue'
+                        <br />
+                        import TableHeaderCell from '@/components/ui/TableHeaderCell.vue'
+                        <br />
+                        import TableBody from '@/components/ui/TableBody.vue'
+                        <br />
+                        import TableRow from '@/components/ui/TableRow.vue'
+                        <br />
                         import TableCell from '@/components/ui/TableCell.vue'
                     </code>
                 </div>
@@ -853,25 +925,44 @@
                     </Table>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Table&gt;<br>
-                            &nbsp;&nbsp;&lt;TableHeader&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;Name&lt;/TableHeaderCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;Email&lt;/TableHeaderCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;Role&lt;/TableHeaderCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;Status&lt;/TableHeaderCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;<br>
-                            &nbsp;&nbsp;&lt;/TableHeader&gt;<br>
-                            &nbsp;&nbsp;&lt;TableBody&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;template v-for="item in sortedUsers" :key="item.id"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow :item="item"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.name&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.email&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.role&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.status&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;<br>
-                            &nbsp;&nbsp;&lt;/template&gt;<br>
-                            &nbsp;&nbsp;&lt;/TableBody&gt;<br>
+                            &lt;Table&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;TableHeader&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;Name&lt;/TableHeaderCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;Email&lt;/TableHeaderCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;Role&lt;/TableHeaderCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;Status&lt;/TableHeaderCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;/TableHeader&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;TableBody&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;template v-for="item in sortedUsers" :key="item.id"&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow :item="item"&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.name&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.email&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.role&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.status&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;/template&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;/TableBody&gt;
+                            <br />
                             &lt;/Table&gt;
                         </code>
                     </div>
@@ -904,37 +995,68 @@
                     </Table>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Table&gt;<br>
-                            &nbsp;&nbsp;&lt;TableHeader&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sortable<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@sort="handleSort('name')"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sortable<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@sort="handleSort('email')"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sortable<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@sort="handleSort('role')"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sortable<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@sort="handleSort('status')"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;<br>
-                            &nbsp;&nbsp;&lt;/TableHeader&gt;<br>
-                            &nbsp;&nbsp;&lt;TableBody&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;template v-for="item in sortedUsers" :key="item.id"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow :item="item"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.name&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.email&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.role&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.status&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;<br>
-                            &nbsp;&nbsp;&lt;/template&gt;<br>
-                            &nbsp;&nbsp;&lt;/TableBody&gt;<br>
+                            &lt;Table&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;TableHeader&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sortable
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@sort="handleSort('name')"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sortable
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@sort="handleSort('email')"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sortable
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@sort="handleSort('role')"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sortable
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@sort="handleSort('status')"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;/TableHeader&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;TableBody&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;template v-for="item in sortedUsers" :key="item.id"&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow :item="item"&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.name&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.email&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.role&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.status&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;/template&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;/TableBody&gt;
+                            <br />
                             &lt;/Table&gt;
                         </code>
                     </div>
@@ -949,10 +1071,7 @@
                         <TableHeader>
                             <TableRow>
                                 <TableHeaderCell>
-                                    <Checkbox 
-                                        :model-value="selectedUsers.length === users.length"
-                                        @update:model-value="toggleSelectAll"
-                                    />
+                                    <Checkbox :model-value="selectedUsers.length === users.length" @update:model-value="toggleSelectAll" />
                                 </TableHeaderCell>
                                 <TableHeaderCell>Name</TableHeaderCell>
                                 <TableHeaderCell>Email</TableHeaderCell>
@@ -964,10 +1083,7 @@
                             <template #row="{ item }">
                                 <TableRow :item="item">
                                     <TableCell>
-                                        <Checkbox 
-                                            :model-value="selectedUsers.some((u: TableData) => u.id === (item as TableData).id)"
-                                            @update:model-value="toggleSelectUser(item as TableData)"
-                                        />
+                                        <Checkbox :model-value="selectedUsers.some((u: TableData) => u.id === (item as TableData).id)" @update:model-value="toggleSelectUser(item as TableData)" />
                                     </TableCell>
                                     <TableCell>{{ item.name }}</TableCell>
                                     <TableCell>{{ item.email }}</TableCell>
@@ -979,32 +1095,58 @@
                     </Table>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Table&gt;<br>
-                            &nbsp;&nbsp;&lt;TableHeader&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Checkbox<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v-model="selectAll"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@change="toggleSelectAll"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;<br>
-                            &nbsp;&nbsp;&lt;/TableHeader&gt;<br>
-                            &nbsp;&nbsp;&lt;TableBody&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;template v-for="item in sortedUsers" :key="item.id"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow :item="item"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Checkbox<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:model-value="selectedUsers.value.some((u: TableData) => u.id === (item as TableData).id)"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@update:model-value="toggleSelectUser(item as TableData)"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.name&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.email&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.role&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.status&lt;/TableCell&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;<br>
-                            &nbsp;&nbsp;&lt;/template&gt;<br>
-                            &nbsp;&nbsp;&lt;/TableBody&gt;<br>
+                            &lt;Table&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;TableHeader&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableHeaderCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Checkbox
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v-model="selectAll"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@change="toggleSelectAll"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;/TableHeader&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;TableBody&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;template v-for="item in sortedUsers" :key="item.id"&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableRow :item="item"&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Checkbox
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:model-value="selectedUsers.value.some((u: TableData) => u.id === (item as TableData).id)"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@update:model-value="toggleSelectUser(item as TableData)"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.name&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.email&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.role&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TableCell&gt;item.status&lt;/TableCell&gt;
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TableRow&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;/template&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;/TableBody&gt;
+                            <br />
                             &lt;/Table&gt;
                         </code>
                     </div>
@@ -1038,8 +1180,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Checkbox v-model="checkboxValue1" label="Checkbox 1" /&gt;<br>
-                            &lt;Checkbox v-model="checkboxValue2" label="Checkbox 2" /&gt;<br>
+                            &lt;Checkbox v-model="checkboxValue1" label="Checkbox 1" /&gt;
+                            <br />
+                            &lt;Checkbox v-model="checkboxValue2" label="Checkbox 2" /&gt;
+                            <br />
                             &lt;Checkbox v-model="checkboxValue3" label="Checkbox 3" /&gt;
                         </code>
                     </div>
@@ -1057,8 +1201,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Checkbox v-model="inlineCheckbox1" label="Checkbox 1" inline /&gt;<br>
-                            &lt;Checkbox v-model="inlineCheckbox2" label="Checkbox 2" inline /&gt;<br>
+                            &lt;Checkbox v-model="inlineCheckbox1" label="Checkbox 1" inline /&gt;
+                            <br />
+                            &lt;Checkbox v-model="inlineCheckbox2" label="Checkbox 2" inline /&gt;
+                            <br />
                             &lt;Checkbox v-model="inlineCheckbox3" label="Checkbox 3" inline /&gt;
                         </code>
                     </div>
@@ -1076,8 +1222,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Checkbox v-model="stateCheckbox1" label="Normal" /&gt;<br>
-                            &lt;Checkbox v-model="stateCheckbox2" label="Checked" /&gt;<br>
+                            &lt;Checkbox v-model="stateCheckbox1" label="Normal" /&gt;
+                            <br />
+                            &lt;Checkbox v-model="stateCheckbox2" label="Checked" /&gt;
+                            <br />
                             &lt;Checkbox v-model="stateCheckbox3" label="Disabled" disabled /&gt;
                         </code>
                     </div>
@@ -1111,8 +1259,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Radio v-model="radioValue" value="1" label="Radio 1" name="radio-demo" /&gt;<br>
-                            &lt;Radio v-model="radioValue" value="2" label="Radio 2" name="radio-demo" /&gt;<br>
+                            &lt;Radio v-model="radioValue" value="1" label="Radio 1" name="radio-demo" /&gt;
+                            <br />
+                            &lt;Radio v-model="radioValue" value="2" label="Radio 2" name="radio-demo" /&gt;
+                            <br />
                             &lt;Radio v-model="radioValue" value="3" label="Radio 3" name="radio-demo" /&gt;
                         </code>
                     </div>
@@ -1130,8 +1280,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Radio v-model="inlineRadioValue" value="1" label="Radio 1" name="inline-radio-demo" inline /&gt;<br>
-                            &lt;Radio v-model="inlineRadioValue" value="2" label="Radio 2" name="inline-radio-demo" inline /&gt;<br>
+                            &lt;Radio v-model="inlineRadioValue" value="1" label="Radio 1" name="inline-radio-demo" inline /&gt;
+                            <br />
+                            &lt;Radio v-model="inlineRadioValue" value="2" label="Radio 2" name="inline-radio-demo" inline /&gt;
+                            <br />
                             &lt;Radio v-model="inlineRadioValue" value="3" label="Radio 3" name="inline-radio-demo" inline /&gt;
                         </code>
                     </div>
@@ -1149,8 +1301,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Radio v-model="stateRadioValue" value="1" label="Normal" name="state-radio-demo" /&gt;<br>
-                            &lt;Radio v-model="stateRadioValue" value="2" label="Selected" name="state-radio-demo" /&gt;<br>
+                            &lt;Radio v-model="stateRadioValue" value="1" label="Normal" name="state-radio-demo" /&gt;
+                            <br />
+                            &lt;Radio v-model="stateRadioValue" value="2" label="Selected" name="state-radio-demo" /&gt;
+                            <br />
                             &lt;Radio v-model="stateRadioValue" value="3" label="Disabled" name="state-radio-demo" disabled /&gt;
                         </code>
                     </div>
@@ -1228,9 +1382,12 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Textarea variant="default" placeholder="Default variant" /&gt;<br>
-                            &lt;Textarea variant="filled" placeholder="Filled variant" /&gt;<br>
-                            &lt;Textarea variant="outline" placeholder="Outline variant" /&gt;<br>
+                            &lt;Textarea variant="default" placeholder="Default variant" /&gt;
+                            <br />
+                            &lt;Textarea variant="filled" placeholder="Filled variant" /&gt;
+                            <br />
+                            &lt;Textarea variant="outline" placeholder="Outline variant" /&gt;
+                            <br />
                             &lt;Textarea variant="ghost" placeholder="Ghost variant" /&gt;
                         </code>
                     </div>
@@ -1248,8 +1405,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Textarea size="sm" placeholder="Small textarea" /&gt;<br>
-                            &lt;Textarea size="md" placeholder="Medium textarea" /&gt;<br>
+                            &lt;Textarea size="sm" placeholder="Small textarea" /&gt;
+                            <br />
+                            &lt;Textarea size="md" placeholder="Medium textarea" /&gt;
+                            <br />
                             &lt;Textarea size="lg" placeholder="Large textarea" /&gt;
                         </code>
                     </div>
@@ -1268,9 +1427,12 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;Textarea label="Normal" placeholder="Normal textarea" /&gt;<br>
-                            &lt;Textarea label="Disabled" placeholder="Disabled textarea" disabled /&gt;<br>
-                            &lt;Textarea label="With Error" placeholder="Error textarea" error="Bu alan zorunludur" /&gt;<br>
+                            &lt;Textarea label="Normal" placeholder="Normal textarea" /&gt;
+                            <br />
+                            &lt;Textarea label="Disabled" placeholder="Disabled textarea" disabled /&gt;
+                            <br />
+                            &lt;Textarea label="With Error" placeholder="Error textarea" error="Bu alan zorunludur" /&gt;
+                            <br />
                             &lt;Textarea label="With Helper" placeholder="Helper text" helperText="Bu alana açıklama yazınız" /&gt;
                         </code>
                     </div>
@@ -1354,9 +1516,12 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;DatePicker variant="default" label="Default variant" /&gt;<br>
-                            &lt;DatePicker variant="filled" label="Filled variant" /&gt;<br>
-                            &lt;DatePicker variant="outline" label="Outline variant" /&gt;<br>
+                            &lt;DatePicker variant="default" label="Default variant" /&gt;
+                            <br />
+                            &lt;DatePicker variant="filled" label="Filled variant" /&gt;
+                            <br />
+                            &lt;DatePicker variant="outline" label="Outline variant" /&gt;
+                            <br />
                             &lt;DatePicker variant="ghost" label="Ghost variant" /&gt;
                         </code>
                     </div>
@@ -1374,8 +1539,10 @@
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;DatePicker size="sm" label="Small date picker" /&gt;<br>
-                            &lt;DatePicker size="md" label="Medium date picker" /&gt;<br>
+                            &lt;DatePicker size="sm" label="Small date picker" /&gt;
+                            <br />
+                            &lt;DatePicker size="md" label="Medium date picker" /&gt;
+                            <br />
                             &lt;DatePicker size="lg" label="Large date picker" /&gt;
                         </code>
                     </div>
@@ -1387,48 +1554,44 @@
                 <h3 class="text-lg font-semibold text-white">Durumlar</h3>
                 <div class="p-6 border border-border rounded-lg space-y-6">
                     <div class="max-w-sm space-y-4">
-                        <DatePicker
-                            label="Normal"
-                            v-model="dateValue1"
-                        />
-                        <DatePicker
-                            label="With Min/Max"
-                            v-model="dateValue2"
-                            min="2024-01-01"
-                            max="2024-12-31"
-                        />
-                        <DatePicker
-                            label="Disabled"
-                            v-model="dateValue3"
-                            disabled
-                        />
-                        <DatePicker
-                            label="With Error"
-                            v-model="dateValue4"
-                            error="Lütfen bir tarih seçin"
-                        />
-                        <DatePicker
-                            label="With Helper"
-                            v-model="dateValue5"
-                            helperText="YYYY-AA-GG formatında bir tarih seçin"
-                        />
+                        <DatePicker label="Normal" v-model="dateValue1" />
+                        <DatePicker label="With Min/Max" v-model="dateValue2" min="2024-01-01" max="2024-12-31" />
+                        <DatePicker label="Disabled" v-model="dateValue3" disabled />
+                        <DatePicker label="With Error" v-model="dateValue4" error="Lütfen bir tarih seçin" />
+                        <DatePicker label="With Helper" v-model="dateValue5" helperText="YYYY-AA-GG formatında bir tarih seçin" />
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;DatePicker<br>
-                            &nbsp;&nbsp;label="Normal"<br>
-                            &nbsp;&nbsp;v-model="dateValue"<br>
-                            /&gt;<br><br>
-                            &lt;DatePicker<br>
-                            &nbsp;&nbsp;label="With Min/Max"<br>
-                            &nbsp;&nbsp;v-model="dateValue"<br>
-                            &nbsp;&nbsp;min="2024-01-01"<br>
-                            &nbsp;&nbsp;max="2024-12-31"<br>
-                            /&gt;<br><br>
-                            &lt;DatePicker<br>
-                            &nbsp;&nbsp;label="Disabled"<br>
-                            &nbsp;&nbsp;v-model="dateValue"<br>
-                            &nbsp;&nbsp;disabled<br>
+                            &lt;DatePicker
+                            <br />
+                            &nbsp;&nbsp;label="Normal"
+                            <br />
+                            &nbsp;&nbsp;v-model="dateValue"
+                            <br />
+                            /&gt;
+                            <br />
+                            <br />
+                            &lt;DatePicker
+                            <br />
+                            &nbsp;&nbsp;label="With Min/Max"
+                            <br />
+                            &nbsp;&nbsp;v-model="dateValue"
+                            <br />
+                            &nbsp;&nbsp;min="2024-01-01"
+                            <br />
+                            &nbsp;&nbsp;max="2024-12-31"
+                            <br />
+                            /&gt;
+                            <br />
+                            <br />
+                            &lt;DatePicker
+                            <br />
+                            &nbsp;&nbsp;label="Disabled"
+                            <br />
+                            &nbsp;&nbsp;v-model="dateValue"
+                            <br />
+                            &nbsp;&nbsp;disabled
+                            <br />
                             /&gt;
                         </code>
                     </div>
@@ -1511,32 +1674,19 @@
                 <h3 class="text-lg font-semibold text-white">Varyantlar</h3>
                 <div class="p-6 border border-border rounded-lg space-y-6">
                     <div class="max-w-sm space-y-4">
-                        <FileUpload
-                            v-model="files1"
-                            variant="default"
-                            label="Default variant"
-                        />
-                        <FileUpload
-                            v-model="files2"
-                            variant="filled"
-                            label="Filled variant"
-                        />
-                        <FileUpload
-                            v-model="files3"
-                            variant="outline"
-                            label="Outline variant"
-                        />
-                        <FileUpload
-                            v-model="files4"
-                            variant="ghost"
-                            label="Ghost variant"
-                        />
+                        <FileUpload v-model="files1" variant="default" label="Default variant" />
+                        <FileUpload v-model="files2" variant="filled" label="Filled variant" />
+                        <FileUpload v-model="files3" variant="outline" label="Outline variant" />
+                        <FileUpload v-model="files4" variant="ghost" label="Ghost variant" />
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;FileUpload variant="default" label="Default variant" /&gt;<br>
-                            &lt;FileUpload variant="filled" label="Filled variant" /&gt;<br>
-                            &lt;FileUpload variant="outline" label="Outline variant" /&gt;<br>
+                            &lt;FileUpload variant="default" label="Default variant" /&gt;
+                            <br />
+                            &lt;FileUpload variant="filled" label="Filled variant" /&gt;
+                            <br />
+                            &lt;FileUpload variant="outline" label="Outline variant" /&gt;
+                            <br />
                             &lt;FileUpload variant="ghost" label="Ghost variant" /&gt;
                         </code>
                     </div>
@@ -1548,26 +1698,16 @@
                 <h3 class="text-lg font-semibold text-white">Boyutlar</h3>
                 <div class="p-6 border border-border rounded-lg space-y-6">
                     <div class="max-w-sm space-y-4">
-                        <FileUpload
-                            v-model="files1"
-                            size="sm"
-                            label="Small file upload"
-                        />
-                        <FileUpload
-                            v-model="files2"
-                            size="md"
-                            label="Medium file upload"
-                        />
-                        <FileUpload
-                            v-model="files3"
-                            size="lg"
-                            label="Large file upload"
-                        />
+                        <FileUpload v-model="files1" size="sm" label="Small file upload" />
+                        <FileUpload v-model="files2" size="md" label="Medium file upload" />
+                        <FileUpload v-model="files3" size="lg" label="Large file upload" />
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;FileUpload size="sm" label="Small file upload" /&gt;<br>
-                            &lt;FileUpload size="md" label="Medium file upload" /&gt;<br>
+                            &lt;FileUpload size="sm" label="Small file upload" /&gt;
+                            <br />
+                            &lt;FileUpload size="md" label="Medium file upload" /&gt;
+                            <br />
                             &lt;FileUpload size="lg" label="Large file upload" /&gt;
                         </code>
                     </div>
@@ -1580,60 +1720,63 @@
                 <div class="p-6 border border-border rounded-lg space-y-6">
                     <div class="max-w-sm space-y-4">
                         <!-- Basic Upload -->
-                        <FileUpload
-                            v-model="files1"
-                            label="Temel Kullanım"
-                        />
+                        <FileUpload v-model="files1" label="Temel Kullanım" />
 
                         <!-- Multiple Files -->
-                        <FileUpload
-                            v-model="files2"
-                            label="Çoklu Dosya"
-                            multiple
-                        />
+                        <FileUpload v-model="files2" label="Çoklu Dosya" multiple />
 
                         <!-- With Accept -->
-                        <FileUpload
-                            v-model="files3"
-                            label="Sadece Resim"
-                            accept="image/*"
-                        />
+                        <FileUpload v-model="files3" label="Sadece Resim" accept="image/*" />
 
                         <!-- With Progress -->
-                        <FileUpload
-                            v-model="files4"
-                            label="Yükleme Durumu"
-                            :progress="uploadProgress"
-                        />
+                        <FileUpload v-model="files4" label="Yükleme Durumu" :progress="uploadProgress" />
 
                         <!-- With Error -->
-                        <FileUpload
-                            v-model="files5"
-                            label="Hata Durumu"
-                            error="Dosya yüklenirken bir hata oluştu"
-                        />
+                        <FileUpload v-model="files5" label="Hata Durumu" error="Dosya yüklenirken bir hata oluştu" />
                     </div>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;!-- Temel Kullanım --&gt;<br>
-                            &lt;FileUpload v-model="files" label="Temel Kullanım" /&gt;<br><br>
-                            &lt;!-- Çoklu Dosya --&gt;<br>
-                            &lt;FileUpload<br>
-                            &nbsp;&nbsp;v-model="files"<br>
-                            &nbsp;&nbsp;label="Çoklu Dosya"<br>
-                            &nbsp;&nbsp;multiple<br>
-                            /&gt;<br><br>
-                            &lt;!-- Sadece Resim --&gt;<br>
-                            &lt;FileUpload<br>
-                            &nbsp;&nbsp;v-model="files"<br>
-                            &nbsp;&nbsp;label="Sadece Resim"<br>
-                            &nbsp;&nbsp;accept="image/*"<br>
-                            /&gt;<br><br>
-                            &lt;!-- Yükleme Durumu --&gt;<br>
-                            &lt;FileUpload<br>
-                            &nbsp;&nbsp;v-model="files"<br>
-                            &nbsp;&nbsp;label="Yükleme Durumu"<br>
-                            &nbsp;&nbsp;:progress="70"<br>
+                            &lt;!-- Temel Kullanım --&gt;
+                            <br />
+                            &lt;FileUpload v-model="files" label="Temel Kullanım" /&gt;
+                            <br />
+                            <br />
+                            &lt;!-- Çoklu Dosya --&gt;
+                            <br />
+                            &lt;FileUpload
+                            <br />
+                            &nbsp;&nbsp;v-model="files"
+                            <br />
+                            &nbsp;&nbsp;label="Çoklu Dosya"
+                            <br />
+                            &nbsp;&nbsp;multiple
+                            <br />
+                            /&gt;
+                            <br />
+                            <br />
+                            &lt;!-- Sadece Resim --&gt;
+                            <br />
+                            &lt;FileUpload
+                            <br />
+                            &nbsp;&nbsp;v-model="files"
+                            <br />
+                            &nbsp;&nbsp;label="Sadece Resim"
+                            <br />
+                            &nbsp;&nbsp;accept="image/*"
+                            <br />
+                            /&gt;
+                            <br />
+                            <br />
+                            &lt;!-- Yükleme Durumu --&gt;
+                            <br />
+                            &lt;FileUpload
+                            <br />
+                            &nbsp;&nbsp;v-model="files"
+                            <br />
+                            &nbsp;&nbsp;label="Yükleme Durumu"
+                            <br />
+                            &nbsp;&nbsp;:progress="70"
+                            <br />
                             /&gt;
                         </code>
                     </div>
@@ -1653,7 +1796,8 @@
                 <h3 class="text-lg font-semibold text-white">Import</h3>
                 <div class="border border-border p-4 rounded-md">
                     <code class="text-sm text-gray-300">
-                        import List from '@/components/ui/List.vue'<br>
+                        import List from '@/components/ui/List.vue'
+                        <br />
                         import ListItem from '@/components/ui/ListItem.vue'
                     </code>
                 </div>
@@ -1664,22 +1808,24 @@
                 <h3 class="text-lg font-semibold text-white">Temel Kullanım</h3>
                 <div class="p-6 border border-border rounded-lg space-y-6">
                     <List>
-                        <ListItem
-                            v-for="item in listItems"
-                            :key="item.title"
-                            :title="item.title"
-                            :description="item.description"
-                        />
+                        <ListItem v-for="item in listItems" :key="item.title" :title="item.title" :description="item.description" />
                     </List>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;List&gt;<br>
-                            &nbsp;&nbsp;&lt;ListItem<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;v-for="item in listItems.value"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;:key="item.title"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;:title="item.title"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;:description="item.description"<br>
-                            &nbsp;&nbsp;/&gt;<br>
+                            &lt;List&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;ListItem
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;v-for="item in listItems.value"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;:key="item.title"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;:title="item.title"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;:description="item.description"
+                            <br />
+                            &nbsp;&nbsp;/&gt;
+                            <br />
                             &lt;/List&gt;
                         </code>
                     </div>
@@ -1691,22 +1837,24 @@
                 <h3 class="text-lg font-semibold text-white">Kenarlıklı Liste</h3>
                 <div class="p-6 border border-border rounded-lg space-y-6">
                     <List bordered>
-                        <ListItem
-                            v-for="item in listItems"
-                            :key="item.title"
-                            :title="item.title"
-                            :description="item.description"
-                        />
+                        <ListItem v-for="item in listItems" :key="item.title" :title="item.title" :description="item.description" />
                     </List>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;List bordered&gt;<br>
-                            &nbsp;&nbsp;&lt;ListItem<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;v-for="item in listItems.value"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;:key="item.title"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;:title="item.title"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;:description="item.description"<br>
-                            &nbsp;&nbsp;/&gt;<br>
+                            &lt;List bordered&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;ListItem
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;v-for="item in listItems.value"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;:key="item.title"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;:title="item.title"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;:description="item.description"
+                            <br />
+                            &nbsp;&nbsp;/&gt;
+                            <br />
                             &lt;/List&gt;
                         </code>
                     </div>
@@ -1718,26 +1866,28 @@
                 <h3 class="text-lg font-semibold text-white">Tıklanabilir Liste</h3>
                 <div class="p-6 border border-border rounded-lg space-y-6">
                     <List bordered>
-                        <ListItem
-                            v-for="item in listItems"
-                            :key="item.title"
-                            :title="item.title"
-                            :description="item.description"
-                            clickable
-                            @click="() => handleListItemClick(item)"
-                        />
+                        <ListItem v-for="item in listItems" :key="item.title" :title="item.title" :description="item.description" clickable @click="() => handleListItemClick(item)" />
                     </List>
                     <div class="bg-muted/40 p-4 rounded-md">
                         <code class="text-sm text-gray-300">
-                            &lt;List bordered&gt;<br>
-                            &nbsp;&nbsp;&lt;ListItem<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;v-for="item in listItems.value"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;:key="item.title"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;:title="item.title"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;:description="item.description"<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;clickable<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;@click="() => handleListItemClick(item)"<br>
-                            &nbsp;&nbsp;/&gt;<br>
+                            &lt;List bordered&gt;
+                            <br />
+                            &nbsp;&nbsp;&lt;ListItem
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;v-for="item in listItems.value"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;:key="item.title"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;:title="item.title"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;:description="item.description"
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;clickable
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;@click="() => handleListItemClick(item)"
+                            <br />
+                            &nbsp;&nbsp;/&gt;
+                            <br />
                             &lt;/List&gt;
                         </code>
                     </div>
@@ -1746,7 +1896,7 @@
         </section>
 
         <!-- Navigasyon Bileşenleri -->
-        <div class="space-y-8">
+        <div class="space-y-8 mt-16">
             <div>
                 <h2 class="text-2xl font-bold text-white mb-4">Navigasyon Bileşenleri</h2>
                 <p class="text-zinc-400 mb-8">Sayfa içi gezinme ve yönlendirme için kullanılan bileşenler.</p>
@@ -1828,196 +1978,309 @@
                     <p class="text-zinc-400">Sayfalama işlemleri için kullanılan bileşen.</p>
 
                     <div class="border border-zinc-800 rounded-lg p-4">
-                        <Pagination
-                            v-model:currentPage="currentPage"
-                            :total-items="100"
-                            :per-page="10"
-                        />
+                        <Pagination v-model:currentPage="currentPage" :total-items="100" :per-page="10" />
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Yardımcı Bileşenler -->
+        <section id="helper-components" class="space-y-8 mt-16">
+            <div class="border-b border-border pb-4">
+                <h2 class="text-2xl font-bold text-white">Yardımcı Bileşenler</h2>
+                <p class="text-gray-400 mt-2">Kullanıcı deneyimini zenginleştiren yardımcı bileşenler.</p>
+            </div>
+
+            <!-- Tooltip -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-white">Tooltip</h3>
+                <div class="p-6 border border-border rounded-lg space-y-6">
+                    <div class="flex flex-wrap gap-4">
+                        <Tooltip text="Üst Tooltip" position="top">
+                            <Button>Üstte</Button>
+                        </Tooltip>
+                        <Tooltip text="Sağ Tooltip" position="right">
+                            <Button>Sağda</Button>
+                        </Tooltip>
+                        <Tooltip text="Alt Tooltip" position="bottom">
+                            <Button>Altta</Button>
+                        </Tooltip>
+                        <Tooltip text="Sol Tooltip" position="left">
+                            <Button>Solda</Button>
+                        </Tooltip>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popover -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-white">Popover</h3>
+                <div class="p-6 border border-border rounded-lg space-y-6">
+                    <div class="flex flex-wrap gap-4">
+                        <Popover>
+                            <template #trigger>
+                                <Button>Popover Aç</Button>
+                            </template>
+                            <div class="p-4">
+                                <h4 class="font-medium mb-2">Popover Başlık</h4>
+                                <p class="text-sm text-gray-400">Popover içeriği buraya gelecek.</p>
+                            </div>
+                        </Popover>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tag -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-white">Tag</h3>
+                <div class="p-6 border border-border rounded-lg space-y-6">
+                    <div class="flex flex-wrap gap-4">
+                        <Tag text="Primary" />
+                        <Tag text="Secondary" variant="secondary" />
+                        <Tag text="Success" variant="success" />
+                        <Tag text="Warning" variant="warning" />
+                        <Tag text="Danger" variant="danger" />
+                        <Tag text="Info" variant="info" />
+                        <Tag text="Kapatılabilir" dismissible />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avatar -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-white">Avatar</h3>
+                <div class="p-6 border border-border rounded-lg space-y-6">
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <Avatar src="https://i.pravatar.cc/300" alt="User Avatar" size="sm" />
+                        <Avatar src="https://i.pravatar.cc/300" alt="User Avatar" size="md" />
+                        <Avatar src="https://i.pravatar.cc/300" alt="User Avatar" size="lg" />
+                        <Avatar src="https://i.pravatar.cc/300" alt="User Avatar" size="xl" />
+                        <Avatar initials="JD" size="md" status="online" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rating -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-white">Rating</h3>
+                <div class="p-6 border border-border rounded-lg space-y-6">
+                    <div class="flex flex-wrap gap-8">
+                        <Rating v-model="rating1" :max-stars="5" size="sm" />
+                        <Rating v-model="rating2" :max-stars="5" size="md" />
+                        <Rating v-model="rating3" :max-stars="5" size="lg" show-value />
+                        <Rating v-model="rating4" :max-stars="5" readonly />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-white">Image Gallery</h3>
+                <div class="p-6 border border-border rounded-lg space-y-6">
+                    <ImageGallery
+                        :images="[
+                            { src: 'https://picsum.photos/800/400?random=1', alt: 'Image 1' },
+                            { src: 'https://picsum.photos/800/400?random=2', alt: 'Image 2' },
+                            { src: 'https://picsum.photos/800/400?random=3', alt: 'Image 3' },
+                        ]"
+                        show-thumbnails
+                        autoplay
+                    />
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed } from "vue";
 
-import Button from '@/components/ui/Button.vue'
-import Input from '@/components/ui/Input.vue'
-import Select from '@/components/ui/Select.vue'
-import Loading from '@/components/ui/Loading.vue'
-import Alert from '@/components/ui/Alert.vue'
-import Badge from '@/components/ui/Badge.vue'
-import Table from '@/components/ui/Table.vue'
-import TableHeader from '@/components/ui/TableHeader.vue'
-import TableHeaderCell from '@/components/ui/TableHeaderCell.vue'
-import TableBody from '@/components/ui/TableBody.vue'
-import TableRow from '@/components/ui/TableRow.vue'
-import type { TableItem } from '@/components/ui/TableBody.vue'
-import TableCell from '@/components/ui/TableCell.vue'
-import Checkbox from '@/components/ui/Checkbox.vue'
-import Radio from '@/components/ui/Radio.vue'
-import Textarea from '@/components/ui/Textarea.vue'
-import DatePicker from '@/components/ui/DatePicker.vue'
-import FileUpload from '@/components/ui/FileUpload.vue'
-import List from '@/components/ui/List.vue'
-import ListItem from '@/components/ui/ListItem.vue'
-import Navbar from '@/components/ui/Navbar.vue'
-import Sidebar from '@/components/ui/Sidebar.vue'
-import Breadcrumb from '@/components/ui/Breadcrumb.vue'
-import BreadcrumbItem from '@/components/ui/BreadcrumbItem.vue'
-import Pagination from '@/components/ui/Pagination.vue'
+import Button from "@/components/ui/Button.vue";
+import Input from "@/components/ui/Input.vue";
+import Select from "@/components/ui/Select.vue";
+import Loading from "@/components/ui/Loading.vue";
+import Alert from "@/components/ui/Alert.vue";
+import Badge from "@/components/ui/Badge.vue";
+import Table from "@/components/ui/Table.vue";
+import TableHeader from "@/components/ui/TableHeader.vue";
+import TableHeaderCell from "@/components/ui/TableHeaderCell.vue";
+import TableBody from "@/components/ui/TableBody.vue";
+import TableRow from "@/components/ui/TableRow.vue";
+import type { TableItem } from "@/components/ui/TableBody.vue";
+import TableCell from "@/components/ui/TableCell.vue";
+import Checkbox from "@/components/ui/Checkbox.vue";
+import Radio from "@/components/ui/Radio.vue";
+import Textarea from "@/components/ui/Textarea.vue";
+import DatePicker from "@/components/ui/DatePicker.vue";
+import FileUpload from "@/components/ui/FileUpload.vue";
+import List from "@/components/ui/List.vue";
+import ListItem from "@/components/ui/ListItem.vue";
+import Navbar from "@/components/ui/Navbar.vue";
+import Sidebar from "@/components/ui/Sidebar.vue";
+import Breadcrumb from "@/components/ui/Breadcrumb.vue";
+import BreadcrumbItem from "@/components/ui/BreadcrumbItem.vue";
+import Pagination from "@/components/ui/Pagination.vue";
+import Tooltip from "@/components/ui/Tooltip.vue";
+import Popover from "@/components/ui/Popover.vue";
+import Tag from "@/components/ui/Tag.vue";
+import Avatar from "@/components/ui/Avatar.vue";
+import Rating from "@/components/ui/Rating.vue";
+import ImageGallery from "@/components/ui/ImageGallery.vue";
 
 interface SortState {
-  field: keyof TableItem
-  direction: 'asc' | 'desc' | null
+    field: keyof TableItem;
+    direction: "asc" | "desc" | null;
 }
 
 interface TableData extends TableItem {
-  name: string;
-  email: string;
-  role: string;
-  status: string;
+    name: string;
+    email: string;
+    role: string;
+    status: string;
 }
 
 const users = ref<TableData[]>([
-  {
-    id: 1,
-    name: 'John Doe',
-    email: 'john@example.com',
-    role: 'Admin',
-    status: 'Active'
-  },
-  {
-    id: 2,
-    name: 'Jane Smith',
-    email: 'jane@example.com',
-    role: 'User',
-    status: 'Inactive'
-  }
-])
+    {
+        id: 1,
+        name: "John Doe",
+        email: "john@example.com",
+        role: "Admin",
+        status: "Active",
+    },
+    {
+        id: 2,
+        name: "Jane Smith",
+        email: "jane@example.com",
+        role: "User",
+        status: "Inactive",
+    },
+]);
 
-const selectedUsers = ref<TableData[]>([])
-const selectAll = ref(false)
+const selectedUsers = ref<TableData[]>([]);
+const selectAll = ref(false);
 
 const sortState = ref<SortState>({
-  field: 'name',
-  direction: null
-})
+    field: "name",
+    direction: null,
+});
 
 const sortedUsers = computed(() => {
-  const { field, direction } = sortState.value
-  if (!direction) return users.value
+    const { field, direction } = sortState.value;
+    if (!direction) return users.value;
 
-  return [...users.value].sort((a, b) => {
-    const aValue = a[field]
-    const bValue = b[field]
-    if (direction === 'asc') {
-      return aValue > bValue ? 1 : -1
-    } else {
-      return aValue < bValue ? 1 : -1
-    }
-  })
-})
+    return [...users.value].sort((a, b) => {
+        const aValue = a[field];
+        const bValue = b[field];
+        if (direction === "asc") {
+            return aValue > bValue ? 1 : -1;
+        } else {
+            return aValue < bValue ? 1 : -1;
+        }
+    });
+});
 
 const handleSort = (field: keyof TableData) => {
-  if (sortState.value.field === field) {
-    sortState.value.direction = sortState.value.direction === 'asc' ? 'desc' : sortState.value.direction === 'desc' ? null : 'asc'
-  } else {
-    sortState.value = { field, direction: 'asc' }
-  }
-}
+    if (sortState.value.field === field) {
+        sortState.value.direction = sortState.value.direction === "asc" ? "desc" : sortState.value.direction === "desc" ? null : "asc";
+    } else {
+        sortState.value = { field, direction: "asc" };
+    }
+};
 
 const toggleSelectAll = () => {
-  if (selectedUsers.value.length === users.value.length) {
-    selectedUsers.value = []
-  } else {
-    selectedUsers.value = users.value.map((user: TableItem) => user.id)
-  }
-}
+    if (selectedUsers.value.length === users.value.length) {
+        selectedUsers.value = [];
+    } else {
+        selectedUsers.value = users.value.map((user: TableItem) => user.id);
+    }
+};
 
 const toggleSelectUser = (user: TableData) => {
-  const index = selectedUsers.value.findIndex((u: TableData) => u.id === user.id)
-  if (index === -1) {
-    selectedUsers.value.push(user)
-  } else {
-    selectedUsers.value.splice(index, 1)
-  }
-}
+    const index = selectedUsers.value.findIndex((u: TableData) => u.id === user.id);
+    if (index === -1) {
+        selectedUsers.value.push(user);
+    } else {
+        selectedUsers.value.splice(index, 1);
+    }
+};
 
 const handleSelectAll = () => {
-  selectAll.value = !selectAll.value
-  if (selectAll.value) {
-    selectedUsers.value = [...users.value]
-  } else {
-    selectedUsers.value = []
-  }
-}
+    selectAll.value = !selectAll.value;
+    if (selectAll.value) {
+        selectedUsers.value = [...users.value];
+    } else {
+        selectedUsers.value = [];
+    }
+};
 
 // Checkbox States
-const checkboxValue1 = ref(false)
-const checkboxValue2 = ref(false)
-const checkboxValue3 = ref(false)
+const checkboxValue1 = ref(false);
+const checkboxValue2 = ref(false);
+const checkboxValue3 = ref(false);
 
-const inlineCheckbox1 = ref(false)
-const inlineCheckbox2 = ref(false)
-const inlineCheckbox3 = ref(false)
+const inlineCheckbox1 = ref(false);
+const inlineCheckbox2 = ref(false);
+const inlineCheckbox3 = ref(false);
 
-const stateCheckbox1 = ref(false)
-const stateCheckbox2 = ref(true)
-const stateCheckbox3 = ref(false)
+const stateCheckbox1 = ref(false);
+const stateCheckbox2 = ref(true);
+const stateCheckbox3 = ref(false);
 
 // Radio States
-const radioValue = ref('1')
-const inlineRadioValue = ref('1')
-const stateRadioValue = ref('1')
+const radioValue = ref("1");
+const inlineRadioValue = ref("1");
+const stateRadioValue = ref("1");
 
 // Date Picker States
-const dateValue1 = ref('')
-const dateValue2 = ref('')
-const dateValue3 = ref('')
-const dateValue4 = ref('')
-const dateValue5 = ref('')
+const dateValue1 = ref("");
+const dateValue2 = ref("");
+const dateValue3 = ref("");
+const dateValue4 = ref("");
+const dateValue5 = ref("");
 
 // File Upload States
-const files1 = ref<File[]>([])
-const files2 = ref<File[]>([])
-const files3 = ref<File[]>([])
-const files4 = ref<File[]>([])
-const files5 = ref<File[]>([])
-const uploadProgress = ref(70)
+const files1 = ref<File[]>([]);
+const files2 = ref<File[]>([]);
+const files3 = ref<File[]>([]);
+const files4 = ref<File[]>([]);
+const files5 = ref<File[]>([]);
+const uploadProgress = ref(70);
 
 // List Items
 const listItems = ref([
     {
-        title: 'Liste Öğesi 1',
-        description: 'Açıklama metni 1'
+        title: "Liste Öğesi 1",
+        description: "Açıklama metni 1",
     },
     {
-        title: 'Liste Öğesi 2',
-        description: 'Açıklama metni 2'
+        title: "Liste Öğesi 2",
+        description: "Açıklama metni 2",
     },
     {
-        title: 'Liste Öğesi 3',
-        description: 'Açıklama metni 3'
-    }
-])
+        title: "Liste Öğesi 3",
+        description: "Açıklama metni 3",
+    },
+]);
 
 const handleUserSelect = (user: TableItem) => {
-  const index = selectedUsers.value.findIndex((u: TableItem) => u.id === user.id)
-  if (index === -1) {
-    selectedUsers.value.push(user)
-  } else {
-    selectedUsers.value.splice(index, 1)
-  }
-}
+    const index = selectedUsers.value.findIndex((u: TableItem) => u.id === user.id);
+    if (index === -1) {
+        selectedUsers.value.push(user);
+    } else {
+        selectedUsers.value.splice(index, 1);
+    }
+};
 
 const handleListItemClick = (item: any) => {
-    console.log('Liste öğesine tıklandı:', item)
-}
+    console.log("Liste öğesine tıklandı:", item);
+};
 
 // Pagination için gerekli state
-const currentPage = ref(1)
-</script>
+const currentPage = ref(1);
 
+// Yardımcı bileşenler için state'ler
+const rating1 = ref(3);
+const rating2 = ref(4);
+const rating3 = ref(5);
+const rating4 = ref(4.5);
+</script>
