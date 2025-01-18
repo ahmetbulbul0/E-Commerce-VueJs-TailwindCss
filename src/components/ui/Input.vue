@@ -21,18 +21,7 @@
             </div>
 
             <!-- Input Element -->
-            <input 
-                :id="id" 
-                :type="actualType" 
-                :value="modelValue" 
-                :placeholder="placeholder" 
-                :disabled="disabled" 
-                :required="required" 
-                :class="inputClasses" 
-                @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
-                @blur="$emit('blur', $event)"
-                @focus="$emit('focus', $event)"
-            />
+            <input :id="id" :type="actualType" :value="modelValue" :placeholder="placeholder" :disabled="disabled" :required="required" :class="inputClasses" @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)" @blur="$emit('blur', $event)" @focus="$emit('focus', $event)" />
 
             <!-- Right Icon -->
             <div v-if="type === 'password' || $slots.rightIcon" class="absolute inset-y-0 right-0 flex items-center pr-3">
@@ -63,8 +52,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, useSlots } from "vue";
 
+type SizeType = "sm" | "md" | "lg";
+type VariantType = "default" | "filled" | "outline" | "ghost";
+type InputType = "text" | "number" | "email" | "password" | "tel" | "url" | "search";
+
+const slots = useSlots();
 const props = defineProps({
     modelValue: {
         type: [String, Number],
@@ -79,12 +73,12 @@ const props = defineProps({
         default: "",
     },
     type: {
-        type: String,
+        type: String as () => InputType,
         default: "text",
         validator: (value: string) => ["text", "number", "email", "password", "tel", "url", "search"].includes(value),
     },
     variant: {
-        type: String,
+        type: String as () => VariantType,
         default: "default",
         validator: (value: string) => ["default", "filled", "outline", "ghost"].includes(value),
     },
@@ -93,7 +87,7 @@ const props = defineProps({
         default: "",
     },
     size: {
-        type: String,
+        type: String as () => SizeType,
         default: "md",
         validator: (value: string) => ["sm", "md", "lg"].includes(value),
     },
@@ -132,34 +126,26 @@ const actualType = computed(() => {
     return props.type;
 });
 
-const variantClasses = computed(() => ({
-    default: 'bg-zinc-900 border border-zinc-700 focus:border-zinc-600 focus:ring-zinc-600 focus:ring-offset-zinc-900',
-    filled: 'bg-zinc-800 border-transparent hover:bg-zinc-700/50 focus:bg-zinc-800 focus:border-zinc-600 focus:ring-zinc-600 focus:ring-offset-zinc-900',
-    outline: 'bg-transparent border-2 border-zinc-700 hover:border-zinc-600 focus:border-zinc-500 focus:ring-zinc-600 focus:ring-offset-zinc-900',
-    ghost: 'bg-transparent border-transparent hover:bg-zinc-800/50 focus:bg-zinc-800 focus:border-zinc-600 focus:ring-zinc-600 focus:ring-offset-zinc-900'
-})[props.variant])
+const variantClasses = computed(
+    () =>
+        ({
+            default: "bg-zinc-900 border border-zinc-700 focus:border-zinc-600 focus:ring-zinc-600 focus:ring-offset-zinc-900",
+            filled: "bg-zinc-800 border-transparent hover:bg-zinc-700/50 focus:bg-zinc-800 focus:border-zinc-600 focus:ring-zinc-600 focus:ring-offset-zinc-900",
+            outline: "bg-transparent border-2 border-zinc-700 hover:border-zinc-600 focus:border-zinc-500 focus:ring-zinc-600 focus:ring-offset-zinc-900",
+            ghost: "bg-transparent border-transparent hover:bg-zinc-800/50 focus:bg-zinc-800 focus:border-zinc-600 focus:ring-zinc-600 focus:ring-offset-zinc-900",
+        })[props.variant]
+);
 
-const inputClasses = computed(() => [
-    'block w-full rounded-md shadow-sm px-4',
-    'text-white placeholder:text-zinc-400',
-    'focus:outline-none focus:ring-2 focus:ring-offset-2',
-    $slots.leftIcon || defaultLeftIcon.value ? 'pl-10' : '',
-    type === 'password' || $slots.rightIcon ? 'pr-10' : '',
-    variantClasses.value,
-    sizeClasses.value,
-    props.error ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : '',
-    props.disabled ? 'opacity-50 cursor-not-allowed' : '',
-    props.className
-])
-
-const togglePasswordVisibility = () => {
-    showPassword.value = !showPassword.value;
-};
-
-const sizeClasses = {
+const sizeClasses: Record<SizeType, string> = {
     sm: "h-8 text-sm",
     md: "h-10 text-base",
     lg: "h-12 text-lg",
+};
+
+const inputClasses = computed(() => ["block w-full rounded-md shadow-sm px-4", "text-white placeholder:text-zinc-400", "focus:outline-none focus:ring-2 focus:ring-offset-2", slots.leftIcon || defaultLeftIcon.value ? "pl-10" : "", props.type === "password" || slots.rightIcon ? "pr-10" : "", variantClasses.value, sizeClasses[props.size], props.error ? "border-red-500 focus:border-red-500 focus:ring-red-500" : "", props.disabled ? "opacity-50 cursor-not-allowed" : "", props.className]);
+
+const togglePasswordVisibility = () => {
+    showPassword.value = !showPassword.value;
 };
 
 defineEmits(["update:modelValue", "blur", "focus"]);

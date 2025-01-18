@@ -428,12 +428,12 @@
                             <h2 class="text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl">Fırsatları Kaçırmayın!</h2>
                             <p class="max-w-2xl text-muted-foreground md:text-lg">En yeni ürünler, özel kampanyalar ve indirimlerden ilk siz haberdar olun.</p>
                             <div class="flex w-full max-w-md flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                                <Input type="email" placeholder="E-posta adresiniz" />
-                                <Button size="sm" >Abone Ol</Button>
+                                <Input variant="default" type="email" size="sm" placeholder="E-posta adresiniz" />
+                                <Button size="sm" class="whitespace-nowrap">Abone Ol</Button>
                             </div>
                             <p class="text-sm text-muted-foreground">
                                 Dilediğiniz zaman abonelikten çıkabilirsiniz.
-                                <a href="#" class="text-primary hover:text-primary/80 underline">Gizlilik Politikası</a>
+                                <router-link :to="{ name: 'privacy-policy' }" class="text-primary hover:text-primary/80 underline">Gizlilik Politikası</router-link>
                             </p>
                         </div>
                     </div>
@@ -442,8 +442,8 @@
         </section>
 
         <!-- Markalar -->
-        <section class="sm:py-16 md:py-24 lg:py-32">
-            <div class="container space-y-8">
+        <section class="border-t sm:py-16 md:py-24 lg:py-32">
+            <div class="container space-y-8 rounded-2xl bg-muted/40 px-6 py-16 border shadow-lg">
                 <div class="flex flex-col items-center space-y-2">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">İş Ortaklarımız</h2>
                     <p class="text-muted-foreground">Güvenilir markalarla çalışıyoruz</p>
