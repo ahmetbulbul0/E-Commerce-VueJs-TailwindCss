@@ -23,7 +23,7 @@
         </section>
 
         <!-- Kampanyalar -->
-        <section class="sm:py-16 md:py-24 lg:py-32 border-t">
+        <section class="py-16 md:py-24 lg:py-32 border-t">
             <div class="container space-y-8">
                 <div class="flex flex-col items-center space-y-2">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Özel Kampanyalar</h2>
@@ -68,7 +68,7 @@
         </section>
 
         <!-- Öne Çıkan Kategoriler -->
-        <section class="border-t bg-muted/40 sm:py-16 md:py-24 lg:py-32">
+        <section class="border-t bg-muted/40 py-16 md:py-24 lg:py-32">
             <div class="container space-y-8">
                 <div class="flex flex-col items-center space-y-2">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Öne Çıkan Kategoriler</h2>
@@ -90,7 +90,7 @@
         </section>
 
         <!-- Popüler Ürünler -->
-        <section class="sm:py-16 md:py-24 lg:py-32">
+        <section class="py-16 md:py-24 lg:py-32">
             <div class="container space-y-8">
                 <div class="flex flex-col items-center space-y-2">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Popüler Ürünler</h2>
@@ -122,7 +122,7 @@
         </section>
 
         <!-- Özellikler -->
-        <section class="border-t bg-muted/40 sm:py-16 md:py-24 lg:py-32">
+        <section class="border-t bg-muted/40 py-16 md:py-24 lg:py-32">
             <div class="container">
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-3 px-4 sm:px-0">
                     <div class="flex flex-col items-center space-y-2 text-center p-4 bg-background rounded-lg">
@@ -165,7 +165,7 @@
         </section>
 
         <!-- Avantajlar -->
-        <section class="sm:py-16 md:py-24 lg:py-32">
+        <section class="py-16 md:py-24 lg:py-32">
             <div class="container">
                 <div class="flex flex-col items-center space-y-2 mb-12">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Alışveriş Avantajları</h2>
@@ -259,7 +259,7 @@
         </section>
 
         <!-- Müşteri Yorumları -->
-        <section class="border-t bg-muted/40 sm:py-16 md:py-24 lg:py-32">
+        <section class="border-t bg-muted/40 py-16 md:py-24 lg:py-32">
             <div class="container">
                 <div class="flex flex-col items-center space-y-2 mb-12">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Müşteri Yorumları</h2>
@@ -411,7 +411,7 @@
         </section>
 
         <!-- Newsletter -->
-        <section class="border-t sm:py-16 md:py-24 lg:py-32">
+        <section class="border-t py-16 md:py-24 lg:py-32">
             <div class="container">
                 <div class="relative overflow-hidden rounded-2xl bg-card px-6 py-16 border shadow-lg">
                     <!-- Gradient Arka Plan -->
@@ -442,7 +442,7 @@
         </section>
 
         <!-- Markalar -->
-        <section class="border-t sm:py-16 md:py-24 lg:py-32">
+        <section class="border-t py-16 md:py-24 lg:py-32 px-6">
             <div class="container space-y-8 rounded-2xl bg-muted/40 px-6 py-16 border shadow-lg">
                 <div class="flex flex-col items-center space-y-2">
                     <h2 class="text-2xl font-bold tracking-tight md:text-3xl">İş Ortaklarımız</h2>
