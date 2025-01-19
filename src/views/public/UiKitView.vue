@@ -2283,6 +2283,185 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modal ve Dialog Bileşenleri -->
+        <section class="space-y-8 mt-16">
+          <div class="border-b border-border pb-4">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+              Modal ve Dialog Bileşenleri
+            </h2>
+            <p class="text-gray-600 dark:text-zinc-300 mt-2">
+              Kullanıcı etkileşimleri için modal ve dialog bileşenleri.
+            </p>
+          </div>
+
+          <!-- Temel Modal -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Temel Modal
+            </h3>
+            <div class="space-y-4">
+              <div class="flex flex-wrap gap-4">
+                <Button @click="showBasicModal = true">Temel Modal</Button>
+                <Button @click="showLargeModal = true">Büyük Modal</Button>
+                <Button @click="showSmallModal = true">Küçük Modal</Button>
+              </div>
+
+              <!-- Temel Modal -->
+              <Modal v-model="showBasicModal" title="Temel Modal">
+                <p class="text-gray-600 dark:text-zinc-300">
+                  Bu bir temel modal örneğidir. İçeriği istediğiniz gibi
+                  özelleştirebilirsiniz.
+                </p>
+                <template #footer>
+                  <Button variant="outline" @click="showBasicModal = false">Kapat</Button>
+                  <Button @click="showBasicModal = false">Kaydet</Button>
+                </template>
+              </Modal>
+
+              <!-- Büyük Modal -->
+              <Modal v-model="showLargeModal" title="Büyük Modal" size="lg">
+                <div class="space-y-4">
+                  <p class="text-gray-600 dark:text-zinc-300">
+                    Bu bir büyük modal örneğidir. Daha fazla içerik göstermek için
+                    kullanılabilir.
+                  </p>
+                  <div class="rounded-lg border p-4 dark:border-zinc-700">
+                    <h4 class="text-sm font-medium text-gray-900 dark:text-white">
+                      Örnek İçerik
+                    </h4>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-zinc-300">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                      voluptates, quod, quia, voluptate quae voluptatem quibusdam
+                      voluptatibus quos quas quidem nesciunt. Quisquam, quae. Quisquam
+                      voluptates, quod, quia, voluptate quae voluptatem quibusdam
+                      voluptatibus quos quas quidem nesciunt. Quisquam, quae.
+                    </p>
+                  </div>
+                </div>
+                <template #footer>
+                  <Button variant="outline" @click="showLargeModal = false">Kapat</Button>
+                  <Button @click="showLargeModal = false">Kaydet</Button>
+                </template>
+              </Modal>
+
+              <!-- Küçük Modal -->
+              <Modal v-model="showSmallModal" title="Küçük Modal" size="sm">
+                <p class="text-gray-600 dark:text-zinc-300">
+                  Bu bir küçük modal örneğidir. Basit mesajlar için kullanılabilir.
+                </p>
+                <template #footer>
+                  <Button variant="outline" @click="showSmallModal = false">Kapat</Button>
+                  <Button @click="showSmallModal = false">Tamam</Button>
+                </template>
+              </Modal>
+            </div>
+          </div>
+
+          <!-- Onay Dialogu -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Onay Dialogu
+            </h3>
+            <div class="space-y-4">
+              <div class="flex flex-wrap gap-4">
+                <Button variant="warning" @click="showWarningDialog = true">
+                  Uyarı Dialogu
+                </Button>
+                <Button variant="danger" @click="showDangerDialog = true">
+                  Tehlike Dialogu
+                </Button>
+                <Button variant="primary" @click="showInfoDialog = true">
+                  Bilgi Dialogu
+                </Button>
+              </div>
+
+              <!-- Uyarı Dialogu -->
+              <ConfirmDialog
+                v-model="showWarningDialog"
+                title="İşlemi Onayla"
+                message="Bu işlemi gerçekleştirmek istediğinizden emin misiniz?"
+                type="warning"
+                @confirm="handleConfirm"
+                @cancel="handleCancel"
+              />
+
+              <!-- Tehlike Dialogu -->
+              <ConfirmDialog
+                v-model="showDangerDialog"
+                title="Hesabı Sil"
+                message="Hesabınızı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+                type="danger"
+                confirm-button-text="Sil"
+                @confirm="handleConfirm"
+                @cancel="handleCancel"
+              />
+
+              <!-- Bilgi Dialogu -->
+              <ConfirmDialog
+                v-model="showInfoDialog"
+                title="Değişiklikleri Kaydet"
+                message="Yaptığınız değişiklikleri kaydetmek istiyor musunuz?"
+                type="info"
+                confirm-button-text="Kaydet"
+                @confirm="handleConfirm"
+                @cancel="handleCancel"
+              />
+            </div>
+          </div>
+
+          <!-- Alert Dialog -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Alert Dialog
+            </h3>
+            <div class="space-y-4">
+              <div class="flex flex-wrap gap-4">
+                <Button variant="success" @click="showSuccessAlert = true">
+                  Başarılı
+                </Button>
+                <Button variant="danger" @click="showErrorAlert = true">Hata</Button>
+                <Button variant="warning" @click="showWarningAlert = true">Uyarı</Button>
+                <Button variant="primary" @click="showInfoAlert = true">Bilgi</Button>
+              </div>
+
+              <!-- Başarılı Alert -->
+              <AlertDialog
+                v-model="showSuccessAlert"
+                title="İşlem Başarılı"
+                message="İşleminiz başarıyla tamamlandı."
+                type="success"
+                auto-close
+              />
+
+              <!-- Hata Alert -->
+              <AlertDialog
+                v-model="showErrorAlert"
+                title="Hata"
+                message="İşlem sırasında bir hata oluştu."
+                description="Lütfen daha sonra tekrar deneyin veya destek ekibiyle iletişime geçin."
+                type="error"
+              />
+
+              <!-- Uyarı Alert -->
+              <AlertDialog
+                v-model="showWarningAlert"
+                title="Uyarı"
+                message="Bu işlem geri alınamaz."
+                type="warning"
+              />
+
+              <!-- Bilgi Alert -->
+              <AlertDialog
+                v-model="showInfoAlert"
+                title="Bilgi"
+                message="Yeni bir güncelleme mevcut."
+                description="Yeni özellikleri görmek için <a href='#' class='text-blue-600 hover:underline dark:text-blue-400'>tıklayın</a>."
+                type="info"
+              />
+            </div>
+          </div>
+        </section>
     </div>
 </template>
 
@@ -2324,6 +2503,9 @@ import ProductCard from "@/components/ui/ProductCard.vue";
 import OrderCard from "@/components/ui/OrderCard.vue";
 import StatisticCard from "@/components/ui/StatisticCard.vue";
 import ProfileCard from "@/components/ui/ProfileCard.vue";
+import Modal from '@/components/ui/Modal.vue';
+import ConfirmDialog from '@/components/ui/ConfirmDialog.vue';
+import AlertDialog from '@/components/ui/AlertDialog.vue';
 
 interface SortState {
     field: keyof TableItem;
@@ -2481,4 +2663,29 @@ const rating1 = ref(3);
 const rating2 = ref(4);
 const rating3 = ref(5);
 const rating4 = ref(4.5);
+
+// Modal States
+const showBasicModal = ref(false);
+const showLargeModal = ref(false);
+const showSmallModal = ref(false);
+
+// Confirm Dialog States
+const showWarningDialog = ref(false);
+const showDangerDialog = ref(false);
+const showInfoDialog = ref(false);
+
+// Alert Dialog States
+const showSuccessAlert = ref(false);
+const showErrorAlert = ref(false);
+const showWarningAlert = ref(false);
+const showInfoAlert = ref(false);
+
+// Dialog Handlers
+const handleConfirm = () => {
+  console.log('Onaylandı');
+};
+
+const handleCancel = () => {
+  console.log('İptal edildi');
+};
 </script>
