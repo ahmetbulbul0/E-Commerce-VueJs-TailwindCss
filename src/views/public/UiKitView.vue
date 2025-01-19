@@ -2089,6 +2089,200 @@
                 </div>
             </div>
         </section>
+
+        <!-- Kart Bileşenleri -->
+        <section class="space-y-8 mt-16">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Kart Bileşenleri</h2>
+            <p class="text-gray-600 dark:text-zinc-300">Farklı amaçlar için tasarlanmış kart bileşenleri.</p>
+
+            <!-- Ürün Kartı -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Ürün Kartı</h3>
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <ProductCard
+                        :product="{
+                            id: 1,
+                            name: 'Kablosuz Kulaklık',
+                            description: 'Aktif gürültü önleme özellikli premium kablosuz kulaklık',
+                            image: 'https://picsum.photos/400/300',
+                            price: 2499.99,
+                            originalPrice: 2999.99,
+                            discount: 15,
+                            stock: 25,
+                            isFavorite: false,
+                        }"
+                        @add-to-cart="() => {}"
+                        @toggle-favorite="() => {}"
+                    />
+                    <ProductCard
+                        :product="{
+                            id: 2,
+                            name: 'Akıllı Saat',
+                            description: 'Spor ve sağlık takibi için akıllı saat',
+                            image: 'https://picsum.photos/400/301',
+                            price: 1899.99,
+                            stock: 8,
+                            isFavorite: true,
+                        }"
+                        @add-to-cart="() => {}"
+                        @toggle-favorite="() => {}"
+                    />
+                    <ProductCard
+                        :product="{
+                            id: 3,
+                            name: 'Bluetooth Hoparlör',
+                            description: 'Su geçirmez taşınabilir bluetooth hoparlör',
+                            image: 'https://picsum.photos/400/302',
+                            price: 899.99,
+                            originalPrice: 1199.99,
+                            discount: 25,
+                            stock: 0,
+                            isFavorite: false,
+                        }"
+                        @add-to-cart="() => {}"
+                        @toggle-favorite="() => {}"
+                    />
+                </div>
+            </div>
+
+            <!-- Sipariş Kartı -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Sipariş Kartı</h3>
+                <div class="grid gap-4 lg:grid-cols-2">
+                    <OrderCard
+                        :order="{
+                            id: 1001,
+                            date: '2024-02-15T10:30:00',
+                            status: 'completed',
+                            items: [
+                                {
+                                    id: 1,
+                                    name: 'Kablosuz Kulaklık',
+                                    image: 'https://picsum.photos/400/300',
+                                    price: 2499.99,
+                                    quantity: 1,
+                                },
+                                {
+                                    id: 2,
+                                    name: 'Akıllı Saat',
+                                    image: 'https://picsum.photos/400/301',
+                                    price: 1899.99,
+                                    quantity: 2,
+                                },
+                            ],
+                            subtotal: 6299.97,
+                            shipping: 29.99,
+                            total: 6329.96,
+                        }"
+                        @view-details="() => {}"
+                    />
+                    <OrderCard
+                        :order="{
+                            id: 1002,
+                            date: '2024-02-14T15:45:00',
+                            status: 'processing',
+                            items: [
+                                {
+                                    id: 3,
+                                    name: 'Bluetooth Hoparlör',
+                                    image: 'https://picsum.photos/400/302',
+                                    price: 899.99,
+                                    quantity: 1,
+                                },
+                            ],
+                            subtotal: 899.99,
+                            shipping: 29.99,
+                            total: 929.98,
+                        }"
+                        @view-details="() => {}"
+                    />
+                </div>
+            </div>
+
+            <!-- İstatistik Kartları -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">İstatistik Kartları</h3>
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <StatisticCard title="Toplam Satış" :value="125999.99" format="currency" variant="primary" :trend="12.5" subtitle="Geçen aya göre <span class='font-medium text-green-600 dark:text-green-400'>%12.5</span> artış">
+                        <template #icon>
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </template>
+                    </StatisticCard>
+
+                    <StatisticCard title="Yeni Müşteriler" :value="256" variant="success" :trend="8.2" subtitle="Bu ay 256 yeni müşteri kazanıldı">
+                        <template #icon>
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </template>
+                    </StatisticCard>
+
+                    <StatisticCard title="Dönüşüm Oranı" :value="15.7" format="percent" variant="warning" :trend="-2.3" subtitle="Geçen haftaya göre düşüş">
+                        <template #icon>
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </template>
+                    </StatisticCard>
+
+                    <StatisticCard title="İptal Edilen Siparişler" :value="12" variant="danger" :trend="5.4" subtitle="Son 24 saatte 12 iptal">
+                        <template #icon>
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </template>
+                    </StatisticCard>
+                </div>
+            </div>
+
+            <!-- Profil Kartı -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Profil Kartı</h3>
+                <div class="grid gap-4 lg:grid-cols-2">
+                    <ProfileCard
+                        name="Ahmet Yılmaz"
+                        title="Kıdemli Yazılım Geliştirici"
+                        avatar="https://picsum.photos/200"
+                        coverImage="https://picsum.photos/1000/300"
+                        status="online"
+                        bio="10+ yıl deneyimli full-stack geliştirici. Modern web teknolojileri ve mimari tasarım konularında uzman."
+                        :stats="[
+                            { label: 'Projeler', value: 48 },
+                            { label: 'Takipçiler', value: 2150 },
+                            { label: 'Takip', value: 184 },
+                        ]"
+                        :contact="{
+                            email: 'ahmet.yilmaz@example.com',
+                            phone: '+90 555 123 4567',
+                            location: 'İstanbul, Türkiye',
+                        }"
+                    >
+                        <template #actions>
+                            <button class="rounded-lg bg-blue-600 px-3 py-1 text-sm font-medium text-white transition hover:bg-blue-700">Takip Et</button>
+                        </template>
+                    </ProfileCard>
+
+                    <ProfileCard
+                        name="Ayşe Demir"
+                        title="UI/UX Tasarımcısı"
+                        avatar="https://picsum.photos/201"
+                        status="busy"
+                        bio="Kullanıcı deneyimi ve arayüz tasarımı konusunda 5 yıllık deneyim. Minimal ve kullanıcı dostu tasarımlar."
+                        :stats="[
+                            { label: 'Tasarımlar', value: 124 },
+                            { label: 'Beğeniler', value: 8432 },
+                            { label: 'Yorumlar', value: 342 },
+                        ]"
+                        :contact="{
+                            email: 'ayse.demir@example.com',
+                            location: 'Ankara, Türkiye',
+                        }"
+                    />
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -2126,6 +2320,10 @@ import Tag from "@/components/ui/Tag.vue";
 import Avatar from "@/components/ui/Avatar.vue";
 import Rating from "@/components/ui/Rating.vue";
 import ImageGallery from "@/components/ui/ImageGallery.vue";
+import ProductCard from "@/components/ui/ProductCard.vue";
+import OrderCard from "@/components/ui/OrderCard.vue";
+import StatisticCard from "@/components/ui/StatisticCard.vue";
+import ProfileCard from "@/components/ui/ProfileCard.vue";
 
 interface SortState {
     field: keyof TableItem;
