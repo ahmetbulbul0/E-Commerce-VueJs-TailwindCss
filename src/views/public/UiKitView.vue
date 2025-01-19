@@ -2462,6 +2462,99 @@
             </div>
           </div>
         </section>
+
+        <!-- Yükleme ve Durum Bileşenleri -->
+        <section class="space-y-8 mt-16">
+          <div class="border-b border-border pb-4">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+              Yükleme ve Durum Bileşenleri
+            </h2>
+            <p class="text-gray-600 dark:text-zinc-300 mt-2">
+              Yükleme durumları ve boş/hata durumları için kullanılan bileşenler.
+            </p>
+          </div>
+
+          <!-- Loading/Spinner -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Loading/Spinner
+            </h3>
+            <div class="p-6 border border-border rounded-lg space-y-6">
+              <div class="flex flex-wrap gap-8">
+                <Loading text="Yükleniyor..." />
+                <Loading variant="success" text="Kaydediliyor..." />
+                <Loading variant="danger" text="Siliniyor..." />
+                <Loading variant="warning" text="İşleniyor..." />
+              </div>
+              <div class="flex flex-wrap gap-8">
+                <Loading size="sm" text="Küçük" />
+                <Loading size="md" text="Orta" />
+                <Loading size="lg" text="Büyük" />
+              </div>
+              <div class="flex flex-wrap gap-8">
+                <Loading vertical text="Dikey" />
+                <Loading variant="info" vertical text="Dikey Info" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Skeleton Loading -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Skeleton Loading
+            </h3>
+            <div class="p-6 border border-border rounded-lg space-y-6">
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <Skeleton variant="text" size="full" />
+                  <Skeleton variant="text" size="lg" />
+                  <Skeleton variant="text" size="md" />
+                  <Skeleton variant="text" size="sm" />
+                </div>
+                <div class="flex gap-4">
+                  <Skeleton variant="avatar" />
+                  <div class="space-y-2 flex-1">
+                    <Skeleton variant="text" size="md" />
+                    <Skeleton variant="text" size="sm" />
+                  </div>
+                </div>
+                <Skeleton variant="image" size="full" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Empty State -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Empty State
+            </h3>
+            <div class="p-6 border border-border rounded-lg space-y-6">
+              <EmptyState
+                title="Veri Bulunamadı"
+                description="Aradığınız kriterlere uygun veri bulunamadı. Lütfen farklı bir arama yapmayı deneyin."
+              >
+                <template #action>
+                  <Button variant="primary">Yeni Ekle</Button>
+                </template>
+              </EmptyState>
+            </div>
+          </div>
+
+          <!-- Error State -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Error State
+            </h3>
+            <div class="p-6 border border-border rounded-lg space-y-6">
+              <ErrorState
+                title="Bir Hata Oluştu"
+                message="Veriler yüklenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+                details="Error: Network request failed"
+                @retry="handleRetry"
+              />
+            </div>
+          </div>
+        </section>
     </div>
 </template>
 
@@ -2506,6 +2599,9 @@ import ProfileCard from "@/components/ui/ProfileCard.vue";
 import Modal from '@/components/ui/Modal.vue';
 import ConfirmDialog from '@/components/ui/ConfirmDialog.vue';
 import AlertDialog from '@/components/ui/AlertDialog.vue';
+import Skeleton from "@/components/ui/Skeleton.vue";
+import EmptyState from "@/components/ui/EmptyState.vue";
+import ErrorState from "@/components/ui/ErrorState.vue";
 
 interface SortState {
     field: keyof TableItem;
@@ -2687,5 +2783,9 @@ const handleConfirm = () => {
 
 const handleCancel = () => {
   console.log('İptal edildi');
+};
+
+const handleRetry = () => {
+  console.log('Yeniden deneniyor...');
 };
 </script>
