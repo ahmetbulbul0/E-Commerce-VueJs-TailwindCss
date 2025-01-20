@@ -1,7 +1,7 @@
 <template>
     <div class="container py-8">
         <div class="flex gap-8">
-            <div class="sticky top-20 h-fit w-72 rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 backdrop-blur">
+            <div class="sticky top-20 h-fit w-72 rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 backdrop-blur hidden">
                 <nav class="space-y-1">
                     <a href="#button" class="block rounded-md px-3 py-2 text-sm text-zinc-200 hover:bg-zinc-800 hover:text-white">Button</a>
                     <a href="#input" class="block rounded-md px-3 py-2 text-sm text-zinc-200 hover:bg-zinc-800 hover:text-white">Input</a>
@@ -2797,7 +2797,7 @@
                     <div class="space-y-4">
                         <h3 class="text-lg font-medium text-white">Arayüz Özelleştirici</h3>
                         <div class="relative h-[400px] rounded-lg border border-zinc-800 bg-zinc-900">
-                            <Customizer />
+                            <!-- <Customizer /> -->
                         </div>
                     </div>
                 </section>
@@ -3434,7 +3434,6 @@ import TableHeader from "@/components/ui/Table/TableHeader.vue";
 import TableHeaderCell from "@/components/ui/Table/TableHeaderCell.vue";
 import TableBody from "@/components/ui/Table/TableBody.vue";
 import TableRow from "@/components/ui/Table/TableRow.vue";
-// import type { TableItem } from "@/components/ui/Table/TableItem.vue";
 import TableCell from "@/components/ui/Table/TableCell.vue";
 import Checkbox from "@/components/ui/Form/Checkbox.vue";
 import Radio from "@/components/ui/Form/Radio.vue";

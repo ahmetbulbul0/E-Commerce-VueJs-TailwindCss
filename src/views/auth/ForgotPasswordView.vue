@@ -117,7 +117,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import Input from '@/components/ui/form/Input.vue'
+import Input from '@/components/ui/Form/Input.vue'
 
 const loading = ref(false)
 const showSuccess = ref(false)
