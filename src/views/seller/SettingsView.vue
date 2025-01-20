@@ -1,23 +1,18 @@
 <template>
     <div class="space-y-6">
-        <!-- Başlık -->
         <div>
             <h1 class="text-3xl font-bold tracking-tight">Ayarlar</h1>
             <p class="text-muted-foreground">Mağaza ve hesap ayarlarınızı yönetin</p>
         </div>
 
-        <!-- Ayarlar Bölümleri -->
         <div class="grid gap-8 lg:grid-cols-[250px_1fr]">
-            <!-- Sol Taraf - Ayar Kategorileri -->
             <nav class="space-y-2">
                 <button v-for="(section, index) in sections" :key="index" class="w-full rounded-lg px-3 py-2 text-left text-sm transition-colors hover:bg-accent" :class="{ 'bg-accent': activeSection === section.id }" @click="activeSection = section.id">
                     {{ section.name }}
                 </button>
             </nav>
 
-            <!-- Sağ Taraf - Ayar İçeriği -->
             <div class="space-y-8">
-                <!-- Mağaza Bilgileri -->
                 <div v-if="activeSection === 'store'" class="space-y-6">
                     <div class="space-y-4">
                         <h2 class="text-xl font-semibold">Mağaza Bilgileri</h2>
@@ -64,7 +59,6 @@
                     </div>
                 </div>
 
-                <!-- Kargo Ayarları -->
                 <div v-if="activeSection === 'shipping'" class="space-y-6">
                     <div class="space-y-4">
                         <h2 class="text-xl font-semibold">Kargo Ayarları</h2>
@@ -114,7 +108,6 @@
                     </div>
                 </div>
 
-                <!-- Ödeme Ayarları -->
                 <div v-if="activeSection === 'payment'" class="space-y-6">
                     <div class="space-y-4">
                         <h2 class="text-xl font-semibold">Banka Hesap Bilgileri</h2>
@@ -164,7 +157,6 @@
                     </div>
                 </div>
 
-                <!-- Bildirim Ayarları -->
                 <div v-if="activeSection === 'notifications'" class="space-y-6">
                     <div class="space-y-4">
                         <h2 class="text-xl font-semibold">Bildirim Ayarları</h2>
@@ -230,7 +222,6 @@
             </div>
         </div>
 
-        <!-- Kaydet Butonu -->
         <div class="mt-8 flex justify-end">
             <Button @click="saveSettings" class="w-full sm:w-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2">
@@ -246,10 +237,10 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import Input from "@/components/ui/form/Input.vue";
-import Button from "@/components/ui/button/Button.vue";
-import Switch from "@/components/ui/form/Switch.vue";
-import Textarea from "@/components/ui/form/Textarea.vue";
+import Input from "@/components/ui/Form/Input.vue";
+import Button from "@/components/ui/Form/Button.vue";
+import Switch from "@/components/ui/Form/Switch.vue";
+import Textarea from "@/components/ui/Form/Textarea.vue";
 
 // Aktif bölüm
 const activeSection = ref("store");

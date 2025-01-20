@@ -1,28 +1,15 @@
 <template>
     <div class="space-y-6">
-        <!-- Başlık ve Açıklama -->
         <div>
             <h1 class="text-3xl font-bold tracking-tight">Platform Ayarları</h1>
             <p class="text-muted-foreground">E-ticaret platformunuzun tüm ayarlarını buradan yönetin.</p>
         </div>
 
-        <!-- Ayarlar Navigasyonu -->
         <div class="flex flex-col gap-6 md:flex-row">
-            <!-- Sol Menü -->
             <div class="w-full md:w-64">
                 <div class="sticky top-6 rounded-lg border bg-card">
                     <div class="flex flex-col">
-                        <button
-                            v-for="tab in settingTabs"
-                            :key="tab.id"
-                            @click="activeTab = tab.id"
-                            class="flex items-center gap-3 px-4 py-3 text-sm transition-colors hover:bg-accent"
-                            :class="[
-                                activeTab === tab.id
-                                    ? 'bg-primary/10 text-primary'
-                                    : 'text-muted-foreground hover:text-foreground'
-                            ]"
-                        >
+                        <button v-for="tab in settingTabs" :key="tab.id" @click="activeTab = tab.id" class="flex items-center gap-3 px-4 py-3 text-sm transition-colors hover:bg-accent" :class="[activeTab === tab.id ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:text-foreground']">
                             <component :is="tab.icon" class="h-5 w-5" />
                             {{ tab.title }}
                         </button>
@@ -30,16 +17,13 @@
                 </div>
             </div>
 
-            <!-- Sağ İçerik -->
             <div class="flex-1 space-y-6">
-                <!-- Genel Ayarlar -->
                 <div v-if="activeTab === 'general'" class="rounded-lg border bg-card">
                     <div class="border-b p-6">
                         <h2 class="text-lg font-medium">Genel Ayarlar</h2>
                         <p class="text-sm text-muted-foreground">Platform için temel ayarları yapılandırın.</p>
                     </div>
                     <div class="p-6 space-y-6">
-                        <!-- Site Bilgileri -->
                         <div class="space-y-4">
                             <div>
                                 <label class="text-sm font-medium">Site Adı</label>
@@ -58,7 +42,6 @@
                             </div>
                         </div>
 
-                        <!-- İletişim Bilgileri -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">İletişim Bilgileri</h3>
                             <div>
@@ -75,7 +58,6 @@
                             </div>
                         </div>
 
-                        <!-- Sosyal Medya -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">Sosyal Medya</h3>
                             <div>
@@ -94,14 +76,12 @@
                     </div>
                 </div>
 
-                <!-- Güvenlik Ayarları -->
                 <div v-if="activeTab === 'security'" class="rounded-lg border bg-card">
                     <div class="border-b p-6">
                         <h2 class="text-lg font-medium">Güvenlik Ayarları</h2>
                         <p class="text-sm text-muted-foreground">Platform güvenlik ayarlarını yapılandırın.</p>
                     </div>
                     <div class="p-6 space-y-6">
-                        <!-- Şifre Politikası -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">Şifre Politikası</h3>
                             <div class="flex items-center gap-2">
@@ -122,7 +102,6 @@
                             </div>
                         </div>
 
-                        <!-- Oturum Ayarları -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">Oturum Ayarları</h3>
                             <div>
@@ -135,7 +114,6 @@
                             </div>
                         </div>
 
-                        <!-- İki Faktörlü Doğrulama -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">İki Faktörlü Doğrulama</h3>
                             <div class="flex items-center gap-2">
@@ -150,14 +128,12 @@
                     </div>
                 </div>
 
-                <!-- Bildirim Ayarları -->
                 <div v-if="activeTab === 'notifications'" class="rounded-lg border bg-card">
                     <div class="border-b p-6">
                         <h2 class="text-lg font-medium">Bildirim Ayarları</h2>
                         <p class="text-sm text-muted-foreground">E-posta ve anlık bildirim tercihlerini yapılandırın.</p>
                     </div>
                     <div class="p-6 space-y-6">
-                        <!-- E-posta Bildirimleri -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">E-posta Bildirimleri</h3>
                             <div class="flex items-center justify-between">
@@ -189,7 +165,6 @@
                             </div>
                         </div>
 
-                        <!-- Anlık Bildirimler -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">Anlık Bildirimler</h3>
                             <div class="flex items-center justify-between">
@@ -214,14 +189,12 @@
                     </div>
                 </div>
 
-                <!-- Entegrasyon Ayarları -->
                 <div v-if="activeTab === 'integrations'" class="rounded-lg border bg-card">
                     <div class="border-b p-6">
                         <h2 class="text-lg font-medium">Entegrasyon Ayarları</h2>
                         <p class="text-sm text-muted-foreground">Harici servis ve API entegrasyonlarını yapılandırın.</p>
                     </div>
                     <div class="p-6 space-y-6">
-                        <!-- Ödeme Entegrasyonları -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">Ödeme Sistemleri</h3>
                             <div class="rounded-lg border p-4">
@@ -250,7 +223,6 @@
                             </div>
                         </div>
 
-                        <!-- Kargo Entegrasyonları -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">Kargo Firmaları</h3>
                             <div class="rounded-lg border p-4">
@@ -279,7 +251,6 @@
                             </div>
                         </div>
 
-                        <!-- Diğer Entegrasyonlar -->
                         <div class="space-y-4">
                             <h3 class="text-base font-medium">Diğer Entegrasyonlar</h3>
                             <div class="rounded-lg border p-4">
@@ -310,11 +281,8 @@
                     </div>
                 </div>
 
-                <!-- Kaydet Butonu -->
                 <div class="flex justify-end">
-                    <button class="inline-flex items-center justify-center rounded-md bg-primary px-8 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90">
-                        Değişiklikleri Kaydet
-                    </button>
+                    <button class="inline-flex items-center justify-center rounded-md bg-primary px-8 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90">Değişiklikleri Kaydet</button>
                 </div>
             </div>
         </div>
@@ -322,47 +290,47 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
 // Aktif sekme
-const activeTab = ref('general')
+const activeTab = ref("general");
 
 // Ayar sekmeleri
 const settingTabs = [
     {
-        id: 'general',
-        title: 'Genel Ayarlar',
-        icon: 'SettingsIcon'
+        id: "general",
+        title: "Genel Ayarlar",
+        icon: "SettingsIcon",
     },
     {
-        id: 'security',
-        title: 'Güvenlik',
-        icon: 'ShieldIcon'
+        id: "security",
+        title: "Güvenlik",
+        icon: "ShieldIcon",
     },
     {
-        id: 'notifications',
-        title: 'Bildirimler',
-        icon: 'BellIcon'
+        id: "notifications",
+        title: "Bildirimler",
+        icon: "BellIcon",
     },
     {
-        id: 'integrations',
-        title: 'Entegrasyonlar',
-        icon: 'PlugIcon'
-    }
-]
+        id: "integrations",
+        title: "Entegrasyonlar",
+        icon: "PlugIcon",
+    },
+];
 
 // Örnek ayarlar verisi
 const settings = ref({
-    siteName: 'E-Ticaret Platformu',
-    siteDescription: 'Modern ve güvenilir e-ticaret platformu',
-    logo: 'https://picsum.photos/200',
-    contactEmail: 'info@example.com',
-    contactPhone: '+90 555 123 4567',
-    address: 'Örnek Mahallesi, Örnek Sokak No:1\nİstanbul, Türkiye',
+    siteName: "E-Ticaret Platformu",
+    siteDescription: "Modern ve güvenilir e-ticaret platformu",
+    logo: "https://picsum.photos/200",
+    contactEmail: "info@example.com",
+    contactPhone: "+90 555 123 4567",
+    address: "Örnek Mahallesi, Örnek Sokak No:1\nİstanbul, Türkiye",
     socialMedia: {
-        facebook: 'https://facebook.com',
-        instagram: 'https://instagram.com',
-        twitter: 'https://twitter.com'
+        facebook: "https://facebook.com",
+        instagram: "https://instagram.com",
+        twitter: "https://twitter.com",
     },
     security: {
         requireUppercase: true,
@@ -372,14 +340,14 @@ const settings = ref({
         sessionTimeout: 60,
         forceLogout: true,
         require2FA: true,
-        optional2FA: true
+        optional2FA: true,
     },
     notifications: {
         orderEmail: true,
         stockEmail: true,
         userEmail: false,
         desktop: true,
-        mobile: true
-    }
-})
-</script> 
+        mobile: true,
+    },
+});
+</script>
