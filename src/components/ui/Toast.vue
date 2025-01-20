@@ -1,47 +1,98 @@
 <template>
   <Teleport to="body">
-    <div class="fixed inset-0 z-50 pointer-events-none flex flex-col items-end justify-start p-4 gap-2">
+    <div class="fixed inset-x-0 bottom-0 z-50 p-4 pointer-events-none">
       <TransitionGroup
-        enter-active-class="transition duration-300 ease-out"
-        enter-from-class="transform translate-x-full opacity-0"
-        enter-to-class="transform translate-x-0 opacity-100"
-        leave-active-class="transition duration-200 ease-in"
-        leave-from-class="transform translate-x-0 opacity-100"
-        leave-to-class="transform translate-x-full opacity-0"
+        enter-active-class="transition ease-out duration-300"
+        enter-from-class="translate-y-2 opacity-0"
+        enter-to-class="translate-y-0 opacity-100"
+        leave-active-class="transition ease-in duration-200"
+        leave-from-class="translate-y-0 opacity-100"
+        leave-to-class="translate-y-2 opacity-0"
       >
         <div
           v-for="toast in toasts"
           :key="toast.id"
-          class="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg shadow-lg"
+          class="pointer-events-auto mb-2 flex w-full max-w-sm mx-auto overflow-hidden rounded-lg shadow-lg"
           :class="[
-            variantClasses[toast.variant],
-            positionClasses[position]
+            toast.type === 'success' ? 'bg-green-500' :
+            toast.type === 'error' ? 'bg-red-500' :
+            toast.type === 'warning' ? 'bg-yellow-500' :
+            'bg-blue-500'
           ]"
-          role="alert"
         >
-          <div class="p-4">
+          <div class="flex-1 p-4">
             <div class="flex items-start">
-              <!-- İkon -->
-              <div v-if="toast.variant !== 'default'" class="flex-shrink-0">
-                <component :is="icons[toast.variant]" class="h-5 w-5" />
+              <div class="flex-shrink-0">
+                <svg
+                  v-if="toast.type === 'success'"
+                  class="h-6 w-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <svg
+                  v-else-if="toast.type === 'error'"
+                  class="h-6 w-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+                <svg
+                  v-else-if="toast.type === 'warning'"
+                  class="h-6 w-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  />
+                </svg>
+                <svg
+                  v-else
+                  class="h-6 w-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
               </div>
-
-              <!-- İçerik -->
               <div class="ml-3 w-0 flex-1">
-                <p v-if="toast.title" class="text-sm font-medium">
+                <p class="text-sm font-medium text-white">
                   {{ toast.title }}
                 </p>
-                <p class="text-sm">{{ toast.message }}</p>
+                <p v-if="toast.message" class="mt-1 text-sm text-white/90">
+                  {{ toast.message }}
+                </p>
               </div>
-
-              <!-- Kapat Butonu -->
               <div class="ml-4 flex flex-shrink-0">
                 <button
-                  type="button"
-                  class="inline-flex rounded-md text-zinc-400 hover:text-zinc-500 focus:outline-none"
+                  class="inline-flex text-white/80 hover:text-white focus:outline-none"
                   @click="removeToast(toast.id)"
                 >
-                  <span class="sr-only">Kapat</span>
                   <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path
                       fill-rule="evenodd"
@@ -60,94 +111,48 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
 interface Toast {
   id: number;
-  title?: string;
-  message: string;
-  variant: 'default' | 'success' | 'error' | 'warning' | 'info';
+  type: 'success' | 'error' | 'warning' | 'info';
+  title: string;
+  message?: string;
   duration?: number;
 }
-
-interface Props {
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  position: 'top-right',
-});
 
 const toasts = ref<Toast[]>([]);
 let toastId = 0;
 
-const variantClasses = {
-  default: 'bg-zinc-800 text-zinc-200',
-  success: 'bg-green-600 text-white',
-  error: 'bg-red-600 text-white',
-  warning: 'bg-yellow-500 text-white',
-  info: 'bg-blue-600 text-white',
-};
+const show = (toast: Omit<Toast, 'id'>) => {
+  const id = ++toastId;
+  const duration = toast.duration ?? 5000;
 
-const positionClasses = {
-  'top-right': 'top-0 right-0',
-  'top-left': 'top-0 left-0',
-  'bottom-right': 'bottom-0 right-0',
-  'bottom-left': 'bottom-0 left-0',
-};
+  toasts.value.push({ ...toast, id });
 
-const icons = {
-  success: {
-    template: `
-      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-      </svg>
-    `,
-  },
-  error: {
-    template: `
-      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    `,
-  },
-  warning: {
-    template: `
-      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-      </svg>
-    `,
-  },
-  info: {
-    template: `
-      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    `,
-  },
-};
-
-const addToast = (toast: Omit<Toast, 'id'>) => {
-  const id = toastId++;
-  const newToast = { ...toast, id };
-  toasts.value.push(newToast);
-
-  if (toast.duration !== 0) {
+  if (duration > 0) {
     setTimeout(() => {
       removeToast(id);
-    }, toast.duration || 5000);
+    }, duration);
   }
 };
 
 const removeToast = (id: number) => {
-  const index = toasts.value.findIndex((t) => t.id === id);
+  const index = toasts.value.findIndex(t => t.id === id);
   if (index > -1) {
     toasts.value.splice(index, 1);
   }
 };
 
 defineExpose({
-  addToast,
-  removeToast,
+  show,
+  success: (title: string, message?: string, duration?: number) =>
+    show({ type: 'success', title, message, duration }),
+  error: (title: string, message?: string, duration?: number) =>
+    show({ type: 'error', title, message, duration }),
+  warning: (title: string, message?: string, duration?: number) =>
+    show({ type: 'warning', title, message, duration }),
+  info: (title: string, message?: string, duration?: number) =>
+    show({ type: 'info', title, message, duration }),
 });
 </script> 

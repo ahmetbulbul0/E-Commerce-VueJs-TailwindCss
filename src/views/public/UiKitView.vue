@@ -24,6 +24,9 @@
                     <a href="#switch" class="block rounded-md px-3 py-2 text-sm text-zinc-200 hover:bg-zinc-800 hover:text-white">Switch</a>
                     <a href="#slider" class="block rounded-md px-3 py-2 text-sm text-zinc-200 hover:bg-zinc-800 hover:text-white">Slider</a>
                     <a href="#colorpicker" class="block rounded-md px-3 py-2 text-sm text-zinc-200 hover:bg-zinc-800 hover:text-white">Color Picker</a>
+                    <a href="#tree" class="block rounded-md px-3 py-2 text-sm text-zinc-200 hover:bg-zinc-800 hover:text-white">Tree</a>
+                    <a href="#layout-components" class="block rounded-md px-3 py-2 text-sm text-zinc-200 hover:bg-zinc-800 hover:text-white">Düzen Bileşenleri</a>
+                    <a href="#notification-components" class="block rounded-md px-3 py-2 text-sm text-zinc-200 hover:bg-zinc-800 hover:text-white">Bildirim ve Geri Bildirim</a>
                 </nav>
             </div>
 
@@ -2604,14 +2607,7 @@
                         <h3 class="text-lg font-semibold text-white">İşaretleyiciler</h3>
                         <div class="p-6 border border-border rounded-lg space-y-6">
                             <div class="max-w-sm space-y-8">
-                                <Slider
-                                    v-model="sliderValue1"
-                                    label="İşaretleyicili Slider"
-                                    :min="0"
-                                    :max="100"
-                                    :step="20"
-                                    show-ticks
-                                />
+                                <Slider v-model="sliderValue1" label="İşaretleyicili Slider" :min="0" :max="100" :step="20" show-ticks />
                             </div>
                             <div class="bg-muted/40 p-4 rounded-md">
                                 <code class="text-sm text-gray-300">
@@ -2677,18 +2673,7 @@
                         <h3 class="text-lg font-semibold text-white">Hazır Renkler</h3>
                         <div class="p-6 border border-border rounded-lg space-y-6">
                             <div class="max-w-sm">
-                                <ColorPicker
-                                    v-model="colorValue1"
-                                    label="Özel Hazır Renkler"
-                                    :preset-colors="[
-                                        '#FF0000',
-                                        '#00FF00',
-                                        '#0000FF',
-                                        '#FFFF00',
-                                        '#FF00FF',
-                                        '#00FFFF',
-                                    ]"
-                                />
+                                <ColorPicker v-model="colorValue1" label="Özel Hazır Renkler" :preset-colors="['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF']" />
                             </div>
                             <div class="bg-muted/40 p-4 rounded-md">
                                 <code class="text-sm text-gray-300">
@@ -2733,15 +2718,8 @@
                         <div class="space-y-4">
                             <h4 class="text-sm font-medium text-zinc-300">Temel Kullanım</h4>
                             <div class="grid gap-4 md:grid-cols-2">
-                                <TimePicker
-                                    v-model="timeValue"
-                                    label="24 Saat Formatı"
-                                />
-                                <TimePicker
-                                    v-model="time12hValue"
-                                    label="12 Saat Formatı"
-                                    format="12h"
-                                />
+                                <TimePicker v-model="timeValue" label="24 Saat Formatı" />
+                                <TimePicker v-model="time12hValue" label="12 Saat Formatı" format="12h" />
                             </div>
                             <CodeBlock :code="timePickerBasicCode" lang="vue" />
                         </div>
@@ -2750,16 +2728,698 @@
                         <div class="space-y-4">
                             <h4 class="text-sm font-medium text-zinc-300">Devre Dışı Durum</h4>
                             <div class="grid gap-4 md:grid-cols-2">
-                                <TimePicker
-                                    v-model="timeValue"
-                                    label="Devre Dışı"
-                                    disabled
-                                />
+                                <TimePicker v-model="timeValue" label="Devre Dışı" disabled />
                             </div>
                             <CodeBlock :code="timePickerDisabledCode" lang="vue" />
                         </div>
                     </div>
                 </div>
+
+                <!-- Medya Bileşenleri -->
+                <section class="space-y-8">
+                    <h2 class="text-2xl font-semibold text-white">Medya Bileşenleri</h2>
+
+                    <!-- Video Player -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Video Player</h3>
+                        <VideoPlayer :src="videoSrc" poster="https://picsum.photos/800/450?random=1" :autoplay="false" :loop="false" :muted="false" />
+                    </div>
+
+                    <!-- Audio Player -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Audio Player</h3>
+                        <AudioPlayer :src="audioSrc" title="Sample Audio" artist="Unknown Artist" cover="https://picsum.photos/300/300?random=1" :autoplay="false" :loop="false" />
+                    </div>
+
+                    <!-- Carousel -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Carousel</h3>
+                        <Carousel :slides="carouselSlides" :autoplay="true" :interval="5000" aspect-ratio="16:9" :show-arrows="true" :show-indicators="true" :show-thumbnails="true" />
+                    </div>
+
+                    <!-- LightBox -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">LightBox</h3>
+                        <LightBox :images="lightboxImages" :show-thumbnails="true" />
+                    </div>
+
+                    <!-- File Viewer -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">File Viewer</h3>
+                        <FileViewer v-bind="sampleFile" aspect-ratio="16:9" :downloadable="true" :closable="true" />
+                    </div>
+                </section>
+
+                <!-- Özelleştirme Bileşenleri -->
+                <section class="space-y-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-semibold text-white">Özelleştirme</h2>
+                        <span class="text-sm text-zinc-400">Arayüz özelleştirme bileşenleri</span>
+                    </div>
+
+                    <!-- Theme Switcher -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Tema Değiştirici</h3>
+                        <div class="flex items-center gap-4">
+                            <ThemeSwitcher />
+                        </div>
+                    </div>
+
+                    <!-- Language Switcher -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Dil Değiştirici</h3>
+                        <div class="flex items-center gap-4">
+                            <LanguageSwitcher />
+                        </div>
+                    </div>
+
+                    <!-- Customizer -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Arayüz Özelleştirici</h3>
+                        <div class="relative h-[400px] rounded-lg border border-zinc-800 bg-zinc-900">
+                            <Customizer />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Güvenlik ve Doğrulama -->
+                <section class="space-y-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-semibold text-white">Güvenlik ve Doğrulama</h2>
+                        <span class="text-sm text-zinc-400">Güvenlik ve kimlik doğrulama bileşenleri</span>
+                    </div>
+
+                    <!-- Captcha -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Captcha</h3>
+                        <div class="max-w-md">
+                            <Captcha @verify="handleCaptchaVerify" />
+                        </div>
+                    </div>
+
+                    <!-- Password Strength -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Şifre Güçlüğü</h3>
+                        <div class="max-w-md">
+                            <PasswordStrength @input="handlePasswordInput" />
+                        </div>
+                    </div>
+
+                    <!-- Biometric Auth -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Biyometrik Doğrulama</h3>
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <!-- Parmak İzi -->
+                            <BiometricAuth type="fingerprint" @success="handleBiometricSuccess" @error="handleBiometricError" />
+                            <!-- Yüz Tanıma -->
+                            <BiometricAuth type="face" @success="handleBiometricSuccess" @error="handleBiometricError" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- İş Akışı Bileşenleri -->
+                <section class="space-y-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-semibold text-white">İş Akışı</h2>
+                        <span class="text-sm text-zinc-400">Proje ve görev yönetimi bileşenleri</span>
+                    </div>
+
+                    <!-- Kanban -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Kanban</h3>
+                        <div class="overflow-hidden">
+                            <Kanban @update:columns="handleKanbanUpdate" />
+                        </div>
+                    </div>
+
+                    <!-- Calendar -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Takvim</h3>
+                        <Calendar @add-event="handleAddCalendarEvent" @edit-event="handleEditCalendarEvent" />
+                    </div>
+
+                    <!-- Gantt -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Gantt Şeması</h3>
+                        <Gantt @add-task="handleAddGanttTask" @edit-task="handleEditGanttTask" />
+                    </div>
+
+                    <!-- Scheduler -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Zamanlayıcı</h3>
+                        <Scheduler @add-event="handleAddSchedulerEvent" @edit-event="handleEditSchedulerEvent" />
+                    </div>
+                </section>
+
+                <!-- Veri Görselleştirme -->
+                <section class="space-y-8">
+                    <h2 class="text-2xl font-semibold text-white">Veri Görselleştirme</h2>
+                    <p class="text-zinc-400">Veri görselleştirme ve analiz bileşenleri.</p>
+
+                    <!-- Ağaç Görünümü -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Ağaç Görünümü</h3>
+                        <div class="max-w-sm p-4 border border-zinc-800 rounded-lg">
+                            <Tree :nodes="treeNodes" defaultExpanded iconSize="md" indentSize="md" />
+                        </div>
+                    </div>
+
+                    <!-- Grafikler -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Grafikler</h3>
+                        <div class="grid gap-4 lg:grid-cols-2">
+                            <!-- Çizgi Grafiği -->
+                            <Chart
+                                title="Aylık Satışlar"
+                                description="Son 12 ayın satış verileri"
+                                type="line"
+                                :data="{
+                                    labels: ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'],
+                                    datasets: [
+                                        {
+                                            label: 'Satışlar',
+                                            data: [65, 59, 80, 81, 56, 55, 40, 45, 60, 75, 85, 90],
+                                            borderColor: '#3b82f6',
+                                            tension: 0.3,
+                                        },
+                                    ],
+                                }"
+                            />
+
+                            <!-- Pasta Grafiği -->
+                            <Chart
+                                title="Kategori Dağılımı"
+                                description="Ürün kategorilerine göre dağılım"
+                                type="pie"
+                                :data="{
+                                    labels: ['Elektronik', 'Giyim', 'Kitap', 'Spor', 'Kozmetik'],
+                                    datasets: [
+                                        {
+                                            data: [30, 25, 15, 20, 10],
+                                            backgroundColor: ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6'],
+                                        },
+                                    ],
+                                }"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- İlerleme Çubukları -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">İlerleme Çubukları</h3>
+                        <div class="space-y-4">
+                            <ProgressBar label="Temel" value="75" showValue />
+                            <ProgressBar label="Özel Renk" value="60" color="bg-purple-500" showValue />
+                            <ProgressBar label="Belirsiz" indeterminate />
+                            <ProgressBar label="Nabız" value="90" color="bg-red-500" pulse showValue />
+                        </div>
+                    </div>
+
+                    <!-- Zaman Çizelgesi -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Zaman Çizelgesi</h3>
+                        <Timeline
+                            :items="[
+                                {
+                                    title: 'Sipariş Alındı',
+                                    content: 'Sipariş başarıyla oluşturuldu.',
+                                    date: '12 Mart 2024, 10:30',
+                                    icon: 'ShoppingCartIcon',
+                                    iconBackground: 'bg-blue-500',
+                                },
+                                {
+                                    title: 'Ödeme Onaylandı',
+                                    content: 'Ödeme işlemi tamamlandı.',
+                                    date: '12 Mart 2024, 10:35',
+                                    icon: 'CreditCardIcon',
+                                    iconBackground: 'bg-green-500',
+                                },
+                                {
+                                    title: 'Kargoya Verildi',
+                                    content: 'Ürün kargo firmasına teslim edildi.',
+                                    date: '13 Mart 2024, 14:20',
+                                    icon: 'TruckIcon',
+                                    iconBackground: 'bg-yellow-500',
+                                },
+                                {
+                                    title: 'Teslim Edildi',
+                                    content: 'Ürün müşteriye teslim edildi.',
+                                    date: '14 Mart 2024, 11:45',
+                                    icon: 'CheckCircleIcon',
+                                    iconBackground: 'bg-green-500',
+                                },
+                            ]"
+                        />
+                    </div>
+
+                    <!-- Veri Tablosu -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Veri Tablosu</h3>
+                        <DataGrid
+                            :columns="[
+                                { field: 'id', header: 'ID', sortable: true },
+                                { field: 'name', header: 'Ad', sortable: true },
+                                { field: 'category', header: 'Kategori', sortable: true },
+                                { field: 'price', header: 'Fiyat', sortable: true },
+                                { field: 'stock', header: 'Stok', sortable: true },
+                            ]"
+                            :rows="[
+                                { id: 1, name: 'iPhone 15 Pro', category: 'Telefon', price: '84.999 ₺', stock: 25 },
+                                { id: 2, name: 'MacBook Pro M3', category: 'Bilgisayar', price: '124.999 ₺', stock: 15 },
+                                { id: 3, name: 'AirPods Pro', category: 'Aksesuar', price: '14.999 ₺', stock: 50 },
+                                { id: 4, name: 'iPad Air', category: 'Tablet', price: '34.999 ₺', stock: 30 },
+                                { id: 5, name: 'Apple Watch', category: 'Aksesuar', price: '24.999 ₺', stock: 40 },
+                            ]"
+                            selectable
+                            actions
+                        >
+                            <template #actions="{ row }">
+                                <button class="rounded-lg bg-blue-500 px-2 py-1 text-xs text-white hover:bg-blue-600" @click="() => {}">Düzenle</button>
+                                <button class="rounded-lg bg-red-500 px-2 py-1 text-xs text-white hover:bg-red-600" @click="() => {}">Sil</button>
+                            </template>
+                        </DataGrid>
+                    </div>
+                </section>
+
+                <!-- Tree Documentation -->
+                <section id="tree" class="space-y-8 mt-16 hidden">
+                    <div class="border-b border-border pb-4">
+                        <h2 class="text-2xl font-bold text-white">Tree</h2>
+                        <p class="text-gray-400 mt-2">Hiyerarşik veri yapılarını görüntülemek için ağaç bileşeni.</p>
+                    </div>
+
+                    <!-- Import Section -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-white">Import</h3>
+                        <div class="border border-border p-4 rounded-md">
+                            <code class="text-sm text-gray-300">import Tree from '@/components/ui/Tree.vue'</code>
+                        </div>
+                    </div>
+
+                    <!-- Props Section -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-white">Props</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-border">
+                                        <th class="py-3 text-gray-400">Prop</th>
+                                        <th class="py-3 text-gray-400">Tip</th>
+                                        <th class="py-3 text-gray-400">Varsayılan</th>
+                                        <th class="py-3 text-gray-400">Açıklama</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-300">
+                                    <tr class="border-b border-border">
+                                        <td class="py-3 font-medium">nodes</td>
+                                        <td>TreeNode[]</td>
+                                        <td>[]</td>
+                                        <td>Ağaç düğümlerinin listesi</td>
+                                    </tr>
+                                    <tr class="border-b border-border">
+                                        <td class="py-3 font-medium">iconSize</td>
+                                        <td>string</td>
+                                        <td>'md'</td>
+                                        <td>İkon boyutu (sm, md, lg)</td>
+                                    </tr>
+                                    <tr class="border-b border-border">
+                                        <td class="py-3 font-medium">indentSize</td>
+                                        <td>string</td>
+                                        <td>'md'</td>
+                                        <td>İç içe geçmiş öğelerin girinti boyutu</td>
+                                    </tr>
+                                    <tr class="border-b border-border">
+                                        <td class="py-3 font-medium">defaultExpanded</td>
+                                        <td>boolean</td>
+                                        <td>false</td>
+                                        <td>Başlangıçta tüm düğümlerin genişletilmiş olup olmayacağı</td>
+                                    </tr>
+                                    <tr class="border-b border-border">
+                                        <td class="py-3 font-medium">defaultSelected</td>
+                                        <td>(string | number)[]</td>
+                                        <td>[]</td>
+                                        <td>Başlangıçta seçili olan düğümlerin ID'leri</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Tree Example Section -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-white">Örnek</h3>
+                        <div class="p-6 border border-border rounded-lg space-y-6">
+                            <div class="max-w-sm">
+                                <Tree :nodes="treeNodes" defaultExpanded />
+                            </div>
+                            <div class="bg-muted/40 p-4 rounded-md">
+                                <code class="text-sm text-gray-300">&lt;Tree :nodes="treeNodes" defaultExpanded /&gt;</code>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Düzen Bileşenleri -->
+                <section class="space-y-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-semibold text-white">Düzen Bileşenleri</h2>
+                        <span class="text-sm text-zinc-400">Sayfa düzeni ve yerleşim bileşenleri</span>
+                    </div>
+
+                    <!-- Accordion -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Accordion</h3>
+                        <div class="max-w-md">
+                            <Accordion
+                                :items="[
+                                    {
+                                        title: 'Accordion Başlık 1',
+                                        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                                    },
+                                    {
+                                        title: 'Accordion Başlık 2',
+                                        content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                                    },
+                                    {
+                                        title: 'Accordion Başlık 3',
+                                        content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                                    },
+                                ]"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Tabs -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Tabs</h3>
+                        <div class="max-w-2xl">
+                            <Tabs
+                                :tabs="[
+                                    {
+                                        title: 'Sekme 1',
+                                        content: 'Sekme 1 içeriği burada yer alır. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                    },
+                                    {
+                                        title: 'Sekme 2',
+                                        content: 'Sekme 2 içeriği burada yer alır. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                                    },
+                                    {
+                                        title: 'Sekme 3',
+                                        content: 'Sekme 3 içeriği burada yer alır. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+                                    },
+                                ]"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Drawer -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Drawer</h3>
+                        <div class="flex gap-4">
+                            <Button @click="leftDrawerOpen = true">Sol Drawer</Button>
+                            <Button @click="rightDrawerOpen = true">Sağ Drawer</Button>
+                        </div>
+
+                        <Drawer v-model="leftDrawerOpen" title="Sol Drawer" position="left">
+                            <div class="space-y-4">
+                                <p class="text-zinc-400">Sol drawer içeriği burada yer alır.</p>
+                                <Button @click="leftDrawerOpen = false">Kapat</Button>
+                            </div>
+                        </Drawer>
+
+                        <Drawer v-model="rightDrawerOpen" title="Sağ Drawer" position="right">
+                            <div class="space-y-4">
+                                <p class="text-zinc-400">Sağ drawer içeriği burada yer alır.</p>
+                                <Button @click="rightDrawerOpen = false">Kapat</Button>
+                            </div>
+                        </Drawer>
+                    </div>
+
+                    <!-- Masonry -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Masonry</h3>
+                        <Masonry :columns="3" :gap="16">
+                            <div v-for="i in 9" :key="i" class="rounded-lg bg-zinc-800 p-4" :style="{ height: 100 + Math.random() * 200 + 'px' }">
+                                <h4 class="text-white">Öğe {{ i }}</h4>
+                                <p class="mt-2 text-sm text-zinc-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </Masonry>
+                    </div>
+
+                    <!-- Virtual Scroll -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Virtual Scroll</h3>
+                        <div class="max-w-md">
+                            <VirtualScroll
+                                :items="
+                                    Array.from({ length: 1000 }, (_, i) => ({
+                                        id: i + 1,
+                                        title: 'Öğe ' + (i + 1),
+                                        description: 'Açıklama ' + (i + 1),
+                                    }))
+                                "
+                                :height="400"
+                                :item-height="80"
+                            >
+                                <template #default="{ item }">
+                                    <div class="border-b border-zinc-800 p-4">
+                                        <h4 class="text-white">{{ item.title }}</h4>
+                                        <p class="mt-1 text-sm text-zinc-400">{{ item.description }}</p>
+                                    </div>
+                                </template>
+                            </VirtualScroll>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bildirim ve Geri Bildirim -->
+                <section class="space-y-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-semibold text-white">Bildirim ve Geri Bildirim</h2>
+                        <span class="text-sm text-zinc-400">Kullanıcı etkileşimi ve bildirim bileşenleri</span>
+                    </div>
+
+                    <!-- Toast -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Toast</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <Button @click="showToast('success', 'Başarılı', 'İşlem başarıyla tamamlandı.')">Başarılı Toast</Button>
+                            <Button @click="showToast('error', 'Hata', 'Bir hata oluştu.')">Hata Toast</Button>
+                            <Button @click="showToast('warning', 'Uyarı', 'Dikkat edilmesi gereken bir durum var.')">Uyarı Toast</Button>
+                            <Button @click="showToast('info', 'Bilgi', 'Yeni bir güncelleme mevcut.')">Bilgi Toast</Button>
+                        </div>
+                    </div>
+
+                    <!-- Snackbar -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Snackbar</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <Button @click="showBasicSnackbar">Temel Snackbar</Button>
+                            <Button @click="showActionSnackbar">Aksiyonlu Snackbar</Button>
+                        </div>
+                    </div>
+
+                    <!-- Banner -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Banner</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <Button @click="showSuccessBanner">Başarılı Banner</Button>
+                            <Button @click="showErrorBanner">Hata Banner</Button>
+                            <Button @click="showWarningBanner">Uyarı Banner</Button>
+                            <Button @click="showInfoBanner">Bilgi Banner</Button>
+                        </div>
+                    </div>
+
+                    <!-- Stepper -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Stepper</h3>
+                        <div class="max-w-4xl">
+                            <Stepper
+                                v-model="currentStep"
+                                :steps="[
+                                    { title: 'Kişisel Bilgiler', description: 'Ad, soyad ve iletişim bilgileri' },
+                                    { title: 'Adres Bilgileri', description: 'Teslimat adresi bilgileri' },
+                                    { title: 'Ödeme', description: 'Ödeme yöntemi seçimi' },
+                                    { title: 'Onay', description: 'Sipariş özeti ve onay' },
+                                ]"
+                                @finish="handleStepperFinish"
+                            >
+                                <template #default="{ step }">
+                                    <div class="rounded-lg border border-zinc-800 bg-zinc-900 p-6">
+                                        <div v-if="step === 0">
+                                            <h4 class="text-lg font-medium text-white">Kişisel Bilgiler</h4>
+                                            <p class="mt-2 text-zinc-400">Kişisel bilgilerinizi girin.</p>
+                                        </div>
+                                        <div v-else-if="step === 1">
+                                            <h4 class="text-lg font-medium text-white">Adres Bilgileri</h4>
+                                            <p class="mt-2 text-zinc-400">Teslimat adresinizi girin.</p>
+                                        </div>
+                                        <div v-else-if="step === 2">
+                                            <h4 class="text-lg font-medium text-white">Ödeme</h4>
+                                            <p class="mt-2 text-zinc-400">Ödeme yönteminizi seçin.</p>
+                                        </div>
+                                        <div v-else>
+                                            <h4 class="text-lg font-medium text-white">Onay</h4>
+                                            <p class="mt-2 text-zinc-400">Siparişinizi onaylayın.</p>
+                                        </div>
+                                    </div>
+                                </template>
+                            </Stepper>
+                        </div>
+                    </div>
+
+                    <!-- Context Menu -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Context Menu</h3>
+                        <div class="max-w-sm">
+                            <ContextMenu :items="contextMenuItems">
+                                <div class="rounded-lg border border-zinc-800 bg-zinc-900 p-6 text-center text-zinc-400">Sağ tıklayın</div>
+                            </ContextMenu>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Toast -->
+                <Toast ref="toast" />
+
+                <!-- Snackbar -->
+                <Snackbar ref="snackbar" />
+
+                <!-- Banner -->
+                <Banner v-model="bannerVisible" :type="bannerType" :message="bannerMessage" :action="bannerAction" closable />
+
+                <!-- Sosyal Medya Bileşenleri -->
+                <section class="mb-12">
+                    <h2 class="mb-6 text-2xl font-semibold text-white">Sosyal Medya Bileşenleri</h2>
+
+                    <!-- Yorum Sistemi -->
+                    <div class="mb-8 space-y-4">
+                        <h3 class="text-lg font-medium text-white">Yorum Sistemi</h3>
+                        <div class="rounded-lg bg-zinc-900 p-6">
+                            <Comments
+                                :initial-comments="[
+                                    {
+                                        id: 1,
+                                        user: {
+                                            id: 1,
+                                            name: 'Ahmet Yılmaz',
+                                            avatar: 'https://i.pravatar.cc/150?img=1',
+                                        },
+                                        content: 'Harika bir ürün! Kesinlikle tavsiye ederim.',
+                                        date: new Date('2024-03-15T10:30:00'),
+                                        likes: 5,
+                                        isLiked: true,
+                                        replies: [
+                                            {
+                                                id: 2,
+                                                user: {
+                                                    id: 2,
+                                                    name: 'Mehmet Demir',
+                                                    avatar: 'https://i.pravatar.cc/150?img=2',
+                                                },
+                                                content: 'Katılıyorum, gerçekten çok kaliteli.',
+                                                date: new Date('2024-03-15T11:00:00'),
+                                            },
+                                        ],
+                                    },
+                                ]"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Paylaşım Düğmeleri -->
+                    <div class="mb-8 space-y-4">
+                        <h3 class="text-lg font-medium text-white">Paylaşım Düğmeleri</h3>
+                        <div class="rounded-lg bg-zinc-900 p-6">
+                            <div class="space-y-4">
+                                <Share url="https://example.com" title="Örnek Paylaşım İçeriği" :show-quick-share="true" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beğeni/Tepki Sistemi -->
+                    <div class="mb-8 space-y-4">
+                        <h3 class="text-lg font-medium text-white">Beğeni/Tepki Sistemi</h3>
+                        <div class="rounded-lg bg-zinc-900 p-6">
+                            <div class="space-y-4">
+                                <Like
+                                    v-model="isLiked"
+                                    :count="likeCount"
+                                    :show-reactions="true"
+                                    :show-likes-list="true"
+                                    :likes-list="[
+                                        {
+                                            id: 1,
+                                            name: 'Ahmet Yılmaz',
+                                            avatar: 'https://i.pravatar.cc/150?img=1',
+                                        },
+                                        {
+                                            id: 2,
+                                            name: 'Mehmet Demir',
+                                            avatar: 'https://i.pravatar.cc/150?img=2',
+                                        },
+                                        {
+                                            id: 3,
+                                            name: 'Ayşe Kaya',
+                                            avatar: 'https://i.pravatar.cc/150?img=3',
+                                        },
+                                    ]"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Takip Et Düğmesi -->
+                    <div class="mb-8 space-y-4">
+                        <h3 class="text-lg font-medium text-white">Takip Et Düğmesi</h3>
+                        <div class="rounded-lg bg-zinc-900 p-6">
+                            <div class="space-y-4">
+                                <div class="flex flex-wrap gap-4">
+                                    <Follow v-model="isFollowing" :count="1234" show-count />
+                                    <Follow variant="secondary" :loading="true" />
+                                    <Follow disabled />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Form Bileşenleri -->
+                <section class="space-y-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-semibold text-white">Form Bileşenleri</h2>
+                        <span class="text-sm text-zinc-400">Gelişmiş form bileşenleri</span>
+                    </div>
+
+                    <!-- OTP Input -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">OTP Doğrulama</h3>
+                        <div class="max-w-md rounded-lg bg-zinc-900 p-6">
+                            <OTPInput v-model="otpValue" :error="otpError" />
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-sm text-zinc-400">Doğrulama kodu: {{ otpValue }}</span>
+                                <button
+                                    @click="resetOTP"
+                                    class="text-sm text-primary hover:text-primary/80"
+                                >
+                                    Sıfırla
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rich Text Editor -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-medium text-white">Zengin Metin Editörü</h3>
+                        <div class="rounded-lg bg-zinc-900 p-6">
+                            <RichTextEditor v-model="editorContent" />
+                            <div class="mt-4">
+                                <h4 class="mb-2 text-sm font-medium text-white">Önizleme:</h4>
+                                <div class="rounded-lg border border-zinc-700 bg-zinc-800 p-4" v-html="editorContent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
@@ -2811,7 +3471,46 @@ import ErrorState from "@/components/ui/ErrorState.vue";
 import Switch from "@/components/ui/Switch.vue";
 import Slider from "@/components/ui/Slider.vue";
 import ColorPicker from "@/components/ui/ColorPicker.vue";
-import TimePicker from '@/components/ui/TimePicker.vue';
+import TimePicker from "@/components/ui/TimePicker.vue";
+import VideoPlayer from "@/components/ui/VideoPlayer.vue";
+import AudioPlayer from "@/components/ui/AudioPlayer.vue";
+import Carousel from "@/components/ui/Carousel.vue";
+import LightBox from "@/components/ui/LightBox.vue";
+import FileViewer from "@/components/ui/FileViewer.vue";
+import ThemeSwitcher from "@/components/ui/ThemeSwitcher.vue";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher.vue";
+import Customizer from "@/components/ui/Customizer.vue";
+import Captcha from "@/components/ui/Captcha.vue";
+import PasswordStrength from "@/components/ui/PasswordStrength.vue";
+import BiometricAuth from "@/components/ui/BiometricAuth.vue";
+import Kanban from "@/components/ui/Kanban.vue";
+import Calendar from "@/components/ui/Calendar.vue";
+import Gantt from "@/components/ui/Gantt.vue";
+import Scheduler from "@/components/ui/Scheduler.vue";
+import Chart from "@/components/ui/Chart.vue";
+import ProgressBar from "@/components/ui/ProgressBar.vue";
+import Timeline from "@/components/ui/Timeline.vue";
+import Tree from "@/components/ui/Tree.vue";
+import DataGrid from "@/components/ui/DataGrid.vue";
+import { DeviceTabletIcon, DevicePhoneMobileIcon, ComputerDesktopIcon } from "@heroicons/vue/24/outline";
+import Accordion from "@/components/ui/Accordion.vue";
+import Tabs from "@/components/ui/Tabs.vue";
+import Drawer from "@/components/ui/Drawer.vue";
+import Masonry from "@/components/ui/Masonry.vue";
+import VirtualScroll from "@/components/ui/VirtualScroll.vue";
+import Toast from "@/components/ui/Toast.vue";
+import Snackbar from "@/components/ui/Snackbar.vue";
+import Banner from "@/components/ui/Banner.vue";
+import Stepper from "@/components/ui/Stepper.vue";
+import ContextMenu from "@/components/ui/ContextMenu.vue";
+import { DocumentDuplicateIcon, PencilIcon, TrashIcon, ArrowPathIcon, ShareIcon } from "@heroicons/vue/24/outline";
+// import { Comments, Share, Like, Follow } from "@/components/ui";
+import Comments from "@/components/ui/Comments.vue";
+import Share from "@/components/ui/Share.vue";
+import Like from "@/components/ui/Like.vue";
+import Follow from "@/components/ui/Follow.vue";
+import OTPInput from "@/components/ui/OTPInput.vue";
+import RichTextEditor from "@/components/ui/RichTextEditor.vue";
 
 interface SortState {
     field: keyof TableItem;
@@ -3009,24 +3708,15 @@ const sliderValue1 = ref(50);
 const sliderValue2 = ref(25);
 const sliderValue3 = ref(75);
 
-const presetColors = [
-  '#FF0000',
-  '#00FF00',
-  '#0000FF',
-  '#FFFF00',
-  '#FF00FF',
-  '#00FFFF',
-  '#000000',
-  '#FFFFFF',
-];
+const presetColors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF", "#000000", "#FFFFFF"];
 
 // ColorPicker States
-const colorValue1 = ref('#FF0000');
-const colorValue2 = ref('#00FF00');
-const colorValue3 = ref('#0000FF');
+const colorValue1 = ref("#FF0000");
+const colorValue2 = ref("#00FF00");
+const colorValue3 = ref("#0000FF");
 
-const timeValue = ref('12:30');
-const time12hValue = ref('02:30');
+const timeValue = ref("12:30");
+const time12hValue = ref("02:30");
 
 const timePickerBasicCode = `<TimePicker
   v-model="timeValue"
@@ -3045,4 +3735,277 @@ const timePickerDisabledCode = `<TimePicker
   disabled
 />`;
 
+// Medya Bileşenleri için örnek veriler
+const videoSrc = "https://www.w3schools.com/html/mov_bbb.mp4";
+const audioSrc = "https://www.w3schools.com/html/horse.mp3";
+
+const carouselSlides = [
+    {
+        image: "https://picsum.photos/800/400?random=1",
+        alt: "Slide 1",
+        caption: "Güzel bir manzara",
+    },
+    {
+        image: "https://picsum.photos/800/400?random=2",
+        alt: "Slide 2",
+        caption: "Şehir hayatı",
+    },
+    {
+        image: "https://picsum.photos/800/400?random=3",
+        alt: "Slide 3",
+        caption: "Doğa harikası",
+    },
+];
+
+const lightboxImages = [
+    {
+        src: "https://picsum.photos/1200/800?random=1",
+        thumbnail: "https://picsum.photos/300/200?random=1",
+        alt: "Image 1",
+        caption: "Harika bir fotoğraf",
+    },
+    {
+        src: "https://picsum.photos/1200/800?random=2",
+        thumbnail: "https://picsum.photos/300/200?random=2",
+        alt: "Image 2",
+        caption: "Muhteşem manzara",
+    },
+    {
+        src: "https://picsum.photos/1200/800?random=3",
+        thumbnail: "https://picsum.photos/300/200?random=3",
+        alt: "Image 3",
+        caption: "Doğanın güzelliği",
+    },
+];
+
+const sampleFile = {
+    src: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+    fileName: "sample.pdf",
+    fileSize: 1024 * 1024, // 1MB
+    fileType: "PDF Document",
+};
+
+// Event handlers
+const handleCaptchaVerify = (success: boolean) => {
+    console.log("Captcha verification:", success ? "success" : "failed");
+};
+
+const handlePasswordInput = (password: string) => {
+    console.log("Password input:", password);
+};
+
+const handleBiometricSuccess = () => {
+    console.log("Biometric authentication successful");
+};
+
+const handleBiometricError = (error: any) => {
+    console.error("Biometric authentication failed:", error);
+};
+
+// İş Akışı Bileşenleri için Event Handlers
+const handleKanbanUpdate = (columns: any) => {
+    console.log("Kanban columns updated:", columns);
+};
+
+const handleAddCalendarEvent = (date?: Date) => {
+    console.log("Add calendar event:", date);
+};
+
+const handleEditCalendarEvent = (event: any) => {
+    console.log("Edit calendar event:", event);
+};
+
+const handleAddGanttTask = () => {
+    console.log("Add gantt task");
+};
+
+const handleEditGanttTask = (task: any) => {
+    console.log("Edit gantt task:", task);
+};
+
+const handleAddSchedulerEvent = (date?: Date) => {
+    console.log("Add scheduler event:", date);
+};
+
+const handleEditSchedulerEvent = (event: any) => {
+    console.log("Edit scheduler event:", event);
+};
+
+const treeNodes = ref([
+    {
+        id: 1,
+        label: "Elektronik",
+        icon: DeviceTabletIcon,
+        iconColor: "text-blue-500",
+        children: [
+            {
+                id: 2,
+                label: "Telefonlar",
+                icon: DevicePhoneMobileIcon,
+                children: [
+                    {
+                        id: 3,
+                        label: "iPhone",
+                        icon: DevicePhoneMobileIcon,
+                    },
+                    {
+                        id: 4,
+                        label: "Samsung",
+                        icon: DevicePhoneMobileIcon,
+                    },
+                ],
+            },
+            {
+                id: 5,
+                label: "Bilgisayarlar",
+                icon: ComputerDesktopIcon,
+                children: [
+                    {
+                        id: 6,
+                        label: "Dizüstü",
+                        icon: ComputerDesktopIcon,
+                    },
+                    {
+                        id: 7,
+                        label: "Masaüstü",
+                        icon: ComputerDesktopIcon,
+                    },
+                ],
+            },
+        ],
+    },
+]);
+
+// Drawer durumları
+const leftDrawerOpen = ref(false);
+const rightDrawerOpen = ref(false);
+
+// Toast referansı
+const toast = ref();
+
+// Toast gösterme fonksiyonu
+const showToast = (type: "success" | "error" | "warning" | "info", title: string, message?: string) => {
+    toast.value?.[type](title, message);
+};
+
+// Snackbar referansı
+const snackbar = ref();
+
+// Snackbar gösterme fonksiyonları
+const showBasicSnackbar = () => {
+    snackbar.value?.show({
+        message: "Bu bir temel snackbar mesajıdır.",
+    });
+};
+
+const showActionSnackbar = () => {
+    snackbar.value?.show({
+        message: "İşlem geri alındı.",
+        action: {
+            label: "Geri Al",
+            callback: () => {
+                console.log("Geri alma işlemi gerçekleştirildi");
+            },
+        },
+    });
+};
+
+// Banner durumları
+const bannerVisible = ref(false);
+const bannerType = ref<"success" | "error" | "warning" | "info">("info");
+const bannerMessage = ref("");
+const bannerAction = ref<{ label: string; callback: () => void } | undefined>();
+
+// Banner gösterme fonksiyonları
+const showSuccessBanner = () => {
+    bannerType.value = "success";
+    bannerMessage.value = "İşlem başarıyla tamamlandı!";
+    bannerVisible.value = true;
+};
+
+const showErrorBanner = () => {
+    bannerType.value = "error";
+    bannerMessage.value = "Bir hata oluştu. Lütfen tekrar deneyin.";
+    bannerVisible.value = true;
+};
+
+const showWarningBanner = () => {
+    bannerType.value = "warning";
+    bannerMessage.value = "Bu işlem geri alınamaz!";
+    bannerAction.value = {
+        label: "Anladım",
+        callback: () => {
+            bannerVisible.value = false;
+        },
+    };
+    bannerVisible.value = true;
+};
+
+const showInfoBanner = () => {
+    bannerType.value = "info";
+    bannerMessage.value = "Yeni özellikler eklendi! Keşfetmek için tıklayın.";
+    bannerAction.value = {
+        label: "Keşfet",
+        callback: () => {
+            console.log("Yeni özellikler keşfediliyor...");
+            bannerVisible.value = false;
+        },
+    };
+    bannerVisible.value = true;
+};
+
+// Stepper durumu
+const currentStep = ref(0);
+
+const handleStepperFinish = () => {
+    showToast("success", "Tamamlandı", "Tüm adımlar başarıyla tamamlandı.");
+};
+
+// Context Menu öğeleri
+const contextMenuItems = [
+    {
+        label: "Düzenle",
+        icon: PencilIcon,
+        action: () => console.log("Düzenle"),
+    },
+    {
+        label: "Kopyala",
+        icon: DocumentDuplicateIcon,
+        action: () => console.log("Kopyala"),
+    },
+    {
+        label: "Paylaş",
+        icon: ShareIcon,
+        action: () => console.log("Paylaş"),
+    },
+    { type: "divider" },
+    {
+        label: "Yenile",
+        icon: ArrowPathIcon,
+        action: () => console.log("Yenile"),
+    },
+    { type: "divider" },
+    {
+        label: "Sil",
+        icon: TrashIcon,
+        action: () => console.log("Sil"),
+    },
+];
+
+// Beğeni durumu
+const isLiked = ref(false);
+const likeCount = ref(42);
+
+// Takip durumu
+const isFollowing = ref(false);
+
+// Form Bileşenleri için yeni değişkenler
+const otpValue = ref('');
+const otpError = ref('');
+const editorContent = ref('<p>Merhaba! Bu bir <strong>zengin metin</strong> editörüdür.</p>');
+
+const resetOTP = () => {
+    otpValue.value = '';
+    otpError.value = '';
+};
 </script>
