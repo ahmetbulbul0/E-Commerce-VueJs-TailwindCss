@@ -48,6 +48,75 @@
                     </label>
                 </div>
 
+                <!-- Marka Filtresi -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold">Markalar</h3>
+                    <div class="space-y-2 max-h-40 overflow-y-auto">
+                        <label v-for="brand in brands" :key="brand.id" class="flex cursor-pointer items-center space-x-2">
+                            <input type="checkbox" :value="brand.id" v-model="selectedBrands" class="h-4 w-4 rounded border-input bg-background text-primary" />
+                            <span class="text-sm">{{ brand.name }}</span>
+                            <span class="text-xs text-muted-foreground">({{ brand.count }})</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Değerlendirme Puanı -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold">Değerlendirme</h3>
+                    <div class="space-y-2">
+                        <label v-for="rating in [5,4,3,2,1]" :key="rating" class="flex cursor-pointer items-center space-x-2">
+                            <input type="checkbox" :value="rating" v-model="selectedRatings" class="h-4 w-4 rounded border-input bg-background text-primary" />
+                            <div class="flex items-center">
+                                <span v-for="star in rating" :key="star" class="text-yellow-400">★</span>
+                                <span v-for="star in 5-rating" :key="star" class="text-gray-300">★</span>
+                                <span class="ml-1 text-sm text-muted-foreground">ve üzeri</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Stok Durumu -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold">Stok Durumu</h3>
+                    <label class="flex cursor-pointer items-center space-x-2">
+                        <input type="checkbox" v-model="onlyInStock" class="h-4 w-4 rounded border-input bg-background text-primary" />
+                        <span class="text-sm">Sadece Stokta Olanlar</span>
+                    </label>
+                </div>
+
+                <!-- Renk Seçenekleri -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold">Renkler</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <button
+                            v-for="color in colors"
+                            :key="color.id"
+                            @click="toggleColor(color.id)"
+                            class="h-8 w-8 rounded-full border-2 transition-all"
+                            :class="{
+                                'border-primary': selectedColors.includes(color.id),
+                                'border-transparent': !selectedColors.includes(color.id)
+                            }"
+                            :style="{ backgroundColor: color.value }"
+                            :title="color.name"
+                        ></button>
+                    </div>
+                </div>
+
+                <!-- Özellik Filtreleri -->
+                <div v-if="categorySpecificFilters.length > 0">
+                    <h3 class="mb-4 text-lg font-semibold">Özellikler</h3>
+                    <div v-for="filter in categorySpecificFilters" :key="filter.id" class="mb-4">
+                        <h4 class="mb-2 text-sm font-medium">{{ filter.name }}</h4>
+                        <Select v-model="selectedSpecifications[filter.id]" class="w-full">
+                            <option value="">Tümü</option>
+                            <option v-for="option in filter.options" :key="option.id" :value="option.id">
+                                {{ option.name }}
+                            </option>
+                        </Select>
+                    </div>
+                </div>
+
                 <!-- Filtreleri Temizle -->
                 <Button variant="outline" class="w-full" @click="clearFilters">Filtreleri Temizle</Button>
             </div>
@@ -146,6 +215,11 @@ const itemsPerPage = 9;
 const selectedCategories = ref([]);
 const priceRange = ref({ min: null, max: null });
 const onlyDiscounted = ref(false);
+const selectedBrands = ref([]);
+const selectedRatings = ref([]);
+const onlyInStock = ref(false);
+const selectedColors = ref([]);
+const selectedSpecifications = ref({});
 
 // Örnek kategori verileri
 const categories = ref([
@@ -167,6 +241,14 @@ const products = ref([
         oldPrice: 299.99,
         discount: 33,
         categoryId: 1,
+        brandId: 3, // Sony
+        rating: 4.5,
+        inStock: true,
+        colors: [1, 2], // Siyah, Beyaz
+        specifications: {
+            1: 2, // 128 GB
+            2: 2  // 6.1 inç
+        },
         image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=400&fit=crop",
     },
     {
@@ -175,6 +257,14 @@ const products = ref([
         description: "Fitness takibi ve bildirimler için akıllı saat",
         price: 149.99,
         categoryId: 1,
+        brandId: 1, // Samsung
+        rating: 4.2,
+        inStock: true,
+        colors: [1, 4], // Siyah, Mavi
+        specifications: {
+            1: 1, // 64 GB
+            2: 1  // 5.5 inç
+        },
         image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=400&fit=crop",
     },
     {
@@ -185,6 +275,14 @@ const products = ref([
         oldPrice: 399.99,
         discount: 25,
         categoryId: 1,
+        brandId: 2, // Apple
+        rating: 4.8,
+        inStock: true,
+        colors: [1, 2, 3], // Siyah, Beyaz, Gri
+        specifications: {
+            1: 3, // 256 GB
+            2: 4  // 6.7 inç
+        },
         image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=400&fit=crop",
     },
     {
@@ -193,6 +291,14 @@ const products = ref([
         description: "Taşınabilir kablosuz hoparlör",
         price: 79.99,
         categoryId: 1,
+        brandId: 3, // Sony
+        rating: 4.0,
+        inStock: false,
+        colors: [1, 5], // Siyah, Kırmızı
+        specifications: {
+            1: 1, // 64 GB
+            2: 1  // 5.5 inç
+        },
         image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&h=400&fit=crop",
     },
     {
@@ -203,9 +309,60 @@ const products = ref([
         oldPrice: 1299.99,
         discount: 23,
         categoryId: 1,
+        brandId: 1, // Samsung
+        rating: 4.7,
+        inStock: true,
+        colors: [1, 2, 4], // Siyah, Beyaz, Mavi
+        specifications: {
+            1: 4, // 512 GB
+            2: 3  // 6.5 inç
+        },
         image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=500&h=400&fit=crop",
     },
     // Daha fazla ürün eklenebilir
+]);
+
+// Örnek marka verileri
+const brands = ref([
+    { id: 1, name: "Samsung", count: 45 },
+    { id: 2, name: "Apple", count: 32 },
+    { id: 3, name: "Sony", count: 28 },
+    { id: 4, name: "LG", count: 25 },
+    { id: 5, name: "Xiaomi", count: 20 },
+]);
+
+// Örnek renk verileri
+const colors = ref([
+    { id: 1, name: "Siyah", value: "#000000" },
+    { id: 2, name: "Beyaz", value: "#FFFFFF" },
+    { id: 3, name: "Gri", value: "#808080" },
+    { id: 4, name: "Mavi", value: "#0000FF" },
+    { id: 5, name: "Kırmızı", value: "#FF0000" },
+    { id: 6, name: "Yeşil", value: "#008000" },
+]);
+
+// Örnek kategoriye özel filtreler
+const categorySpecificFilters = ref([
+    {
+        id: 1,
+        name: "Bellek Kapasitesi",
+        options: [
+            { id: 1, name: "64 GB" },
+            { id: 2, name: "128 GB" },
+            { id: 3, name: "256 GB" },
+            { id: 4, name: "512 GB" },
+        ],
+    },
+    {
+        id: 2,
+        name: "Ekran Boyutu",
+        options: [
+            { id: 1, name: "5.5 inç" },
+            { id: 2, name: "6.1 inç" },
+            { id: 3, name: "6.5 inç" },
+            { id: 4, name: "6.7 inç" },
+        ],
+    },
 ]);
 
 // Hesaplanan özellikler
@@ -234,6 +391,39 @@ const filteredProducts = computed(() => {
     if (searchQuery.value) {
         const query = searchQuery.value.toLowerCase();
         result = result.filter((product) => product.name.toLowerCase().includes(query) || product.description.toLowerCase().includes(query));
+    }
+
+    // Marka filtresi
+    if (selectedBrands.value.length > 0) {
+        result = result.filter((product) => selectedBrands.value.includes(product.brandId));
+    }
+
+    // Değerlendirme filtresi
+    if (selectedRatings.value.length > 0) {
+        result = result.filter((product) => 
+            selectedRatings.value.some(rating => product.rating >= rating)
+        );
+    }
+
+    // Stok durumu filtresi
+    if (onlyInStock.value) {
+        result = result.filter((product) => product.inStock);
+    }
+
+    // Renk filtresi
+    if (selectedColors.value.length > 0) {
+        result = result.filter((product) => 
+            product.colors?.some(color => selectedColors.value.includes(color))
+        );
+    }
+
+    // Özellik filtreleri
+    for (const [filterId, value] of Object.entries(selectedSpecifications.value)) {
+        if (value) {
+            result = result.filter((product) => 
+                product.specifications?.[filterId] === value
+            );
+        }
     }
 
     // Sıralama
@@ -281,9 +471,24 @@ const clearFilters = () => {
     selectedCategories.value = [];
     priceRange.value = { min: null, max: null };
     onlyDiscounted.value = false;
+    selectedBrands.value = [];
+    selectedRatings.value = [];
+    onlyInStock.value = false;
+    selectedColors.value = [];
+    selectedSpecifications.value = {};
     searchQuery.value = "";
     sortBy.value = "newest";
     currentPage.value = 1;
+};
+
+// Renk seçimi için metod
+const toggleColor = (colorId) => {
+    const index = selectedColors.value.indexOf(colorId);
+    if (index === -1) {
+        selectedColors.value.push(colorId);
+    } else {
+        selectedColors.value.splice(index, 1);
+    }
 };
 
 // Sayfa yüklendiğinde
