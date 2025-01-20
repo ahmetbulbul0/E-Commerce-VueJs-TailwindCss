@@ -536,6 +536,7 @@
 </template>
 
 <script setup lang="ts">
+
 import { ref, onMounted } from "vue";
 import FeatureIcons from "@/components/icons/FeatureIcons.vue";
 
