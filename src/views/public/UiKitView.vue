@@ -3398,12 +3398,7 @@
                             <OTPInput v-model="otpValue" :error="otpError" />
                             <div class="mt-4 flex items-center justify-between">
                                 <span class="text-sm text-zinc-400">Doğrulama kodu: {{ otpValue }}</span>
-                                <button
-                                    @click="resetOTP"
-                                    class="text-sm text-primary hover:text-primary/80"
-                                >
-                                    Sıfırla
-                                </button>
+                                <button @click="resetOTP" class="text-sm text-primary hover:text-primary/80">Sıfırla</button>
                             </div>
                         </div>
                     </div>
@@ -3427,90 +3422,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import Button from "@/components/ui/Button.vue";
-import Input from "@/components/ui/Input.vue";
-import Select from "@/components/ui/Select.vue";
-import Loading from "@/components/ui/Loading.vue";
-import Alert from "@/components/ui/Alert.vue";
-import Badge from "@/components/ui/Badge.vue";
-import Table from "@/components/ui/Table.vue";
-import TableHeader from "@/components/ui/TableHeader.vue";
-import TableHeaderCell from "@/components/ui/TableHeaderCell.vue";
-import TableBody from "@/components/ui/TableBody.vue";
-import TableRow from "@/components/ui/TableRow.vue";
-import type { TableItem } from "@/components/ui/TableBody.vue";
-import TableCell from "@/components/ui/TableCell.vue";
-import Checkbox from "@/components/ui/Checkbox.vue";
-import Radio from "@/components/ui/Radio.vue";
-import Textarea from "@/components/ui/Textarea.vue";
-import DatePicker from "@/components/ui/DatePicker.vue";
-import FileUpload from "@/components/ui/FileUpload.vue";
-import List from "@/components/ui/List.vue";
-import ListItem from "@/components/ui/ListItem.vue";
-import Navbar from "@/components/ui/Navbar.vue";
-import Sidebar from "@/components/ui/Sidebar.vue";
-import Breadcrumb from "@/components/ui/Breadcrumb.vue";
-import BreadcrumbItem from "@/components/ui/BreadcrumbItem.vue";
-import Pagination from "@/components/ui/Pagination.vue";
-import Tooltip from "@/components/ui/Tooltip.vue";
-import Popover from "@/components/ui/Popover.vue";
-import Tag from "@/components/ui/Tag.vue";
-import Avatar from "@/components/ui/Avatar.vue";
-import Rating from "@/components/ui/Rating.vue";
-import ImageGallery from "@/components/ui/ImageGallery.vue";
-import ProductCard from "@/components/ui/ProductCard.vue";
-import OrderCard from "@/components/ui/OrderCard.vue";
-import StatisticCard from "@/components/ui/StatisticCard.vue";
-import ProfileCard from "@/components/ui/ProfileCard.vue";
-import Modal from "@/components/ui/Modal.vue";
-import ConfirmDialog from "@/components/ui/ConfirmDialog.vue";
-import AlertDialog from "@/components/ui/AlertDialog.vue";
-import Skeleton from "@/components/ui/Skeleton.vue";
-import EmptyState from "@/components/ui/EmptyState.vue";
-import ErrorState from "@/components/ui/ErrorState.vue";
-import Switch from "@/components/ui/Switch.vue";
-import Slider from "@/components/ui/Slider.vue";
-import ColorPicker from "@/components/ui/ColorPicker.vue";
-import TimePicker from "@/components/ui/TimePicker.vue";
-import VideoPlayer from "@/components/ui/VideoPlayer.vue";
-import AudioPlayer from "@/components/ui/AudioPlayer.vue";
-import Carousel from "@/components/ui/Carousel.vue";
-import LightBox from "@/components/ui/LightBox.vue";
-import FileViewer from "@/components/ui/FileViewer.vue";
-import ThemeSwitcher from "@/components/ui/ThemeSwitcher.vue";
-import LanguageSwitcher from "@/components/ui/LanguageSwitcher.vue";
-import Customizer from "@/components/ui/Customizer.vue";
-import Captcha from "@/components/ui/Captcha.vue";
-import PasswordStrength from "@/components/ui/PasswordStrength.vue";
-import BiometricAuth from "@/components/ui/BiometricAuth.vue";
-import Kanban from "@/components/ui/Kanban.vue";
-import Calendar from "@/components/ui/Calendar.vue";
-import Gantt from "@/components/ui/Gantt.vue";
-import Scheduler from "@/components/ui/Scheduler.vue";
-import Chart from "@/components/ui/Chart.vue";
-import ProgressBar from "@/components/ui/ProgressBar.vue";
-import Timeline from "@/components/ui/Timeline.vue";
-import Tree from "@/components/ui/Tree.vue";
-import DataGrid from "@/components/ui/DataGrid.vue";
-import { DeviceTabletIcon, DevicePhoneMobileIcon, ComputerDesktopIcon } from "@heroicons/vue/24/outline";
-import Accordion from "@/components/ui/Accordion.vue";
-import Tabs from "@/components/ui/Tabs.vue";
-import Drawer from "@/components/ui/Drawer.vue";
-import Masonry from "@/components/ui/Masonry.vue";
-import VirtualScroll from "@/components/ui/VirtualScroll.vue";
-import Toast from "@/components/ui/Toast.vue";
-import Snackbar from "@/components/ui/Snackbar.vue";
-import Banner from "@/components/ui/Banner.vue";
-import Stepper from "@/components/ui/Stepper.vue";
-import ContextMenu from "@/components/ui/ContextMenu.vue";
-import { DocumentDuplicateIcon, PencilIcon, TrashIcon, ArrowPathIcon, ShareIcon } from "@heroicons/vue/24/outline";
-// import { Comments, Share, Like, Follow } from "@/components/ui";
-import Comments from "@/components/ui/Comments.vue";
-import Share from "@/components/ui/Share.vue";
-import Like from "@/components/ui/Like.vue";
-import Follow from "@/components/ui/Follow.vue";
-import OTPInput from "@/components/ui/OTPInput.vue";
-import RichTextEditor from "@/components/ui/RichTextEditor.vue";
+import { DeviceTabletIcon, DevicePhoneMobileIcon, ComputerDesktopIcon, DocumentDuplicateIcon, PencilIcon, TrashIcon, ArrowPathIcon, ShareIcon } from "@heroicons/vue/24/outline";
 
 interface SortState {
     field: keyof TableItem;
@@ -4000,12 +3912,12 @@ const likeCount = ref(42);
 const isFollowing = ref(false);
 
 // Form Bileşenleri için yeni değişkenler
-const otpValue = ref('');
-const otpError = ref('');
-const editorContent = ref('<p>Merhaba! Bu bir <strong>zengin metin</strong> editörüdür.</p>');
+const otpValue = ref("");
+const otpError = ref("");
+const editorContent = ref("<p>Merhaba! Bu bir <strong>zengin metin</strong> editörüdür.</p>");
 
 const resetOTP = () => {
-    otpValue.value = '';
-    otpError.value = '';
+    otpValue.value = "";
+    otpError.value = "";
 };
 </script>

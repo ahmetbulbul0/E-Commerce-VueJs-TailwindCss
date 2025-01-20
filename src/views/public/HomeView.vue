@@ -460,9 +460,10 @@
 </template>
 
 <script setup lang="ts">
+
 import { ref } from "vue";
-import Button from "@/components/ui/Button.vue";
-import Input from "@/components/ui/Input.vue";
+import Button from "@/components/ui/Form/Button.vue";
+import Input from "@/components/ui/Form/Input.vue";
 
 const categories = ref([
     {

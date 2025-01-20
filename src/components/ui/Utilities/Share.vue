@@ -70,9 +70,8 @@
 </template>
 
 <script setup lang="ts">
-
-import Dropdown from "@/components/ui/Dropdown.vue";
-import DropdownItem from "@/components/ui/DropdownItem.vue";
+import Dropdown from "@/components/ui/Overlays/Dropdown.vue";
+import DropdownItem from "@/components/ui/Overlays/DropdownItem.vue";
 
 interface Props {
     url?: string;
