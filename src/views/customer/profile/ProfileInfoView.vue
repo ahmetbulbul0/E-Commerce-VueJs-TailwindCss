@@ -82,11 +82,10 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import Input from "@/components/ui/form/Input.vue";
-import Button from "@/components/ui/button/Button.vue";
-import Select from "@/components/ui/form/Select.vue";
-import Label from "@/components/ui/label/Label.vue";
-import Checkbox from "@/components/ui/form/Checkbox.vue";
+import Input from "@/components/ui/Form/Input.vue";
+import Button from "@/components/ui/Form/Button.vue";
+import Select from "@/components/ui/Form/Select.vue";
+import Checkbox from "@/components/ui/Form/Checkbox.vue";
 
 const profile = ref({
     firstName: "Ahmet",

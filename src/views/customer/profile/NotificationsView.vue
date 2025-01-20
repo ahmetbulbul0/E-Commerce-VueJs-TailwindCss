@@ -6,7 +6,6 @@
         </div>
 
         <div class="space-y-6 bg-card rounded-lg border border-border p-4 mb-6">
-            <!-- E-posta Bildirimleri -->
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
                     <div class="space-y-0.5">
@@ -51,7 +50,6 @@
                 </div>
             </div>
 
-            <!-- SMS Bildirimleri -->
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
                     <div class="space-y-0.5">
@@ -88,7 +86,6 @@
                 </div>
             </div>
 
-            <!-- Tarayıcı Bildirimleri -->
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
                     <div class="space-y-0.5">
@@ -117,7 +114,6 @@
                 </div>
             </div>
 
-            <!-- Kaydet Butonu -->
             <div class="flex justify-end">
                 <Button @click="saveNotifications">Değişiklikleri Kaydet</Button>
             </div>
@@ -127,9 +123,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import Switch from "@/components/ui/form/Switch.vue";
-import Button from "@/components/ui/button/Button.vue";
-import Label from "@/components/ui/label/Label.vue";
+import Switch from "@/components/ui/Form/Switch.vue";
+import Button from "@/components/ui/Form/Button.vue";
 
 const notifications = ref({
     email: {

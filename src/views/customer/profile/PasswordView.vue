@@ -66,9 +66,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import Input from "@/components/ui/form/Input.vue";
-import Button from "@/components/ui/button/Button.vue";
-import Label from "@/components/ui/label/Label.vue";
+import Input from "@/components/ui/Form/Input.vue";
+import Button from "@/components/ui/Form/Button.vue";
 
 const form = ref({
     currentPassword: "",

@@ -76,9 +76,9 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import Input from "@/components/ui/form/Input.vue";
-import Button from "@/components/ui/button/Button.vue";
-import Select from "@/components/ui/form/Select.vue";
+import Input from "@/components/ui/Form/Input.vue";
+import Button from "@/components/ui/Form/Button.vue";
+import Select from "@/components/ui/Form/Select.vue";
 
 // Arama ve filtreleme
 const search = ref("");

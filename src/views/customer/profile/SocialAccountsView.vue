@@ -6,7 +6,6 @@
         </div>
 
         <div class="space-y-6">
-            <!-- Google -->
             <div class="flex items-center justify-between p-4 rounded-lg border">
                 <div class="flex items-center space-x-4">
                     <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-red-50">
@@ -26,7 +25,6 @@
                 </Button>
             </div>
 
-            <!-- Facebook -->
             <div class="flex items-center justify-between p-4 rounded-lg border">
                 <div class="flex items-center space-x-4">
                     <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-50">
@@ -46,7 +44,6 @@
                 </Button>
             </div>
 
-            <!-- Twitter -->
             <div class="flex items-center justify-between p-4 rounded-lg border">
                 <div class="flex items-center space-x-4">
                     <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-sky-50">
@@ -66,7 +63,6 @@
                 </Button>
             </div>
 
-            <!-- Apple -->
             <div class="flex items-center justify-between p-4 rounded-lg border">
                 <div class="flex items-center space-x-4">
                     <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-50">
@@ -92,7 +88,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import Button from "@/components/ui/button/Button.vue";
+import Button from "@/components/ui/Form/Button.vue";
 
 const socialAccounts = ref({
     google: true,
