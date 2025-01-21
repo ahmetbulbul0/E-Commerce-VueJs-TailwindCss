@@ -19,13 +19,13 @@ export default defineConfig({
   },
   build: {
     target: 'es2015',
-    minify: 'terser',
+    minify: 'esbuild',
     cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: {
           'vendor': ['vue', 'vue-router', 'pinia'],
-          'ui': ['@headlessui/vue', 'lucide-vue-next']
+          'ui': ['lucide-vue-next']
         }
       }
     },
