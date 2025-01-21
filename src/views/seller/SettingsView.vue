@@ -23,7 +23,7 @@
                             </div>
                             <div class="space-y-2">
                                 <label for="storeDescription" class="text-sm font-medium">Mağaza Açıklaması</label>
-                                <Textarea id="storeDescription" v-model="storeSettings.description" placeholder="Mağazanız hakkında kısa bir açıklama" rows="4" />
+                                <Textarea id="storeDescription" v-model="storeSettings.description" placeholder="Mağazanız hakkında kısa bir açıklama" :rows="4" />
                             </div>
                             <div class="grid gap-4 sm:grid-cols-2">
                                 <div class="space-y-2">
@@ -43,7 +43,7 @@
                         <div class="grid gap-6">
                             <div class="space-y-2">
                                 <label for="storeAddress" class="text-sm font-medium">Adres</label>
-                                <Textarea id="storeAddress" v-model="storeSettings.address" placeholder="Mağazanızın açık adresi" rows="3" />
+                                <Textarea id="storeAddress" v-model="storeSettings.address" placeholder="Mağazanızın açık adresi" :rows="3" />
                             </div>
                             <div class="grid gap-4 sm:grid-cols-2">
                                 <div class="space-y-2">

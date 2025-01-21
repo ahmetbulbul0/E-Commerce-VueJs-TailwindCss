@@ -49,7 +49,7 @@
 
                             <Input id="phone" type="tel" v-model="form.phone" label="Telefon" placeholder="(5XX) XXX XX XX" required />
 
-                            <Textarea id="address" v-model="form.address" label="Adres" placeholder="Açık adresiniz" rows="3" required />
+                            <Textarea id="address" v-model="form.address" label="Adres" placeholder="Açık adresiniz" :rows="3" required />
 
                             <div class="grid gap-4 sm:grid-cols-2">
                                 <Select id="city" v-model="form.city" label="İl" placeholder="İl seçin" required>
@@ -98,7 +98,7 @@
 
                                 <Input v-else id="identityNumber" v-model="form.identityNumber" label="T.C. Kimlik Numarası" placeholder="T.C. Kimlik numaranız" required />
 
-                                <Textarea id="billAddress" v-model="form.billAddress" label="Fatura Adresi" placeholder="Fatura adresiniz" rows="3" required />
+                                <Textarea id="billAddress" v-model="form.billAddress" label="Fatura Adresi" placeholder="Fatura adresiniz" :rows="3" required />
                             </div>
                         </div>
                     </Card>

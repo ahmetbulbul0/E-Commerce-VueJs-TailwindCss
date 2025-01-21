@@ -24,11 +24,7 @@
             <div class="flex flex-col items-center gap-6 md:flex-row md:justify-between">
                 <!-- Logo ve İsim -->
                 <div class="flex items-center gap-6">
-                    <img
-                        :src="brand.logo"
-                        :alt="brand.name"
-                        class="h-24 w-24 object-contain"
-                    />
+                    <img :src="brand.logo" :alt="brand.name" class="h-24 w-24 object-contain" />
                     <div>
                         <h1 class="text-3xl font-bold tracking-tight">{{ brand.name }}</h1>
                         <p class="mt-2 text-muted-foreground">{{ brand.description }}</p>
@@ -45,7 +41,7 @@
                         <div class="flex items-center gap-1">
                             <span class="text-2xl font-bold">{{ brand.rating }}</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-400">
-                                <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                             </svg>
                         </div>
                         <p class="text-sm text-muted-foreground">{{ brand.reviewCount }} Değerlendirme</p>
@@ -103,41 +99,21 @@
         <!-- Filtreler ve Sıralama -->
         <div class="mb-8 grid gap-4 md:grid-cols-3">
             <!-- Kategori Filtresi -->
-            <Select
-                v-model="selectedCategory"
-                :options="categories"
-                placeholder="Kategori seçin"
-            />
+            <Select v-model="selectedCategory" :options="categories" placeholder="Kategori seçin" />
 
             <!-- Fiyat Aralığı -->
-            <Select
-                v-model="priceRange"
-                :options="priceRanges"
-                placeholder="Fiyat aralığı"
-            />
+            <Select v-model="priceRange" :options="priceRanges" placeholder="Fiyat aralığı" />
 
             <!-- Sıralama -->
-            <Select
-                v-model="sortBy"
-                :options="sortOptions"
-                placeholder="Sıralama"
-            />
+            <Select v-model="sortBy" :options="sortOptions" placeholder="Sıralama" />
         </div>
 
         <!-- Ürünler Grid -->
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div
-                v-for="product in filteredProducts"
-                :key="product.id"
-                class="group rounded-lg border bg-card p-4 transition-all hover:shadow-lg"
-            >
+            <div v-for="product in filteredProducts" :key="product.id" class="group rounded-lg border bg-card p-4 transition-all hover:shadow-lg">
                 <!-- Ürün Görseli -->
                 <div class="relative mb-4 aspect-square overflow-hidden rounded-md">
-                    <img
-                        :src="product.image"
-                        :alt="product.name"
-                        class="h-full w-full object-cover transition-transform group-hover:scale-105"
-                    />
+                    <img :src="product.image" :alt="product.name" class="h-full w-full object-cover transition-transform group-hover:scale-105" />
                     <div class="absolute right-2 top-2">
                         <button class="rounded-full bg-background/80 p-2 text-muted-foreground backdrop-blur-sm hover:text-foreground">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -146,9 +122,7 @@
                         </button>
                     </div>
                     <div v-if="product.discount" class="absolute left-2 top-2">
-                        <span class="rounded-full bg-primary px-2 py-1 text-xs font-semibold text-primary-foreground">
-                            %{{ product.discount }}
-                        </span>
+                        <span class="rounded-full bg-primary px-2 py-1 text-xs font-semibold text-primary-foreground">%{{ product.discount }}</span>
                     </div>
                 </div>
 
@@ -160,20 +134,16 @@
                     <div class="flex items-center gap-2">
                         <div class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-400">
-                                <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z"/>
+                                <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8l-6-4.4h7.6L12 2z" />
                             </svg>
                             <span class="ml-1 text-sm">{{ product.rating }}</span>
                         </div>
-                        <span class="text-sm text-muted-foreground">
-                            ({{ product.reviewCount }})
-                        </span>
+                        <span class="text-sm text-muted-foreground">({{ product.reviewCount }})</span>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
                             <span class="text-lg font-bold">{{ product.price }} ₺</span>
-                            <span v-if="product.oldPrice" class="ml-2 text-sm text-muted-foreground line-through">
-                                {{ product.oldPrice }} ₺
-                            </span>
+                            <span v-if="product.oldPrice" class="ml-2 text-sm text-muted-foreground line-through">{{ product.oldPrice }} ₺</span>
                         </div>
                         <button class="rounded-full bg-primary/10 p-2 text-primary hover:bg-primary/20">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -189,159 +159,144 @@
 
         <!-- Sayfalama -->
         <div class="mt-8 flex items-center justify-between border-t pt-4">
-            <button
-                class="rounded-md px-3 py-2 text-sm font-semibold hover:bg-accent disabled:opacity-50"
-                :disabled="currentPage === 1"
-                @click="currentPage--"
-            >
-                Önceki
-            </button>
-            <span class="text-sm text-muted-foreground">
-                Sayfa {{ currentPage }} / {{ totalPages }}
-            </span>
-            <button
-                class="rounded-md px-3 py-2 text-sm font-semibold hover:bg-accent disabled:opacity-50"
-                :disabled="currentPage === totalPages"
-                @click="currentPage++"
-            >
-                Sonraki
-            </button>
+            <button class="rounded-md px-3 py-2 text-sm font-semibold hover:bg-accent disabled:opacity-50" :disabled="currentPage === 1" @click="currentPage--">Önceki</button>
+            <span class="text-sm text-muted-foreground">Sayfa {{ currentPage }} / {{ totalPages }}</span>
+            <button class="rounded-md px-3 py-2 text-sm font-semibold hover:bg-accent disabled:opacity-50" :disabled="currentPage === totalPages" @click="currentPage++">Sonraki</button>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { useRoute } from 'vue-router'
-import Input from '@/components/ui/form/Input.vue'
-import Select from '@/components/ui/form/Select.vue'
+import { ref, computed } from "vue";
+import { useRoute } from "vue-router";
+import Select from "@/components/ui/Form/Select.vue";
 
-const route = useRoute()
+const route = useRoute();
 
 // Durum değişkenleri
-const selectedCategory = ref('')
-const priceRange = ref('')
-const sortBy = ref('')
-const currentPage = ref(1)
+const selectedCategory = ref("");
+const priceRange = ref("");
+const sortBy = ref("");
+const currentPage = ref(1);
 
 // Sabit veriler
 const categories = [
-    { value: 'all', label: 'Tüm Kategoriler' },
-    { value: 'phones', label: 'Telefonlar' },
-    { value: 'laptops', label: 'Laptoplar' },
-    { value: 'tablets', label: 'Tabletler' },
-    { value: 'accessories', label: 'Aksesuarlar' },
-]
+    { value: "all", label: "Tüm Kategoriler" },
+    { value: "phones", label: "Telefonlar" },
+    { value: "laptops", label: "Laptoplar" },
+    { value: "tablets", label: "Tabletler" },
+    { value: "accessories", label: "Aksesuarlar" },
+];
 
 const priceRanges = [
-    { value: 'all', label: 'Tüm Fiyatlar' },
-    { value: '0-1000', label: '0 - 1.000 ₺' },
-    { value: '1000-5000', label: '1.000 - 5.000 ₺' },
-    { value: '5000-10000', label: '5.000 - 10.000 ₺' },
-    { value: '10000+', label: '10.000 ₺ ve üzeri' },
-]
+    { value: "all", label: "Tüm Fiyatlar" },
+    { value: "0-1000", label: "0 - 1.000 ₺" },
+    { value: "1000-5000", label: "1.000 - 5.000 ₺" },
+    { value: "5000-10000", label: "5.000 - 10.000 ₺" },
+    { value: "10000+", label: "10.000 ₺ ve üzeri" },
+];
 
 const sortOptions = [
-    { value: 'popular', label: 'En Popüler' },
-    { value: 'newest', label: 'En Yeni' },
-    { value: 'price-asc', label: 'Fiyat (Düşükten Yükseğe)' },
-    { value: 'price-desc', label: 'Fiyat (Yüksekten Düşüğe)' },
-    { value: 'rating', label: 'En Çok Değerlendirilenler' },
-]
+    { value: "popular", label: "En Popüler" },
+    { value: "newest", label: "En Yeni" },
+    { value: "price-asc", label: "Fiyat (Düşükten Yükseğe)" },
+    { value: "price-desc", label: "Fiyat (Yüksekten Düşüğe)" },
+    { value: "rating", label: "En Çok Değerlendirilenler" },
+];
 
 // Örnek marka verisi
 const brand = {
     id: 1,
-    name: 'Apple',
-    logo: 'https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png',
-    description: 'Think Different',
-    about: 'Apple Inc. teknoloji dünyasının öncü markalarından biridir. iPhone, iPad, Mac ve daha birçok yenilikçi ürünle kullanıcılarına en iyi deneyimi sunmayı hedefler.',
+    name: "Apple",
+    logo: "https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png",
+    description: "Think Different",
+    about: "Apple Inc. teknoloji dünyasının öncü markalarından biridir. iPhone, iPad, Mac ve daha birçok yenilikçi ürünle kullanıcılarına en iyi deneyimi sunmayı hedefler.",
     productCount: 156,
     rating: 4.8,
     reviewCount: 1250,
-    followerCount: '2.5M',
-    location: 'Cupertino, California',
-    email: 'contact@apple.com',
-    phone: '+1 800-692-7753',
-    tags: ['Teknoloji', 'İnovasyon', 'Tasarım', 'Premium'],
+    followerCount: "2.5M",
+    location: "Cupertino, California",
+    email: "contact@apple.com",
+    phone: "+1 800-692-7753",
+    tags: ["Teknoloji", "İnovasyon", "Tasarım", "Premium"],
     socialMedia: [
         {
-            name: 'Twitter',
-            url: 'https://twitter.com/apple',
-            icon: 'TwitterIcon'
+            name: "Twitter",
+            url: "https://twitter.com/apple",
+            icon: "TwitterIcon",
         },
         {
-            name: 'Facebook',
-            url: 'https://facebook.com/apple',
-            icon: 'FacebookIcon'
+            name: "Facebook",
+            url: "https://facebook.com/apple",
+            icon: "FacebookIcon",
         },
         {
-            name: 'Instagram',
-            url: 'https://instagram.com/apple',
-            icon: 'InstagramIcon'
+            name: "Instagram",
+            url: "https://instagram.com/apple",
+            icon: "InstagramIcon",
         },
         {
-            name: 'YouTube',
-            url: 'https://youtube.com/apple',
-            icon: 'YoutubeIcon'
-        }
-    ]
-}
+            name: "YouTube",
+            url: "https://youtube.com/apple",
+            icon: "YoutubeIcon",
+        },
+    ],
+};
 
 // Örnek ürün verileri
 const products = [
     {
         id: 1,
-        name: 'iPhone 14 Pro',
-        image: 'https://example.com/iphone14pro.jpg',
+        name: "iPhone 14 Pro",
+        image: "https://example.com/iphone14pro.jpg",
         price: 64999,
         oldPrice: 69999,
         discount: 7,
         rating: 4.9,
         reviewCount: 856,
-        category: 'phones'
+        category: "phones",
     },
     // Diğer ürünler buraya eklenebilir
-]
+];
 
 // Hesaplanan özellikler
 const filteredProducts = computed(() => {
-    let result = [...products]
+    let result = [...products];
 
     // Kategori filtresi
-    if (selectedCategory.value && selectedCategory.value !== 'all') {
-        result = result.filter(product => product.category === selectedCategory.value)
+    if (selectedCategory.value && selectedCategory.value !== "all") {
+        result = result.filter((product) => product.category === selectedCategory.value);
     }
 
     // Fiyat aralığı filtresi
-    if (priceRange.value && priceRange.value !== 'all') {
-        const [min, max] = priceRange.value.split('-').map(Number)
-        result = result.filter(product => {
+    if (priceRange.value && priceRange.value !== "all") {
+        const [min, max] = priceRange.value.split("-").map(Number);
+        result = result.filter((product) => {
             if (max) {
-                return product.price >= min && product.price <= max
+                return product.price >= min && product.price <= max;
             }
-            return product.price >= min
-        })
+            return product.price >= min;
+        });
     }
 
     // Sıralama
     if (sortBy.value) {
         switch (sortBy.value) {
-            case 'price-asc':
-                result.sort((a, b) => a.price - b.price)
-                break
-            case 'price-desc':
-                result.sort((a, b) => b.price - a.price)
-                break
-            case 'rating':
-                result.sort((a, b) => b.rating - a.rating)
-                break
+            case "price-asc":
+                result.sort((a, b) => a.price - b.price);
+                break;
+            case "price-desc":
+                result.sort((a, b) => b.price - a.price);
+                break;
+            case "rating":
+                result.sort((a, b) => b.rating - a.rating);
+                break;
             // Diğer sıralama seçenekleri buraya eklenebilir
         }
     }
 
-    return result
-})
+    return result;
+});
 
-const totalPages = computed(() => Math.ceil(filteredProducts.value.length / 12))
-</script> 
+const totalPages = computed(() => Math.ceil(filteredProducts.value.length / 12));
+</script>

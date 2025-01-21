@@ -201,8 +201,8 @@
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { Laptop } from 'lucide-vue-next'
-import Input from '@/components/ui/form/Input.vue'
-import Select from '@/components/ui/form/Select.vue'
+import Input from "@/components/ui/Form/Input.vue"
+import Select from "@/components/ui/Form/Select.vue"
 
 const route = useRoute()
 

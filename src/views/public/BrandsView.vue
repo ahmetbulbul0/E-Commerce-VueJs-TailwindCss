@@ -106,8 +106,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import Input from "@/components/ui/form/Input.vue";
-import Select from "@/components/ui/form/Select.vue";
+import Input from "@/components/ui/Form/Input.vue";
+import Select from "@/components/ui/Form/Select.vue";
 
 // Durum değişkenleri
 const searchQuery = ref("");
